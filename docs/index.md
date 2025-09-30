@@ -23,17 +23,20 @@ RedTeam (Subnet 61) is pioneering a new approach to cybersecurity research by le
 ## Key Focus Areas
 
 ### Bot Detection
+
 Developing and testing advanced bot detection bypass techniques to help companies strengthen their security systems.
 
 ### Challenge Marketplace
+
 A decentralized bug bounty platform where enterprises can commission custom security challenges.
 
 ### Open Source Tools
+
 SDKs and detection modules for developers to build commercial security products.
 
 ## Get Started
 
-Visit our [Blog](/blog/) to read about the latest updates, technical deep-dives, and announcements from the RedTeam Subnet ecosystem.
+Visit our [Blog](blog/index.md) to read about the latest updates, technical deep-dives, and announcements from the RedTeam Subnet ecosystem.
 
 ## Links
 
