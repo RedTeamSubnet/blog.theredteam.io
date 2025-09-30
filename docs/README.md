@@ -5,20 +5,37 @@ hide:
 #   - toc
 ---
 
-# Welcome to MkDocs
+# Welcome to RedTeam Subnet Blog
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+RedTeam Subnet is a decentralized platform designed to drive innovation in cybersecurity through competitive programming challenges on the Bittensor network.
 
-## Commands
+## What is RedTeam Subnet?
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+RedTeam (Subnet 61) is pioneering a new approach to cybersecurity research by leveraging decentralized AI and blockchain technology. We create a competitive environment where miners develop cutting-edge solutions to bypass various detection methodologies, while validators ensure quality and security.
 
-## Project layout
+## Our Mission
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+- **Decentralized Cybersecurity:** Building a self-sustaining ecosystem for cybersecurity innovation
+- **Competitive Challenges:** Miners compete to solve real-world security problems
+- **Community-Driven:** Stakeholders govern the subnet through the Alpha token
+- **Enterprise Ready:** Providing solutions for businesses to strengthen their defenses
+
+## Key Focus Areas
+
+### Bot Detection
+Developing and testing advanced bot detection bypass techniques to help companies strengthen their security systems.
+
+### Challenge Marketplace
+A decentralized bug bounty platform where enterprises can commission custom security challenges.
+
+### Open Source Tools
+SDKs and detection modules for developers to build commercial security products.
+
+## Get Started
+
+Visit our [Blog](/blog/) to read about the latest updates, technical deep-dives, and announcements from the RedTeam Subnet ecosystem.
+
+## Links
+
+- [GitHub](https://github.com/RedTeamSubnet)
+- [Official Documentation](https://docs.theredteam.io)

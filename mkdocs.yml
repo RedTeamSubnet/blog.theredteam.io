@@ -1,8 +1,10 @@
 site_name: RedTeam subnet - Blog
 site_description: "This is a short description of the project."
 site_url: https://blog.theredteam.io
-repo_name: abdibekbolot/RedTeamSubnet
-repo_url: https://github.com/abdibekbolot/RedTeamSubnet
+repo_name: RedTeamSubnet
+repo_url: https://github.com/RedTeamSubnet
+extra_css:
+  - assets/css/custom.css
 theme:
   name: material
   # name: readthedocs
@@ -10,8 +12,8 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  logo: assets/images/logo.png
-  favicon: assets/images/logo.png
+  logo: assets/images/logo.light.svg
+  favicon: assets/images/logo.dark.svg
   icon:
     # logo: fontawesome/brands/python
     repo: fontawesome/brands/github
@@ -33,22 +35,18 @@ theme:
     - content.code.annotate
   palette:
     - media: "(prefers-color-scheme)"
-      primary: black
-      accent: black
       toggle:
         icon: material/brightness-auto
         name: Switch to light mode
     - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: white
-      accent: white
+      scheme: redteam
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: black
-      accent: black
+      primary: red
+      accent: red
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
@@ -97,40 +95,30 @@ plugins:
   - search
   - awesome-nav
   - mkdocstrings
-  - blog:
-      # post_excerpt: required
-      post_excerpt_max_authors: 3
-      post_date_format: medium
-      archive_date_format: yyyy/MM
-      archive_url_date_format: yyyy/MM
-      blog_toc: true
-      draft: true
-      draft_if_future_date: true
-      pagination_format: "$link_first $link_previous ~2~ $link_next $link_last"
-      # categories_allowed:
-      #   - Python
-      #   - Data Science
-      #   - Machine Learning
-      #   - AI/DL
-      #   - DevOps
-      #   - Cloud
-      #   - Tools
-      #   - Tutorials
-      #   - Tips
-      #   - Examples
-      #   - Others
+  # - blog:
+  #     blog_dir: blog
+  #     post_dir: "{blog}/posts"
+  #     post_date_format: medium
+  #     post_url_format: "{slug}"
+  #     pagination: false
+  #     categories_allowed:
+  #       - Top Submissions
+  #       - Challenges
+  #       - Tutorials
+  #       - Security Research
+  #       - News
 extra:
   version:
     provider: mike
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/abdibekbolot
-    - icon: fontawesome/brands/docker
-      link: https://hub.docker.com/u/abdibekbolot
-    - icon: fontawesome/brands/python
-      link: https://pypi.org/user/abdibekbolot
-    - icon: fontawesome/brands/x-twitter
-      link: https://x.com/abdibekbolot
-    - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/in/abdibekbolot
-copyright: Copyright &copy; 2025 - abdibekbolot
+      link: https://github.com/RedTeamSubnet
+    # - icon: fontawesome/brands/docker
+    #   link: https://hub.docker.com/u/abdibekbolot
+    # - icon: fontawesome/brands/python
+    #   link: https://pypi.org/user/abdibekbolot
+    # - icon: fontawesome/brands/x-twitter
+    #   link: https://x.com/abdibekbolot
+    # - icon: fontawesome/brands/linkedin
+    #   link: https://www.linkedin.com/in/abdibekbolot
+copyright: Copyright &copy; 2025 - RedTeam
