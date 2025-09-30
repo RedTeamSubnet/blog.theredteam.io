@@ -1,0 +1,5 @@
+/* Card grid title styling - make titles red */
+.md-typeset .grid.cards > ul > li strong,
+.md-typeset .grid.cards > ol > li strong {
+    color: #d32f2f !important;
+}
