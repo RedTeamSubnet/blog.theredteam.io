@@ -5,13 +5,14 @@ repo_name: RedTeamSubnet
 repo_url: https://github.com/RedTeamSubnet
 extra_css:
   - assets/css/custom.css
+  - assets/css/colors.css
 theme:
   name: material
   # name: readthedocs
   language: en
   font:
-    text: Roboto
-    code: Roboto Mono
+    text: Public Sans
+    code: JetBrains Mono
   logo: assets/images/logo.light.svg
   favicon: assets/images/logo.dark.svg
   icon:
@@ -21,9 +22,9 @@ theme:
     - navigation.indexes
     - navigation.tracking
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.top
     - navigation.footer
-    # - navigation.tabs.sticky
     # - navigation.sections
     # - navigation.expand
     # - navigation.instant
@@ -39,7 +40,9 @@ theme:
         icon: material/brightness-auto
         name: Switch to light mode
     - media: "(prefers-color-scheme: light)"
-      scheme: redteam
+      scheme: default
+      primary: red
+      accent: red
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
@@ -93,7 +96,8 @@ plugins:
   - meta
   - tags
   - search
-  - awesome-nav
+  # - awesome-nav:
+  #     expand: true
   - mkdocstrings
   # - blog:
   #     blog_dir: blog
@@ -122,3 +126,8 @@ extra:
     # - icon: fontawesome/brands/linkedin
     #   link: https://www.linkedin.com/in/abdibekbolot
 copyright: Copyright &copy; 2025 - RedTeam
+nav:
+  - Home: index.md
+  - Important: important/index.md
+  - Announcements: announcements/index.md
+  - Blog: blog/index.md
