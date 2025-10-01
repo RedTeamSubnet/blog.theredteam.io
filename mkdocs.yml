@@ -10,6 +10,7 @@ theme:
   name: material
   # name: readthedocs
   language: en
+  custom_dir: overrides
   font:
     text: Public Sans
     code: JetBrains Mono
@@ -117,14 +118,14 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/RedTeamSubnet
-    # - icon: fontawesome/brands/docker
-    #   link: https://hub.docker.com/u/abdibekbolot
-    # - icon: fontawesome/brands/python
-    #   link: https://pypi.org/user/abdibekbolot
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/u/redteamsubnet61
+    - icon: fontawesome/solid/house
+      link: https://www.theredteam.io/
     # - icon: fontawesome/brands/x-twitter
     #   link: https://x.com/abdibekbolot
-    # - icon: fontawesome/brands/linkedin
-    #   link: https://www.linkedin.com/in/abdibekbolot
+    - icon: fontawesome/solid/chart-line
+      link: https://dashboard.theredteam.io/
 copyright: Copyright &copy; 2025 - RedTeam
 nav:
   - Home: index.md
