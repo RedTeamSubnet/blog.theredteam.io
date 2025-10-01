@@ -126,6 +126,8 @@ extra:
     #   link: https://x.com/abdibekbolot
     - icon: fontawesome/solid/chart-line
       link: https://dashboard.theredteam.io/
+    - icon: fontawesome/solid/book
+      link: https://docs.theredteam.io/
 copyright: Copyright &copy; 2025 - RedTeam
 nav:
   - Home: index.md
