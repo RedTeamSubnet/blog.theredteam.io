@@ -8,24 +8,22 @@ Latest announcements and updates from the RedTeam Subnet team.
 
 <div class="grid cards" markdown>
 
-- __Bot Challenges Arrive to RedTeam__
+-   **Bot Challenges Arrive to RedTeam**  
+    <small>Jan 15, 2025 · Challenges, News</small>
 
     ---
 
-    New wave of bot detection challenges and subnet updates released to Subnet 61.
+    A new wave of bot detection challenges has been released to Subnet 61, advancing our security testing suite.
 
-    [:octicons-arrow-right-24: Read more](../blog/posts/bot-detection-challenges.md)
+    [:octicons-arrow-right-24: Read more](../blog/posts/bot-detection-challenges.md){ .md-button }
 
-    _Jan 15, 2025 · Challenges, News_
-
-- __Alpha Token & Dynamic TAO__
+-   **Alpha Token & Dynamic TAO**  
+    <small>Feb 1, 2025 · Security Research, News</small>
 
     ---
 
-    How Dynamic TAO and Alpha token transform RedTeam's decentralized cybersecurity ecosystem.
+    How Dynamic TAO and the Alpha token reshape RedTeam’s decentralized cybersecurity incentives.
 
-    [:octicons-arrow-right-24: Read more](../blog/posts/dynamic-tao-alpha-token.md)
-
-    _Feb 1, 2025 · Security Research, News_
+    [:octicons-arrow-right-24: Read more](../blog/posts/dynamic-tao-alpha-token.md){ .md-button }
 
 </div>

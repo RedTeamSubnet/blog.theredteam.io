@@ -7,6 +7,18 @@
     --shadow-subtle: 0 2px 8px rgba(0, 0, 0, 0.08);
     --shadow-medium: 0 4px 16px rgba(0, 0, 0, 0.12);
 }
+/* Announcements grid: consistent card spacing and subtle borders */
+.md-typeset .grid.cards > ul > li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px;      /* adjust as needed */
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 6px;
+  background: var(--md-code-bg-color);
+}
 
 /* Card grid title styling - make titles red */
 .md-typeset .grid.cards > ul > li strong,

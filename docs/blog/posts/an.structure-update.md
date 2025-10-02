@@ -11,6 +11,7 @@ tags:
   - Structure
   - DFP
 readtime: 5
+title: Subnet Announcement
 ---
 
 ## Update in Subnet Structure
@@ -30,7 +31,7 @@ We are making important changes to improve fairness and protect miners' intellec
     - This ensures each miner fully owns their intellectual property.
 
 **Example (HuggingFace View):**  
-<img src="../../assets/images/hugging_face_hidden_docker.png" alt="HuggingFace hidden Docker IDs" width="800"/>
+![HuggingFace hidden Docker IDs](../../assets/images/hugging_face_hidden_docker.png)
 
 
 ### Encryption Check for Submissions
@@ -44,7 +45,7 @@ We are making important changes to improve fairness and protect miners' intellec
 ### Dashboard Updates
 
 **Example (Updated Dashboard):**  
-<img src="../../assets/images/annoucements/redteam-dashboard.png" alt="RedTeam Dashboard" width="800"/>
+![RedTeam Dashboard](../../assets/images/annoucements/redteam-dashboard.png)
 
 !!! note "Highlights"
     - Removed the **docker_hub_id** column.  
