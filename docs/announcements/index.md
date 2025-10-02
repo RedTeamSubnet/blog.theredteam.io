@@ -15,7 +15,7 @@ Latest announcements and updates from the RedTeam Subnet team.
 
     Major changes to protect miners’ intellectual property: hidden Docker Hub IDs, encryption detection, and dashboard improvements.  
 
-    [:octicons-arrow-right-24: Read more](posts/an.structure-update.md){ .md-button }
+    [:octicons-arrow-right-24: Read more](../blog/posts/an.structure-update.md){ .md-button }
     
 -   **Bot Challenges Arrive to RedTeam**  
     <small>Jan 15, 2025 · Challenges, News</small>
