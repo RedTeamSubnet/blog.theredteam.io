@@ -8,16 +8,16 @@ Latest announcements and updates from the RedTeam Subnet team.
 
 <div class="grid cards" markdown>
 
--   **Update in Subnet Structure**  
+- **Update in Subnet Structure**  
     <small>Oct 2, 2025 · Announcement, News</small>  
 
     ---  
 
-    Major changes to protect miners’ intellectual property: hidden Docker Hub IDs, encryption detection, and dashboard improvements.  
+    Major changes to protect miners intellectual property: hidden Docker Hub IDs, encryption detection, and dashboard improvements.  
 
     [:octicons-arrow-right-24: Read more](../blog/posts/an.structure-update.md){ .md-button }
-    
--   **Bot Challenges Arrive to RedTeam**  
+
+- **Bot Challenges Arrive to RedTeam**  
     <small>Jan 15, 2025 · Challenges, News</small>
 
     ---
@@ -26,12 +26,12 @@ Latest announcements and updates from the RedTeam Subnet team.
 
     [:octicons-arrow-right-24: Read more](../blog/posts/bot-detection-challenges.md){ .md-button }
 
--   **Alpha Token & Dynamic TAO**  
+- **Alpha Token & Dynamic TAO**  
     <small>Feb 1, 2025 · Security Research, News</small>
 
     ---
 
-    How Dynamic TAO and the Alpha token reshape RedTeam’s decentralized cybersecurity incentives.
+    How Dynamic TAO and the Alpha token reshape RedTeam's decentralized cybersecurity incentives.
 
     [:octicons-arrow-right-24: Read more](../blog/posts/dynamic-tao-alpha-token.md){ .md-button }
 

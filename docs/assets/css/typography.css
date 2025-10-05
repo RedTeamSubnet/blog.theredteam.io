@@ -1,0 +1,89 @@
+/* ========================================
+   TYPOGRAPHY CUSTOMIZATION
+   Change fonts, sizes, weights, and spacing
+   ======================================== */
+
+:root {
+	/* === FONT FAMILIES === */
+	--custom-font-body: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+	--custom-font-heading: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+	--custom-font-code: "JetBrains Mono", "Courier New", monospace;
+
+	/* === FONT SIZES - Headings === */
+	--custom-h1-size-min: 2rem;
+	/* Mobile size */
+	--custom-h1-size-max: 2.5rem;
+	/* Desktop size */
+	--custom-h2-size-min: 1.5rem;
+	--custom-h2-size-max: 2rem;
+	--custom-h3-size-min: 1.25rem;
+	--custom-h3-size-max: 1.5rem;
+	--custom-h4-size-min: 1.1rem;
+	--custom-h4-size-max: 1.25rem;
+
+	/* === FONT SIZES - Body === */
+	--custom-body-size-min: 0.9rem;
+	--custom-body-size-max: 1rem;
+	--custom-small-size: 0.875rem;
+	--custom-tiny-size: 0.75rem;
+
+	/* === FONT WEIGHTS === */
+	--custom-weight-light: 300;
+	--custom-weight-normal: 400;
+	--custom-weight-medium: 500;
+	--custom-weight-semibold: 600;
+	--custom-weight-bold: 700;
+
+	/* === LINE HEIGHTS === */
+	--custom-line-height-tight: 1.2;
+	--custom-line-height-normal: 1.6;
+	--custom-line-height-relaxed: 1.8;
+
+	/* === LETTER SPACING === */
+	--custom-tracking-tight: -0.02em;
+	--custom-tracking-normal: 0.01em;
+	--custom-tracking-wide: 0.02em;
+}
+
+/* Apply custom typography */
+.md-typeset {
+	font-family: var(--custom-font-body);
+	font-size: clamp(var(--custom-body-size-min), 1vw, var(--custom-body-size-max));
+	line-height: var(--custom-line-height-normal);
+	letter-spacing: var(--custom-tracking-normal);
+}
+
+.md-typeset h1 {
+	font-family: var(--custom-font-heading);
+	font-weight: var(--custom-weight-bold);
+	font-size: clamp(var(--custom-h1-size-min), 4vw, var(--custom-h1-size-max));
+	line-height: var(--custom-line-height-tight);
+	letter-spacing: var(--custom-tracking-tight);
+}
+
+.md-typeset h2 {
+	font-family: var(--custom-font-heading);
+	font-weight: var(--custom-weight-semibold);
+	font-size: clamp(var(--custom-h2-size-min), 3vw, var(--custom-h2-size-max));
+	line-height: 1.3;
+	letter-spacing: var(--custom-tracking-tight);
+}
+
+.md-typeset h3 {
+	font-family: var(--custom-font-heading);
+	font-weight: var(--custom-weight-semibold);
+	font-size: clamp(var(--custom-h3-size-min), 2.5vw, var(--custom-h3-size-max));
+	line-height: 1.4;
+}
+
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+	font-family: var(--custom-font-heading);
+	font-weight: var(--custom-weight-medium);
+	font-size: clamp(var(--custom-h4-size-min), 2vw, var(--custom-h4-size-max));
+}
+
+.md-typeset code {
+	font-family: var(--custom-font-code);
+}

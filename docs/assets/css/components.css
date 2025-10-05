@@ -1,0 +1,186 @@
+/* ========================================
+   COMPONENTS CUSTOMIZATION
+   Buttons, cards, tables, code blocks, and other UI elements
+   ======================================== */
+
+:root {
+	/* === COMPONENT COLORS === */
+	--custom-card-bg: #ffffff;
+	--custom-card-border: rgba(0, 0, 0, 0.05);
+	--custom-card-hover-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+
+	--custom-code-inline-bg: rgba(211, 47, 47, 0.08);
+	--custom-code-block-bg: #f5f5f5;
+
+	--custom-table-header-bg: rgba(211, 47, 47, 0.05);
+	--custom-table-border: rgba(0, 0, 0, 0.05);
+
+	--custom-admonition-border: var(--md-primary-fg-color);
+
+	/* === TRANSITIONS === */
+	--custom-transition-fast: 0.15s ease;
+	--custom-transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	--custom-transition-slow: 0.5s ease;
+}
+
+/* =====================================
+   CARDS
+   ===================================== */
+.md-typeset .grid.cards {
+	gap: var(--custom-space-lg);
+}
+
+.md-typeset .grid.cards>ul>li,
+.md-typeset .grid.cards>ol>li {
+	background: var(--custom-card-bg);
+	border-radius: var(--custom-radius-lg);
+	box-shadow: var(--custom-shadow-medium);
+	transition: all var(--custom-transition-normal);
+	border: 1px solid var(--custom-card-border);
+	padding: var(--custom-space-lg);
+}
+
+.md-typeset .grid.cards>ul>li:hover,
+.md-typeset .grid.cards>ol>li:hover {
+	transform: translateY(-4px);
+	box-shadow: var(--custom-card-hover-shadow);
+}
+
+.md-typeset .grid.cards>ul>li strong,
+.md-typeset .grid.cards>ol>li strong {
+	color: var(--md-primary-fg-color) !important;
+	font-weight: var(--custom-weight-semibold);
+}
+
+/* =====================================
+   CODE BLOCKS
+   ===================================== */
+.md-typeset code {
+	background-color: var(--custom-code-inline-bg);
+	padding: 0.2em 0.4em;
+	border-radius: var(--custom-radius-sm);
+	font-size: 0.9em;
+	font-weight: var(--custom-weight-medium);
+}
+
+.md-typeset pre>code {
+	background-color: transparent;
+	padding: 0;
+}
+
+.md-typeset .highlight {
+	border-radius: var(--custom-radius-md);
+	overflow: hidden;
+	box-shadow: var(--custom-shadow-medium);
+	margin: var(--custom-space-lg) 0;
+}
+
+/* =====================================
+   TABLES
+   ===================================== */
+.md-typeset table:not([class]) {
+	border-radius: var(--custom-radius-md);
+	overflow: hidden;
+	box-shadow: var(--custom-shadow-subtle);
+	border: 1px solid var(--custom-table-border);
+	margin: var(--custom-space-lg) 0;
+}
+
+.md-typeset table:not([class]) th {
+	font-weight: var(--custom-weight-semibold);
+	background-color: var(--custom-table-header-bg);
+	letter-spacing: var(--custom-tracking-wide);
+	padding: var(--custom-space-md);
+}
+
+.md-typeset table:not([class]) td {
+	padding: var(--custom-space-md);
+}
+
+/* =====================================
+   ADMONITIONS (Info boxes)
+   ===================================== */
+.md-typeset .admonition,
+.md-typeset details {
+	border-radius: var(--custom-radius-md);
+	box-shadow: var(--custom-shadow-subtle);
+	border-left: 4px solid var(--custom-admonition-border);
+	margin: var(--custom-space-lg) 0;
+	padding: var(--custom-space-md);
+}
+
+.md-typeset .admonition-title {
+	font-weight: var(--custom-weight-semibold);
+	letter-spacing: var(--custom-tracking-wide);
+}
+
+/* =====================================
+   BLOCKQUOTES
+   ===================================== */
+.md-typeset blockquote {
+	border-left: 4px solid var(--md-primary-fg-color);
+	padding: var(--custom-space-md) var(--custom-space-lg);
+	margin: var(--custom-space-lg) 0;
+	background-color: rgba(211, 47, 47, 0.03);
+	border-radius: 0 var(--custom-radius-md) var(--custom-radius-md) 0;
+	box-shadow: var(--custom-shadow-subtle);
+}
+
+/* =====================================
+   LINKS
+   ===================================== */
+.md-typeset a {
+	text-decoration: none;
+	border-bottom: 1px solid rgba(211, 47, 47, 0.3);
+	transition: border-color var(--custom-transition-fast);
+}
+
+.md-typeset a:hover {
+	border-bottom-color: var(--md-primary-fg-color);
+}
+
+/* =====================================
+   BUTTONS
+   ===================================== */
+.md-button {
+	border-radius: var(--custom-radius-md);
+	padding: var(--custom-space-sm) var(--custom-space-lg);
+	font-weight: var(--custom-weight-medium);
+	transition: all var(--custom-transition-fast);
+}
+
+.md-button:hover {
+	transform: translateY(-2px);
+	box-shadow: var(--custom-shadow-medium);
+}
+
+/* =====================================
+   HORIZONTAL RULES
+   ===================================== */
+.md-typeset hr {
+	border: none;
+	height: 2px;
+	background: linear-gradient(90deg,
+			transparent,
+			var(--md-primary-fg-color),
+			transparent);
+}
+
+/* =====================================
+   NAVIGATION
+   ===================================== */
+.md-tabs {
+	box-shadow: var(--custom-shadow-subtle);
+}
+
+/* =====================================
+   DARK MODE OVERRIDES
+   ===================================== */
+[data-md-color-scheme="slate"] {
+	--custom-card-bg: #1a1a1a;
+	--custom-card-border: rgba(255, 255, 255, 0.1);
+	--custom-code-inline-bg: rgba(239, 83, 80, 0.15);
+	--custom-code-block-bg: #1a1a1a;
+	--custom-table-header-bg: rgba(239, 83, 80, 0.1);
+	--custom-table-border: rgba(255, 255, 255, 0.1);
+}

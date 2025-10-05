@@ -1,32 +1,54 @@
-/* Light Mode Background */
+/* ========================================
+   COLOR CUSTOMIZATION
+   Change all colors for light and dark modes
+   ======================================== */
+
+/* === LIGHT MODE === */
 [data-md-color-scheme="default"] {
-    --md-default-bg-color: #ffffff;           /* Main background */
+    /* Background Colors */
+    --md-default-bg-color: #ffffff;           /* Main page background */
     --md-default-fg-color: #1a1a1a;           /* Main text color */
     --md-code-bg-color: #f5f5f5;              /* Code block background */
     --md-code-fg-color: #1a1a1a;              /* Code text color */
 
-    /* Custom Dark Red Colors for Light Mode */
-    --md-primary-fg-color: #c62828;           /* Brighter red for dark bg */
-    --md-primary-fg-color--light: #d32f2f;
-    --md-primary-fg-color--dark: #b71c1c;
-    --md-accent-fg-color: #ef5350;            /* Lighter accent for contrast */
-    --md-typeset-a-color: #ef5350;            /* Link color */
+    /* Primary/Accent Colors (Red Theme) */
+    --md-primary-fg-color: #c62828;           /* Primary color - buttons, headers */
+    --md-primary-fg-color--light: #d32f2f;    /* Lighter variant */
+    --md-primary-fg-color--dark: #b71c1c;     /* Darker variant */
+    --md-accent-fg-color: #ef5350;            /* Accent color - highlights */
+
+    /* Link Colors */
+    --md-typeset-a-color: #c62828;            /* Link color */
+
+    /* Header/Navigation */
+    --md-primary-bg-color: #ffffff;           /* Header background */
+    --md-primary-bg-color--light: #fffff;    /* Header hover */
+
+    /* Custom Shadows */
+    --custom-shadow-subtle: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --custom-shadow-medium: 0 4px 16px rgba(0, 0, 0, 0.12);
+    --custom-shadow-strong: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
-
-
-
-/* Dark Mode Background */
+/* === DARK MODE === */
 [data-md-color-scheme="slate"] {
-    --md-default-bg-color: #0f0f0f;           /* Main background - darker */
+    /* Background Colors */
+    --md-default-bg-color: #0f0f0f;           /* Main page background - darker */
     --md-default-fg-color: #e0e0e0;           /* Main text color */
     --md-code-bg-color: #1a1a1a;              /* Code block background */
     --md-code-fg-color: #e0e0e0;              /* Code text color */
 
-    /* Custom Dark Red Colors for Dark Mode */
-    --md-primary-fg-color: #c62828;           /* Brighter red for dark bg */
-    --md-primary-fg-color--light: #d32f2f;
-    --md-primary-fg-color--dark: #b71c1c;
-    --md-accent-fg-color: #ef5350;            /* Lighter accent for contrast */
+    /* Primary/Accent Colors (Brighter for contrast) */
+    --md-primary-fg-color: #c62828;           /* Primary color */
+    --md-primary-fg-color--light: #d32f2f;    /* Lighter variant */
+    --md-primary-fg-color--dark: #b71c1c;     /* Darker variant */
+    --md-accent-fg-color: #ef5350;            /* Accent color */
+
+    /* Link Colors */
     --md-typeset-a-color: #ef5350;            /* Link color */
+
+    /* Custom Shadows (lighter for dark mode) */
+    --custom-shadow-subtle: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --custom-shadow-medium: 0 4px 16px rgba(0, 0, 0, 0.4);
+    --custom-shadow-strong: 0 8px 24px rgba(0, 0, 0, 0.5);
 }
