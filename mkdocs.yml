@@ -1,4 +1,4 @@
-site_name: RedTeam subnet - Blog
+site_name: ""
 site_description: "This is a short description of the project."
 site_url: https://blog.theredteam.io
 repo_name: RedTeamSubnet
@@ -11,7 +11,6 @@ extra_css:
   - assets/css/custom.css # Additional custom styles
 theme:
   name: material
-  # name: readthedocs
   language: en
   custom_dir: overrides
   font:
@@ -20,7 +19,6 @@ theme:
   logo: assets/images/logo/logo.light.svg
   favicon: assets/images/logo/logo.dark.svg
   icon:
-    # logo: fontawesome/brands/python
     repo: fontawesome/brands/github
   features:
     - navigation.indexes
@@ -29,34 +27,30 @@ theme:
     - navigation.tabs.sticky
     - navigation.top
     - navigation.footer
-    # - navigation.sections
-    # - navigation.expand
-    # - navigation.instant
     - toc.follow
-    # - toc.integrate
+    - toc.integrate
     - search.suggest
     - search.highlight
     - content.code.copy
     - content.code.annotate
   palette:
+    # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
       toggle:
         icon: material/brightness-auto
         name: Switch to light mode
+    # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: red
-      accent: red
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
+    # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: red
-      accent: red
       toggle:
         icon: material/brightness-4
-        name: Switch to light mode
+        name: Switch to system preference
 markdown_extensions:
   - abbr
   - admonition
@@ -96,9 +90,10 @@ markdown_extensions:
 extra_javascript:
   - assets/js/mathjax.js
   - assets/js/tex-mml-chtml.js
+  - assets/js/theme-toggle.js
 plugins:
   - meta
-  - tags
+  # - tags
   - search
   # - awesome-nav:
   #     expand: true
@@ -134,6 +129,6 @@ extra:
 copyright: Copyright &copy; 2025 - RedTeam
 nav:
   - Home: index.md
-  - Important: important/index.md
+  - Important: importants/index.md
   - Announcements: announcements/index.md
   - Blog: blog/index.md

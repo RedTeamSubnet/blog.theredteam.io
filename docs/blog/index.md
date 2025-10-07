@@ -1,47 +1,74 @@
 ---
 title: Blog
+hide:
+  - navigation
 ---
 
-# Blog
+<div class="blog-header">
+  <h1>Blog</h1>
+  <p class="blog-subtitle">Welcome to the RedTeam Subnet blog. Stay up to date with the latest announcements, research, and technical insights.</p>
+</div>
 
-Welcome to the RedTeam Subnet blog. Stay up to date with the latest announcements, research, and technical insights.
+<div class="blog-posts">
 
-<div class="grid cards" markdown>
+  <article class="blog-post">
+    <div class="post-content">
+      <h2><a href="posts/dynamic-tao-alpha-token/">Alpha Token & Dynamic TAO: Supercharging RedTeam's Decentralized Cybersecurity Ecosystem</a></h2>
+      <p class="post-excerpt">Discover how Dynamic TAO and Alpha Token reshape RedTeam's decentralized cybersecurity and incentive model.</p>
+      <div class="post-meta">
+        <span class="post-date">Feb 1, 2025</span>
+        <span class="post-separator">·</span>
+        <span class="post-tags">Security Research, News</span>
+      </div>
+    </div>
+    <div class="post-image">
+      <img src="../assets/images/alpha-token.png" alt="Alpha Token & Dynamic TAO">
+    </div>
+  </article>
 
--   **Update in Subnet Structure**  
-    <small>Oct 2, 2025 · Announcement, News</small>  
+  <article class="blog-post">
+    <div class="post-content">
+      <h2><a href="posts/monetization-opportunities/">Unlocking Value: Monetising RedTeam's Outputs and Challenges</a></h2>
+      <p class="post-excerpt">As RedTeam continues to evolve, we're excited to share how its unique ecosystem offers opportunities for monetisation.</p>
+      <div class="post-meta">
+        <span class="post-date">Jan 25, 2025</span>
+        <span class="post-separator">·</span>
+        <span class="post-tags">Security Research, Tutorials</span>
+      </div>
+    </div>
+    <div class="post-image">
+      <img src="../assets/images/decentralized-cybersecurity2.webp" alt="Monetization">
+    </div>
+  </article>
 
-    ---  
+  <article class="blog-post">
+    <div class="post-content">
+      <h2><a href="posts/bot-detection-challenges/">Bot Challenges Arrive to RedTeam</a></h2>
+      <p class="post-excerpt">We are excited to introduce the new wave of bot detection challenges + many other updates that have just been released to Subnet 61.</p>
+      <div class="post-meta">
+        <span class="post-date">Jan 9, 2025</span>
+        <span class="post-separator">·</span>
+        <span class="post-tags">Challenges, News</span>
+      </div>
+    </div>
+    <div class="post-image">
+      <img src="../assets/images/decentralized-cybersecurity.png" alt="Bot Challenges">
+    </div>
+  </article>
 
-    Major changes to protect miners’ intellectual property: hidden Docker Hub IDs, encryption detection, and dashboard improvements.  
-
-    [:octicons-arrow-right-24: Read more](posts/an.structure-update.md){ .md-button }
-
--   **Bot Challenges Arrive to RedTeam**  
-    <small>Jan 15, 2025 · Challenges, News</small>  
-
-    ---  
-
-    A new wave of advanced bot detection challenges has been released to Subnet 61, raising the bar for security testing.  
-
-    [:octicons-arrow-right-24: Read more](posts/bot-detection-challenges.md){ .md-button }
-
--   **Unlocking Value: Monetising RedTeam's Outputs**  
-    <small>Jan 20, 2025 · Security Research, Tutorials</small>  
-
-    ---  
-
-    Learn how miner outputs, challenge components, and third-party integrations can generate real value in the ecosystem.  
-
-    [:octicons-arrow-right-24: Read more](posts/monetization-opportunities.md){ .md-button }
-
--   **Alpha Token & Dynamic TAO**  
-    <small>Feb 1, 2025 · Security Research, News</small>  
-
-    ---  
-
-    Discover how Dynamic TAO and Alpha Token reshape RedTeam’s decentralized cybersecurity and incentive model.  
-
-    [:octicons-arrow-right-24: Read more](posts/dynamic-tao-alpha-token.md){ .md-button }
+  <article class="blog-post">
+    <div class="post-content">
+      <h2><a href="posts/an.structure-update/">Update in Subnet Structure</a></h2>
+      <p class="post-excerpt">Major changes to protect miners intellectual property: hidden Docker Hub IDs, encryption detection, and dashboard improvements.</p>
+      <div class="post-meta">
+        <span class="post-date">Oct 2, 2024</span>
+        <span class="post-separator">·</span>
+        <span class="post-tags">Announcement, News</span>
+      </div>
+    </div>
+    <div class="post-image">
+      <img src="../assets/images/annoucements/redteam-dashboard.png" alt="Subnet Structure">
+    </div>
+  </article>
 
 </div>
