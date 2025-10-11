@@ -129,6 +129,6 @@ extra:
 copyright: Copyright &copy; 2025 - RedTeam
 nav:
   - Home: index.md
-  - Important: importants/index.md
-  - Announcements: announcements/index.md
   - Blog: blog/index.md
+  - Important: important/index.md
+  - Announcements: announcements/index.md
