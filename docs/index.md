@@ -1,44 +1,75 @@
 ---
-title: Home
+title: Blog
 hide:
   - navigation
-#   - toc
+  - toc
 ---
 
-# Welcome to RedTeam Subnet Blog
+<div class="blog-header">
+  <h1>Blog</h1>
+  <p class="blog-subtitle">Welcome to the RedTeam Subnet blog. Stay up to date with the latest announcements, research, and technical insights.</p>
+</div>
 
-RedTeam Subnet is a decentralized platform designed to drive innovation in cybersecurity through competitive programming challenges on the Bittensor network.
+<div class="blog-posts">
 
-## What is RedTeam Subnet?
+  <article class="blog-post">
+    <div class="post-content">
+      <h2><a href="blog/posts/dynamic-tao-alpha-token/">Alpha Token & Dynamic TAO</a></h2>
+      <p class="post-excerpt">Discover how Dynamic TAO and Alpha Token reshape RedTeam's decentralized cybersecurity and incentive model.</p>
+      <div class="post-meta">
+        <span class="post-date">Feb 1, 2025</span>
+        <span class="post-separator">·</span>
+        <span class="post-tags">Security Research, News</span>
+      </div>
+    </div>
+    <div class="post-image">
+      <img src="assets/images/alpha-token.png" alt="Alpha Token & Dynamic TAO">
+    </div>
+  </article>
 
-RedTeam (Subnet 61) is pioneering a new approach to cybersecurity research by leveraging decentralized AI and blockchain technology. We create a competitive environment where miners develop cutting-edge solutions to bypass various detection methodologies, while validators ensure quality and security.
+  <article class="blog-post">
+    <div class="post-content">
+      <h2><a href="blog/posts/monetization-opportunities/">Unlocking Value: Monetising RedTeam's Outputs</a></h2>
+      <p class="post-excerpt">Learn how miner outputs, challenge components, and third-party integrations can generate real value in the ecosystem.</p>
+      <div class="post-meta">
+        <span class="post-date">Jan 20, 2025</span>
+        <span class="post-separator">·</span>
+        <span class="post-tags">Security Research, Tutorials</span>
+      </div>
+    </div>
+    <div class="post-image">
+      <img src="assets/images/decentralized-cybersecurity2.webp" alt="Monetization">
+    </div>
+  </article>
 
-## Our Mission
+  <article class="blog-post">
+    <div class="post-content">
+      <h2><a href="blog/posts/bot-detection-challenges/">Bot Challenges Arrive to RedTeam</a></h2>
+      <p class="post-excerpt">A new wave of advanced bot detection challenges has been released to Subnet 61, raising the bar for security testing.</p>
+      <div class="post-meta">
+        <span class="post-date">Jan 15, 2025</span>
+        <span class="post-separator">·</span>
+        <span class="post-tags">Challenges, News</span>
+      </div>
+    </div>
+    <div class="post-image">
+      <img src="assets/images/decentralized-cybersecurity.png" alt="Bot Challenges">
+    </div>
+  </article>
 
-- **Decentralized Cybersecurity:** Building a self-sustaining ecosystem for cybersecurity innovation
-- **Competitive Challenges:** Miners compete to solve real-world security problems
-- **Community-Driven:** Stakeholders govern the subnet through the Alpha token
-- **Enterprise Ready:** Providing solutions for businesses to strengthen their defenses
+  <article class="blog-post">
+    <div class="post-content">
+      <h2><a href="blog/posts/an.structure-update/">Update in Subnet Structure</a></h2>
+      <p class="post-excerpt">Major changes to protect miners' intellectual property: hidden Docker Hub IDs, encryption detection, and dashboard improvements.</p>
+      <div class="post-meta">
+        <span class="post-date">Oct 2, 2025</span>
+        <span class="post-separator">·</span>
+        <span class="post-tags">Announcement, News</span>
+      </div>
+    </div>
+    <div class="post-image">
+      <img src="assets/images/annoucements/redteam-dashboard.png" alt="Subnet Structure">
+    </div>
+  </article>
 
-## Key Focus Areas
-
-### Bot Detection
-
-Developing and testing advanced bot detection bypass techniques to help companies strengthen their security systems.
-
-### Challenge Marketplace
-
-A decentralized bug bounty platform where enterprises can commission custom security challenges.
-
-### Open Source Tools
-
-SDKs and detection modules for developers to build commercial security products.
-
-## Get Started
-
-Visit our [Blog](blog/index.md) to read about the latest updates, technical deep-dives, and announcements from the RedTeam Subnet ecosystem.
-
-## Links
-
-- [GitHub](https://github.com/RedTeamSubnet)
-- [Official Documentation](https://docs.theredteam.io)
+</div>
