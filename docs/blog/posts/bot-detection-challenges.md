@@ -52,7 +52,7 @@ Enhanced stability in centralized scoring to help newly joining validators achie
 
 ### 5. New Dashboard Integration
 
-A new dashboard has been introduced: http://storage.redteam.technology/
+A new dashboard has been introduced: [http://storage.redteam.technology/](http://storage.redteam.technology/)
 
 ### 6. CR3 Adoption
 
