@@ -1,6 +1,6 @@
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/blog/" title="{{ config.site_name }}" class="md-header__button md-logo" aria-label="{{ config.site_name }}" data-md-component="logo">
+    <a href="{{ '' | url }}" title="{{ config.site_name }}" class="md-header__button md-logo" aria-label="{{ config.site_name }}" data-md-component="logo">
       <!-- Logo SVG -->
       <img src="{{ config.theme.logo | url }}" alt="RedTeam Logo" class="md-header__logo-img">
       <span class="md-header__logo-text">
@@ -17,9 +17,9 @@
       </div>
     </div>
     <div class="md-header__nav-links">
-      <a href="/blog/" class="md-header__nav-link">Blog</a>
-      <a href="/importants/" class="md-header__nav-link">Important</a>
-      <a href="/announcements/" class="md-header__nav-link">Announcements</a>
+      <a href="{{ 'blog/' | url }}" class="md-header__nav-link">Blog</a>
+      <a href="{{ 'important/' | url }}" class="md-header__nav-link">Important</a>
+      <a href="{{ 'announcements/' | url }}" class="md-header__nav-link">Announcements</a>
     </div>
 
     <!-- Theme toggle switch (Radix UI style) -->
