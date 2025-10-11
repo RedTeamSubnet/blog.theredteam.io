@@ -1,38 +1,60 @@
 ---
 title: Announcements
+hide:
+  - navigation
+  - toc
 ---
 
-# Announcements
+<div class="blog-header">
+  <h1>Announcements</h1>
+  <p class="blog-subtitle">Latest announcements and updates from the RedTeam Subnet team.</p>
+</div>
 
-Latest announcements and updates from the RedTeam Subnet team.
+<div class="blog-posts">
 
-<div class="grid cards" markdown>
+  <article class="blog-post">
+    <div class="post-content">
+      <h2><a href="../blog/posts/dynamic-tao-alpha-token/">Alpha Token & Dynamic TAO</a></h2>
+      <p class="post-excerpt">How Dynamic TAO and the Alpha token reshape RedTeam's decentralized cybersecurity incentives.</p>
+      <div class="post-meta">
+        <span class="post-date">Feb 1, 2025</span>
+        <span class="post-separator">·</span>
+        <span class="post-tags">Security Research, News</span>
+      </div>
+    </div>
+    <div class="post-image">
+      <img src="../assets/images/alpha-token.png" alt="Alpha Token & Dynamic TAO">
+    </div>
+  </article>
 
--   **Update in Subnet Structure**  
-    <small>Oct 2, 2025 · Announcement, News</small>  
+  <article class="blog-post">
+    <div class="post-content">
+      <h2><a href="../blog/posts/bot-detection-challenges/">Bot Challenges Arrive to RedTeam</a></h2>
+      <p class="post-excerpt">A new wave of bot detection challenges has been released to Subnet 61, advancing our security testing suite.</p>
+      <div class="post-meta">
+        <span class="post-date">Jan 15, 2025</span>
+        <span class="post-separator">·</span>
+        <span class="post-tags">Challenges, News</span>
+      </div>
+    </div>
+    <div class="post-image">
+      <img src="../assets/images/decentralized-cybersecurity.png" alt="Bot Challenges">
+    </div>
+  </article>
 
-    ---  
-
-    Major changes to protect miners’ intellectual property: hidden Docker Hub IDs, encryption detection, and dashboard improvements.  
-
-    [:octicons-arrow-right-24: Read more](../blog/posts/an.structure-update.md){ .md-button }
-    
--   **Bot Challenges Arrive to RedTeam**  
-    <small>Jan 15, 2025 · Challenges, News</small>
-
-    ---
-
-    A new wave of bot detection challenges has been released to Subnet 61, advancing our security testing suite.
-
-    [:octicons-arrow-right-24: Read more](../blog/posts/bot-detection-challenges.md){ .md-button }
-
--   **Alpha Token & Dynamic TAO**  
-    <small>Feb 1, 2025 · Security Research, News</small>
-
-    ---
-
-    How Dynamic TAO and the Alpha token reshape RedTeam’s decentralized cybersecurity incentives.
-
-    [:octicons-arrow-right-24: Read more](../blog/posts/dynamic-tao-alpha-token.md){ .md-button }
+  <article class="blog-post">
+    <div class="post-content">
+      <h2><a href="../blog/posts/an.structure-update/">Update in Subnet Structure</a></h2>
+      <p class="post-excerpt">Major changes to protect miners' intellectual property: hidden Docker Hub IDs, encryption detection, and dashboard improvements.</p>
+      <div class="post-meta">
+        <span class="post-date">Oct 2, 2025</span>
+        <span class="post-separator">·</span>
+        <span class="post-tags">Announcement, News</span>
+      </div>
+    </div>
+    <div class="post-image">
+      <img src="../assets/images/annoucements/redteam-dashboard.png" alt="Subnet Structure">
+    </div>
+  </article>
 
 </div>
