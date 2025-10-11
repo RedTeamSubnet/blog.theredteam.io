@@ -1,4 +1,10 @@
-# Changelog
+---
+title: Release Notes
+hide:
+  - navigation
+---
+
+# 📌 Release Notes
 
 ## v0.1.0-251011 (2025-10-11)
 
