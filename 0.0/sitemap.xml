@@ -5,19 +5,7 @@
          <lastmod>2025-10-11</lastmod>
     </url>
     <url>
-         <loc>https://blog.theredteam.io/0.0/bar/</loc>
-         <lastmod>2025-10-11</lastmod>
-    </url>
-    <url>
-         <loc>https://blog.theredteam.io/0.0/foo/</loc>
-         <lastmod>2025-10-11</lastmod>
-    </url>
-    <url>
-         <loc>https://blog.theredteam.io/0.0/getting-started/</loc>
-         <lastmod>2025-10-11</lastmod>
-    </url>
-    <url>
-         <loc>https://blog.theredteam.io/0.0/release-notes/</loc>
+         <loc>https://blog.theredteam.io/0.0/CUSTOMIZATION/</loc>
          <lastmod>2025-10-11</lastmod>
     </url>
     <url>
@@ -54,6 +42,10 @@
     </url>
     <url>
          <loc>https://blog.theredteam.io/0.0/important/</loc>
+         <lastmod>2025-10-11</lastmod>
+    </url>
+    <url>
+         <loc>https://blog.theredteam.io/0.0/importants/</loc>
          <lastmod>2025-10-11</lastmod>
     </url>
 </urlset>
