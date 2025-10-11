@@ -7,7 +7,8 @@ hide:
 
 <div class="blog-header">
   <h1>Announcements</h1>
-  <p class="blog-subtitle">Latest news, updates, and announcements from the RedTeam Subnet team.</p>
+  <p class="blog-subtitle">Official updates from the RedTeam. Check here for the latest news, event notices, and important messages. It's where we post what's new, what's coming, and what everyone should know.
+</p>
 </div>
 
 <div class="blog-posts">
