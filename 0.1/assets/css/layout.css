@@ -1,0 +1,103 @@
+/* ========================================
+   LAYOUT & SPACING CUSTOMIZATION
+   Control page width, margins, padding, and spacing
+   ======================================== */
+
+:root {
+	/* === CONTENT WIDTH === */
+	--custom-content-max-width: 1200px;
+	/* Maximum content width */
+	--custom-content-narrow-width: 900px;
+	/* Narrower content (for reading) */
+	--custom-content-wide-width: 1400px;
+	/* Wider content (for tables/code) */
+
+	/* === SPACING SCALE === */
+	--custom-space-xs: 0.5rem;
+	/* 8px */
+	--custom-space-sm: 0.75rem;
+	/* 12px */
+	--custom-space-md: 1rem;
+	/* 16px */
+	--custom-space-lg: 1.5rem;
+	/* 24px */
+	--custom-space-xl: 2rem;
+	/* 32px */
+	--custom-space-2xl: 2.5rem;
+	/* 40px */
+	--custom-space-3xl: 3rem;
+	/* 48px */
+
+	/* === BORDER RADIUS === */
+	--custom-radius-sm: 4px;
+	--custom-radius-md: 8px;
+	--custom-radius-lg: 12px;
+	--custom-radius-xl: 16px;
+
+	/* === CONTAINER PADDING === */
+	--custom-padding-mobile: 1rem;
+	--custom-padding-tablet: 1.5rem;
+	--custom-padding-desktop: 2rem;
+}
+
+/* Main content container */
+.md-content__inner {
+	max-width: var(--custom-content-max-width);
+	margin: 0 auto;
+	padding-top: var(--custom-space-xl);
+	padding-bottom: var(--custom-space-3xl);
+}
+
+/* Heading spacing */
+.md-typeset h1 {
+	margin-top: var(--custom-space-2xl);
+	margin-bottom: var(--custom-space-lg);
+}
+
+.md-typeset h2 {
+	margin-top: var(--custom-space-2xl);
+	margin-bottom: var(--custom-space-md);
+}
+
+.md-typeset h3 {
+	margin-top: var(--custom-space-xl);
+	margin-bottom: var(--custom-space-sm);
+}
+
+/* Paragraph spacing */
+.md-typeset p {
+	margin-top: var(--custom-space-md);
+	margin-bottom: var(--custom-space-md);
+}
+
+/* List spacing */
+.md-typeset ul,
+.md-typeset ol {
+	margin: var(--custom-space-md) 0;
+}
+
+.md-typeset li {
+	margin: var(--custom-space-sm) 0;
+}
+
+/* Section spacing */
+.md-typeset hr {
+	margin: var(--custom-space-2xl) 0;
+}
+
+/* Responsive padding */
+@media screen and (max-width: 76.1875em) {
+	.md-content__inner {
+		padding-left: var(--custom-padding-tablet);
+		padding-right: var(--custom-padding-tablet);
+	}
+}
+
+@media screen and (max-width: 44.9375em) {
+	.md-content__inner {
+		padding-top: var(--custom-space-lg);
+		padding-bottom: var(--custom-space-xl);
+		padding-left: var(--custom-padding-mobile);
+		padding-right: var(--custom-padding-mobile);
+	}
+}
