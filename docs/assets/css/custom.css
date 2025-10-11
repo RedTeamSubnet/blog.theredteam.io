@@ -1,18 +1,123 @@
-
-/* Custom CSS Variables */
+Custom CSS Variables
 :root {
-    --md-primary-fg-color: #510404;
-    --md-accent-fg-color: #ff5252;
     --content-max-width: 1200px;
     --shadow-subtle: 0 2px 8px rgba(0, 0, 0, 0.08);
     --shadow-medium: 0 4px 16px rgba(0, 0, 0, 0.12);
 }
+
+/* Custom Header Styles - Red Background for Both Modes */
+.md-header {
+  background-color: var(--md-primary-fg-color) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-bottom: none;
+}
+
+.md-header__logo-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.logo-red {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.logo-team {
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.md-header__nav-links {
+  display: flex;
+  gap: 2rem;
+  margin-left: auto;
+  margin-right: 1rem;
+  align-items: center;
+}
+
+/* Nav links - White text on red background */
+.md-header__nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  opacity: 0.9;
+}
+
+.md-header__nav-link:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+/* Theme toggle button styling - White icons */
+.md-header__option {
+  margin-right: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.md-header__button[for^="__palette"] {
+  color: #ffffff !important;
+}
+
+.md-header__button[for^="__palette"] svg {
+  fill: #ffffff !important;
+  opacity: 1 !important;
+}
+
+.md-option:checked + label {
+  display: block !important;
+}
+
+.md-option:not(:checked) + label {
+  display: none;
+}
+
+.md-header__option .md-select {
+  display: flex;
+  align-items: center;
+}
+
+.md-header__option label[hidden] {
+  display: block !important;
+  visibility: visible !important;
+}
+
+/* Search icon - White */
+.md-header .md-icon svg {
+  fill: #ffffff;
+}
+
+/* Make hamburger menu icon white on mobile */
+.md-header__button.md-icon svg {
+  fill: #ffffff;
+}
+
+/* Header Logo Image - Light logo with white filter for visibility on red header */
+.md-header__logo-img {
+  display: inline-block;
+  height: 28px;
+  width: auto;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  filter: brightness(0) invert(1); /* Makes logo white for red background */
+  transition: opacity 0.2s ease;
+}
+
+.md-header__button.md-logo {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
 /* Announcements grid: consistent card spacing and subtle borders */
 .md-typeset .grid.cards > ul > li {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 200px;      /* adjust as needed */
+  min-height: 200px;
   padding: 1rem;
   margin-bottom: 1rem;
   border: 1px solid rgba(255,255,255,0.08);
@@ -23,7 +128,7 @@
 /* Card grid title styling - make titles red */
 .md-typeset .grid.cards > ul > li strong,
 .md-typeset .grid.cards > ol > li strong {
-    color: #d32f2f !important;
+    color: var(--md-primary-fg-color) !important;
 }
 
 /* Enhanced Typography */
@@ -108,9 +213,46 @@
     padding-bottom: 3rem;
 }
 
+/* Blog post page container with borders */
+.md-content__inner > article,
+.md-content__inner > .md-typeset {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 3rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  background: var(--md-default-bg-color);
+}
+
+/* Light mode border */
+[data-md-color-scheme="default"] .md-content__inner > article,
+[data-md-color-scheme="default"] .md-content__inner > .md-typeset {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* Dark mode border */
+[data-md-color-scheme="slate"] .md-content__inner > article,
+[data-md-color-scheme="slate"] .md-content__inner > .md-typeset {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Hide the tag pills/badges at top if present */
+.md-content__inner .md-tags {
+  display: none;
+}
+
+/* Adjust spacing for blog posts */
+.md-content__inner > article h1:first-child,
+.md-content__inner > .md-typeset h1:first-child {
+  margin-top: 0;
+}
+
 /* Enhanced Code Blocks */
 .md-typeset code {
-    background-color: rgba(211, 47, 47, 0.08);
+    background-color: var(--md-code-bg-color);
+    color: var(--md-code-fg-color);
     padding: 0.2em 0.4em;
     border-radius: 4px;
     font-size: 0.9em;
@@ -220,7 +362,8 @@
         transparent,
         var(--md-primary-fg-color),
         transparent);
-    margin: 2.5rem 0;
+    margin: 2rem 0;
+    opacity: 0.1;
 }
 
 /* Smooth Scrolling */
@@ -372,3 +515,5 @@ html {
         padding-bottom: 2rem;
     }
 }
+
+/* Removed more duplicate color definitions - colors.css and components.css handle these */

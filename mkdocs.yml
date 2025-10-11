@@ -1,14 +1,15 @@
-site_name: ""
-site_description: "This is a short description of the project."
+site_name: "RedTeam Blog"
+site_description: "RedTeam Blog - Security research, challenges, tutorials, and insights from the RedTeam community"
 site_url: https://blog.theredteam.io
 repo_name: RedTeamSubnet
 repo_url: https://github.com/RedTeamSubnet
 extra_css:
-  - assets/css/colors.css # Color scheme (primary, accent, backgrounds)
+  # Critical CSS first - colors load before anything else to prevent flash
+  - assets/css/colors.css # Color scheme (primary, accent, backgrounds) - CRITICAL
+  - assets/css/layout.css # Spacing, padding, margins - needed for initial paint
   - assets/css/typography.css # Fonts, sizes, weights
-  - assets/css/layout.css # Spacing, padding, margins
   - assets/css/components.css # Cards, buttons, tables, etc.
-  - assets/css/custom.css # Additional custom styles
+  - assets/css/custom.css # Additional custom styles - loaded last
 theme:
   name: material
   language: en
@@ -17,7 +18,7 @@ theme:
     text: Public Sans
     code: JetBrains Mono
   logo: assets/images/logo/logo.light.svg
-  favicon: assets/images/logo/logo.dark.svg
+  favicon: assets/images/favicon/favicon.ico
   icon:
     repo: fontawesome/brands/github
   features:
@@ -28,29 +29,16 @@ theme:
     - navigation.top
     - navigation.footer
     - toc.follow
-    - toc.integrate
+    # - toc.integrate
     - search.suggest
     - search.highlight
     - content.code.copy
     - content.code.annotate
   palette:
-    # Palette toggle for automatic mode
-    - media: "(prefers-color-scheme)"
-      toggle:
-        icon: material/brightness-auto
-        name: Switch to light mode
-    # Palette toggle for light mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-    # Palette toggle for dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      toggle:
-        icon: material/brightness-4
-        name: Switch to system preference
+    # Set primary/accent colors to red to prevent blue flash
+    # No scheme specified - let JavaScript control it via data-md-color-scheme
+    primary: red
+    accent: red
 markdown_extensions:
   - abbr
   - admonition
@@ -93,7 +81,7 @@ extra_javascript:
   - assets/js/theme-toggle.js
 plugins:
   - meta
-  # - tags
+  - tags
   - search
   # - awesome-nav:
   #     expand: true
@@ -127,6 +115,7 @@ extra:
     - icon: fontawesome/solid/book
       link: https://docs.theredteam.io/
 copyright: Copyright &copy; 2025 - RedTeam
+
 nav:
   - Home: index.md
   - Blog: blog/index.md

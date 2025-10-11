@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  <!-- CRITICAL: Apply theme BEFORE any content renders to prevent flash -->
+  <script>
+    (function() {
+      var KEY = 'rd_theme';
+      var saved;
+      try { saved = localStorage.getItem(KEY); } catch (e) { saved = null; }
+      var scheme = saved || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'slate' : 'default');
+      var isDark = scheme === 'slate';
+
+      // Apply to documentElement immediately
+      document.documentElement.setAttribute('data-md-color-scheme', scheme);
+
+      // Apply inline styles for instant rendering
+      document.documentElement.style.cssText =
+        'background-color:' + (isDark ? '#0a0a0a' : '#ffffff') + ';' +
+        'color:' + (isDark ? '#e0e0e0' : '#1a1a1a') + ';';
+    })();
+  </script>
+
+  <!-- Critical inline CSS to prevent flash -->
+  <style>
+    /* Set default colors immediately based on attribute */
+    html[data-md-color-scheme="slate"] {
+      background-color: #0a0a0a !important;
+      color: #e0e0e0 !important;
+    }
+    html[data-md-color-scheme="default"] {
+      background-color: #ffffff !important;
+      color: #1a1a1a !important;
+    }
+    /* Ensure body inherits immediately */
+    body {
+      background-color: inherit;
+      color: inherit;
+    }
+  </style>
+  {{ super() }}
+{% endblock %}
+
+{% block htmltitle %}
+  {{ super() }}
+{% endblock %}
+
+{% block styles %}
+  <!-- Apply theme to body on DOMContentLoaded -->
+  <script>
+    (function() {
+      const KEY = 'rd_theme';
+      const getSaved = () => {
+        try { return localStorage.getItem(KEY); } catch (e) { return null; }
+      };
+      const systemPref = () => (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'slate' : 'default');
+      const scheme = getSaved() || systemPref();
+
+      // Apply to <body> immediately (before DOMContentLoaded)
+      document.body?.setAttribute('data-md-color-scheme', scheme);
+
+      // Update toggle button when DOM is ready
+      document.addEventListener('DOMContentLoaded', function() {
+        document.body.setAttribute('data-md-color-scheme', scheme);
+
+        const btn = document.getElementById('theme-toggle');
+        if (btn) {
+          const isDark = scheme === 'slate';
+          btn.setAttribute('data-state', isDark ? 'checked' : 'unchecked');
+          btn.setAttribute('aria-checked', isDark ? 'true' : 'false');
+          btn.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+        }
+
+        // Enable smooth transitions AFTER page loads (prevents flash)
+        setTimeout(() => {
+          document.documentElement.style.transition = 'background-color 200ms ease, color 200ms ease';
+          document.body.style.transition = 'background-color 200ms ease, color 200ms ease';
+        }, 100);
+      });
+    })();
+  </script>
+
+  {{ super() }}
+{% endblock %}
