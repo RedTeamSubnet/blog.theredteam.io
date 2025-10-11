@@ -101,6 +101,15 @@ plugins:
 extra:
   # version:
   #   provider: mike
+  blog_authors:
+    oscar:
+      name: Oscar
+      avatar: https://avatars.githubusercontent.com/ohayek
+      url: https://github.com/ohayek
+    javokhir:
+      name: Javokhir
+      avatar: https://avatars.githubusercontent.com/aliyuldashev
+      url: https://github.com/aliyuldashev
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/RedTeamSubnet

@@ -58,4 +58,4 @@ We are making important changes to improve fairness and protect miners' intellec
 
 ---
 
-These updates are designed to keep the system **fair, transparent, and supportive** of miners’ contributions.
+These updates are designed to keep the system **fair, transparent, and supportive** of miners' contributions.

@@ -1,0 +1,38 @@
+{% if page.meta and page.meta.authors %}
+  <!-- Author Information Byline -->
+  <div class="post-meta-info">
+    <div class="post-authors">
+      {% for author_id in page.meta.authors %}
+        {% set author_data = config.extra.blog_authors[author_id] %}
+        {% if author_data %}
+          <div class="post-author">
+            {% if author_data.avatar %}
+              <img src="{{ author_data.avatar }}" alt="{{ author_data.name }}" class="post-author-avatar">
+            {% endif %}
+            {% if author_data.url %}
+              <a href="{{ author_data.url }}" class="post-author-name" target="_blank" rel="noopener">
+                {{ author_data.name }}
+              </a>
+            {% else %}
+              <span class="post-author-name">{{ author_data.name }}</span>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+    <div class="post-meta-details">
+      {% if page.meta.date and page.meta.date.created %}
+        <span class="post-meta-date">
+          {{ page.meta.date.created.strftime('%B %d, %Y') }}
+        </span>
+      {% endif %}
+      {% if page.meta.readtime %}
+        <span class="post-meta-separator">·</span>
+        <span class="post-meta-readtime">{{ page.meta.readtime }} min read</span>
+      {% endif %}
+    </div>
+  </div>
+{% endif %}
+
+<!-- Include default content -->
+{{ page.content }}
