@@ -42,7 +42,7 @@ Custom CSS Variables
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 500;
-  transition: all 0.2s;
+  transition: opacity 0.2s, transform 0.2s;
   opacity: 0.9;
 }
 
@@ -93,6 +93,20 @@ Custom CSS Variables
 /* Make hamburger menu icon white on mobile */
 .md-header__button.md-icon svg {
   fill: #ffffff;
+}
+
+/* Mobile Navigation Drawer Styling */
+.md-nav--primary .md-nav__link {
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.md-nav--primary .md-nav__link:hover {
+  background-color: rgba(211, 47, 47, 0.05);
+  color: var(--md-primary-fg-color);
+}
+
+[data-md-color-scheme="slate"] .md-nav--primary .md-nav__link:hover {
+  background-color: rgba(239, 83, 80, 0.1);
 }
 
 /* Header Logo Image - Light logo with white filter for visibility on red header */
@@ -249,6 +263,79 @@ Custom CSS Variables
   margin-top: 0;
 }
 
+/* Author Information (Below Title) */
+.post-meta-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 1.5rem 0 2rem 0;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+[data-md-color-scheme="slate"] .post-meta-info {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.post-authors {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.post-author {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.post-author-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--md-primary-fg-color);
+}
+
+.post-author-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--md-default-fg-color);
+  text-decoration: none;
+  border-bottom: none !important;
+  transition: color 0.2s;
+}
+
+.post-author-name:hover {
+  color: var(--md-primary-fg-color);
+}
+
+.post-meta-details {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--md-default-fg-color);
+  opacity: 0.7;
+}
+
+.post-meta-separator {
+  opacity: 0.5;
+}
+
+/* Mobile - Stack author info vertically */
+@media screen and (max-width: 600px) {
+  .post-meta-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .post-meta-details {
+    width: 100%;
+  }
+}
+
 /* Enhanced Code Blocks */
 .md-typeset code {
     background-color: var(--md-code-bg-color);
@@ -294,7 +381,7 @@ Custom CSS Variables
 .md-typeset .grid.cards > ol > li {
     border-radius: 12px;
     box-shadow: var(--shadow-medium);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
@@ -403,7 +490,7 @@ html {
   gap: 2rem;
   padding: 2rem 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  transition: all 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
 [data-md-color-scheme="slate"] .blog-post {
@@ -485,6 +572,22 @@ html {
     }
 }
 
+/* Mobile Header - Hide nav links on tablets and below */
+@media screen and (max-width: 960px) {
+  .md-header__nav-links {
+    display: none;
+  }
+
+  /* Adjust header spacing on tablets */
+  .md-header__logo-text {
+    font-size: 1.3rem;
+  }
+
+  .md-header__logo-img {
+    height: 24px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .blog-post {
     flex-direction: column-reverse;
@@ -503,6 +606,27 @@ html {
   .post-content h2 {
     font-size: 1.2rem;
   }
+
+  /* Mobile header adjustments */
+  .md-header__logo-text {
+    font-size: 1.2rem;
+  }
+
+  .md-header__logo-img {
+    height: 22px;
+    margin-right: 0.35rem;
+  }
+
+  /* Adjust theme toggle size on mobile */
+  .theme-switch {
+    height: 1rem;
+    width: 1.75rem;
+  }
+
+  .theme-switch-thumb {
+    width: 0.875rem;
+    height: 0.875rem;
+  }
 }
 
 @media screen and (max-width: 44.9375em) {
@@ -513,6 +637,15 @@ html {
     .md-content__inner {
         padding-top: 1.5rem;
         padding-bottom: 2rem;
+    }
+
+    /* Very small screens - further reduce header elements */
+    .md-header__logo-text {
+      font-size: 1.1rem;
+    }
+
+    .md-header__logo-img {
+      height: 20px;
     }
 }
 
