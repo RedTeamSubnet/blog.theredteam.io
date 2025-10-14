@@ -19,6 +19,8 @@ hide:
       <div class="post-meta">
         <span class="post-date">Feb 1, 2025</span>
         <span class="post-separator">·</span>
+        <span class="post-author">Oscar</span>
+        <span class="post-separator">·</span>
         <span class="post-tags">Security Research, News</span>
       </div>
     </div>
@@ -33,6 +35,8 @@ hide:
       <p class="post-excerpt">Learn how miner outputs, challenge components, and third-party integrations can generate real value in the ecosystem.</p>
       <div class="post-meta">
         <span class="post-date">Jan 20, 2025</span>
+        <span class="post-separator">·</span>
+        <span class="post-author">Oscar</span>
         <span class="post-separator">·</span>
         <span class="post-tags">Security Research, Tutorials</span>
       </div>
@@ -49,6 +53,8 @@ hide:
       <div class="post-meta">
         <span class="post-date">Jan 15, 2025</span>
         <span class="post-separator">·</span>
+        <span class="post-author">Oscar</span>
+        <span class="post-separator">·</span>
         <span class="post-tags">Challenges, News</span>
       </div>
     </div>
@@ -63,6 +69,8 @@ hide:
       <p class="post-excerpt">Major changes to protect miners' intellectual property: hidden Docker Hub IDs, encryption detection, and dashboard improvements.</p>
       <div class="post-meta">
         <span class="post-date">Oct 2, 2025</span>
+        <span class="post-separator">·</span>
+        <span class="post-author">Javokhir</span>
         <span class="post-separator">·</span>
         <span class="post-tags">Announcement, News</span>
       </div>

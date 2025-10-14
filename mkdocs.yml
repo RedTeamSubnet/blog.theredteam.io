@@ -79,6 +79,7 @@ extra_javascript:
   - assets/js/mathjax.js
   - assets/js/tex-mml-chtml.js
   - assets/js/theme-toggle.js
+  - assets/js/gradient-search.js
 plugins:
   - meta
   - tags

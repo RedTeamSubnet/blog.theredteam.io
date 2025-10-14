@@ -7,6 +7,13 @@
         <span class="logo-red">Red</span><span class="logo-team">Team</span>
       </span>
     </a>
+
+    <!-- Clean Search Input -->
+    <div class="header-search-container">
+      <input placeholder="Search..." class="header-search-input" id="custom-search-input" type="text" autocomplete="off" />
+      <div class="search-results-dropdown" id="search-results-dropdown"></div>
+    </div>
+
     <label class="md-header__button md-icon" for="__drawer">
       {% include ".icons/material/menu.svg" %}
     </label>
@@ -36,7 +43,8 @@
       </button>
     </div>
 
-    <label class="md-header__button md-icon" for="__search">
+    <!-- Search icon (mobile only) -->
+    <label class="md-header__button md-icon mobile-search-icon" for="__search">
       {% include ".icons/material/magnify.svg" %}
     </label>
     {% include "partials/search.html" %}

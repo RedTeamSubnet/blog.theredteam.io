@@ -85,6 +85,158 @@ Custom CSS Variables
   visibility: visible !important;
 }
 
+/* Clean Search Input */
+.header-search-container {
+  display: flex;
+  align-items: center;
+  margin-left: 1.5rem;
+}
+
+.header-search-input {
+  border: 2px solid transparent;
+  width: 30em;
+  height: 2.5em;
+  padding-left: 0.8em;
+  outline: none;
+  overflow: hidden;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  transition: all 0.5s;
+  color: rgb(19, 19, 19);
+}
+
+.header-search-input:hover,
+.header-search-input:focus {
+  border: 2px solid #4a9dec;
+  box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
+  background-color: white;
+}
+
+.header-search-input::placeholder {
+  color: rgba(19, 19, 19, 0.5);
+}
+
+/* Dark mode adjustments for search input */
+[data-md-color-scheme="slate"] .header-search-input {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-md-color-scheme="slate"] .header-search-input:hover,
+[data-md-color-scheme="slate"] .header-search-input:focus {
+  background-color: #333333;
+  border: 2px solid #ef5350;
+  box-shadow: 0px 0px 0px 7px rgba(239, 83, 80, 15%);
+}
+
+[data-md-color-scheme="slate"] .header-search-input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* Hide mobile search icon on desktop */
+.mobile-search-icon {
+  display: none;
+}
+
+/* Hide the old MkDocs search modal completely */
+.md-search__overlay,
+.md-search__inner {
+  display: none !important;
+}
+
+/* Search Results Dropdown */
+.search-results-dropdown {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  width: 100%;
+  max-width: 1200px;
+  max-height: 500px;
+  overflow-y: auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 1000;
+  margin-top: 0.25rem;
+}
+
+.search-results-dropdown.active {
+  display: block;
+}
+
+.search-result-item {
+  display: block;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.search-result-item:last-child {
+  border-bottom: none;
+}
+
+.search-result-item:hover {
+  background-color: rgba(74, 157, 236, 0.05);
+  text-decoration: none;
+}
+
+.search-result-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #1a1a1a;
+  margin-bottom: 0.25rem;
+}
+
+.search-result-text {
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+.search-result-empty {
+  padding: 2rem;
+  text-align: center;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+/* Dark mode search results */
+[data-md-color-scheme="slate"] .search-results-dropdown {
+  background: #1a1a1a;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-md-color-scheme="slate"] .search-result-item {
+  border-bottom-color: rgba(255, 255, 255, 0.05);
+}
+
+[data-md-color-scheme="slate"] .search-result-item:hover {
+  background-color: rgba(74, 157, 236, 0.1);
+}
+
+[data-md-color-scheme="slate"] .search-result-title {
+  color: #ffffff;
+}
+
+[data-md-color-scheme="slate"] .search-result-text {
+  color: #aaa;
+}
+
+[data-md-color-scheme="slate"] .search-result-empty {
+  color: #666;
+}
+
+/* Position the container relatively for dropdown */
+.header-search-container {
+  position: relative;
+}
+
 /* Search icon - White */
 .md-header .md-icon svg {
   fill: #ffffff;
@@ -586,6 +738,22 @@ html {
   .md-header__logo-img {
     height: 24px;
   }
+
+  /* Adjust search input on tablets */
+  .header-search-container {
+    margin-left: 1rem;
+  }
+
+  .header-search-input {
+    width: 24em;
+    height: 2.3em;
+    font-size: 0.9rem;
+  }
+
+  /* Adjust search results dropdown on tablets */
+  .search-results-dropdown {
+    max-width: 1000px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -626,6 +794,21 @@ html {
   .theme-switch-thumb {
     width: 0.875rem;
     height: 0.875rem;
+  }
+
+  /* Hide search input on mobile, show search icon instead */
+  .header-search-container {
+    display: none;
+  }
+
+  .mobile-search-icon {
+    display: flex !important;
+  }
+
+  /* Make sure the old MkDocs search modal works on mobile */
+  .md-search__overlay,
+  .md-search__inner {
+    display: block !important;
   }
 }
 
