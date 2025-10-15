@@ -14,6 +14,21 @@ hide:
 
   <article class="blog-post">
     <div class="post-content">
+      <h2><a href="posts/an.ab_sniffer_v4/">Release of Auto Browser Sniffer</a></h2>
+      <p class="post-excerpt">We are making important changes to improve fairness and protect miners' intellectual property </p>
+      <div class="post-meta">
+        <span class="post-date">Oct 15, 2025</span>
+        <span class="post-separator">·</span>
+        <span class="post-tags">Challenge, News, ABS</span>
+      </div>
+    </div>
+    <div class="post-image">
+      <img src="../assets/images/alpha-token.png" alt="Alpha Token & Dynamic TAO">
+    </div>
+  </article>
+  
+  <article class="blog-post">
+    <div class="post-content">
       <h2><a href="posts/dynamic-tao-alpha-token/">Alpha Token & Dynamic TAO</a></h2>
       <p class="post-excerpt">Discover how Dynamic TAO and Alpha Token reshape RedTeam's decentralized cybersecurity and incentive model.</p>
       <div class="post-meta">
