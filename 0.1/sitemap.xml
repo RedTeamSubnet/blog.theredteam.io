@@ -2,54 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://blog.theredteam.io/0.1/</loc>
-         <lastmod>2025-10-12</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://blog.theredteam.io/0.1/CUSTOMIZATION/</loc>
-         <lastmod>2025-10-12</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://blog.theredteam.io/0.1/release-notes/</loc>
-         <lastmod>2025-10-12</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://blog.theredteam.io/0.1/announcements/</loc>
-         <lastmod>2025-10-12</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://blog.theredteam.io/0.1/blog/</loc>
-         <lastmod>2025-10-12</lastmod>
+         <lastmod>2025-10-15</lastmod>
+    </url>
+    <url>
+         <loc>https://blog.theredteam.io/0.1/blog/posts/an.ab_sniffer_v4/</loc>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://blog.theredteam.io/0.1/blog/posts/an.structure-update/</loc>
-         <lastmod>2025-10-12</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://blog.theredteam.io/0.1/blog/posts/bot-detection-challenges/</loc>
-         <lastmod>2025-10-12</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://blog.theredteam.io/0.1/blog/posts/dynamic-tao-alpha-token/</loc>
-         <lastmod>2025-10-12</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://blog.theredteam.io/0.1/blog/posts/monetization-opportunities/</loc>
-         <lastmod>2025-10-12</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://blog.theredteam.io/0.1/dev/build/</loc>
-         <lastmod>2025-10-12</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://blog.theredteam.io/0.1/dev/test/</loc>
-         <lastmod>2025-10-12</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://blog.theredteam.io/0.1/important/</loc>
-         <lastmod>2025-10-12</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://blog.theredteam.io/0.1/importants/</loc>
-         <lastmod>2025-10-12</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
 </urlset>
