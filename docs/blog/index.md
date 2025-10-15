@@ -23,7 +23,7 @@ hide:
       </div>
     </div>
     <div class="post-image">
-      <img src="../assets/images/alpha-token.png" alt="Alpha Token & Dynamic TAO">
+      <img alt="Add a heading" src="https://github.com/user-attachments/assets/9335e859-90b8-4277-b95f-eabc55e3a041" />
     </div>
   </article>
   
