@@ -1,5 +1,8 @@
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
+    <label class="md-header__button md-icon" for="__drawer">
+      {% include ".icons/material/menu.svg" %}
+    </label>
     <a href="{{ '' | url }}" title="{{ config.site_name }}" class="md-header__button md-logo" aria-label="{{ config.site_name }}" data-md-component="logo">
       <!-- Logo SVG -->
       <img src="{{ config.theme.logo | url }}" alt="RedTeam Logo" class="md-header__logo-img">
@@ -7,9 +10,6 @@
         <span class="logo-red">Red</span><span class="logo-team">Team</span>
       </span>
     </a>
-    <label class="md-header__button md-icon" for="__drawer">
-      {% include ".icons/material/menu.svg" %}
-    </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
