@@ -650,4 +650,14 @@ html {
     }
 }
 
+/* GitHub repo link - White background in mobile drawer */
+@media screen and (max-width: 59.9844em) {
+  .md-nav__source {
+    background-color: #fff;
+    color: var(--md-primary-bg-color);
+    display: block;
+    padding: 0 .2rem;
+  }
+}
+
 /* Removed more duplicate color definitions - colors.css and components.css handle these */
