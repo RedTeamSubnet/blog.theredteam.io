@@ -86,5 +86,18 @@ hide:
       <img src="../assets/images/annoucements/redteam-dashboard.png" alt="Subnet Structure">
     </div>
   </article>
+  <article class="blog-post">
+    <div class="post-content">
+      <h2><a href="../blog/posts/incentive-logic-update/">Miner Linking & Incentive Logic Update</a></h2>
+      <p class="post-excerpt">This improvement ensures that every miner is recognized fairly, no matter how many nodes or UIDs they operate.</p>
+      <div class="post-meta">
+        <span class="post-date">Oct 25, 2025</span>
+        <span class="post-separator">·</span>
+        <span class="post-tags">Announcement, News</span>
+      </div>
+    </div>
+    </div>
+  </article>
+
 
 </div>
