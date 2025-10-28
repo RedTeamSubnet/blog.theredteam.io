@@ -18,7 +18,7 @@ theme:
     text: Public Sans
     code: JetBrains Mono
   logo: assets/images/logo/logo.light.svg
-  favicon: assets/images/favicon/favicon.ico
+  favicon: assets/images/logo/logo.dark.svg
   icon:
     repo: fontawesome/brands/github
   features:
