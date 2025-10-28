@@ -13,6 +13,36 @@ hide:
 
 <div class="blog-posts">
 
+<article class="blog-post">
+    <div class="post-content">
+        <h2><a href="../blog/posts/incentive-logic-update/">Miner Linking & Incentive Logic Update</a></h2>
+        <p class="post-excerpt">This improvement ensures that every miner is recognized fairly, no matter how many nodes or UIDs they operate.</p>
+        <div class="post-meta">
+            <span class="post-date">Oct 25, 2025</span>
+            <span class="post-separator">·</span>
+            <span class="post-tags">Announcement, News</span>
+        </div>
+    </div>
+    <div class="post-image">
+        <img src="../assets/images/diagram-redteam.jpg" alt="Miner Linking & Incentive Logic">
+    </div>
+</article>
+
+<article class="blog-post">
+    <div class="post-content">
+        <h2><a href="../blog/posts/an.ab_sniffer_v4/">Release of Auto Browser Sniffer</a></h2>
+        <p class="post-excerpt">We are making important changes to improve fairness and protect miners' intellectual property </p>
+        <div class="post-meta">
+            <span class="post-date">Oct 15, 2025</span>
+            <span class="post-separator">·</span>
+            <span class="post-tags">Challenge, News, ABS</span>
+        </div>
+    </div>
+    <div class="post-image">
+        <img alt="Add a heading" src="https://github.com/user-attachments/assets/9335e859-90b8-4277-b95f-eabc55e3a041" />
+    </div>
+</article>
+
   <article class="blog-post">
     <div class="post-content">
       <h2><a href="../blog/posts/dynamic-tao-alpha-token/">Alpha Token & Dynamic TAO</a></h2>
