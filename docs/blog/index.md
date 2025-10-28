@@ -11,7 +11,6 @@ hide:
 </div>
 
 <div class="blog-posts">
-
 <article class="blog-post">
     <div class="post-content">
         <h2><a href="../blog/posts/incentive-logic-update/">Miner Linking & Incentive Logic Update</a></h2>
