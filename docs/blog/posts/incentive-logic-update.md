@@ -1,3 +1,19 @@
+---
+date:
+    created: 2025-10-28T10:00:00
+authors:
+  - bekbolot
+categories:
+  - Announcement
+  - News
+tags:
+  - miner-update
+  - incentive-logic
+  - IP-linking
+  - cold-key
+readtime: 5
+---
+
 ## Miner Linking & Incentive Logic Update
 
 As the network expands, maintaining fairness in how incentives are distributed has become increasingly important. We noticed that some miners were submitting multiple solutions under **different UIDs**, which sometimes resulted in **duplicate rewards** for the same participant.
@@ -18,13 +34,10 @@ We've introduced several upgrades to make incentive distribution **more accurate
     - Only the **maximum scored submission** per challenge is considered for incentives. Oathers condidered as overwritten sub
     - This ensures that miners are rewarded for their **best performance**, not the number of submissions.
 
-
 ![Miner Linking & Incentive Logic Diagram](../../assets/images/diagram-redteam.jpg)
-
 
  **With this update:**
 
 - Each miner is now represented uniquely, even if operating multiple UIDs.
 - Incentives are based solely on the **best submission per challenge**.
 - The overall reward system is now **fairer, more stable, and more reflective of real contributions**.
-
