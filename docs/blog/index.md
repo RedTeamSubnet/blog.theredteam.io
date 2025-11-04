@@ -11,6 +11,16 @@ hide:
 </div>
 
 <div class="blog-grid">
+  <article class="blog-card">
+    <div class="blog-card-image">
+      <img src="https://github.com/user-attachments/assets/c4776739-d0bf-40be-96e0-ea04115a2b48" alt="Fix Submission Abuse">
+    </div>
+    <div class="blog-card-content">
+      <span class="blog-card-date">Nov 4, 2025</span>
+      <h2><a href="../blog/posts/an.structural-internal-services/">Submission Validation & Internal Services</a></h2>
+      <p class="blog-card-excerpt">Providing fairness by new validation and comparison logic which will be fully hidden inside of internal services</p>
+    </div>
+  </article>
 
   <article class="blog-card">
     <div class="blog-card-image">
