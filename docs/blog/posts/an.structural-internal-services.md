@@ -52,7 +52,7 @@ Internal services are now fully operational in a secure, hidden environment, pro
 The validation service performs entire validation of submissions, ensuring they are not only compliant with challenge requirements but also optimized for fair comparison.
 
 - **Linting**: Uses ESLint for JavaScript challenges (AB Sniffer, Device Fingerprinting) and Pylint for Python (Humanize Behaviour).
-- **Testing Playground**: Miners can test scripts via our Replit playground (link to be attached).
+- **Testing Playground**: Miners can test scripts via our [Replit playground](https://replit.com/@redteamsn61/absnifferv1eslintcheck?v=2#README.md).
 - **Comprehensive Checks**: Validates the entire submission to ensure it meets requirements without extraneous code, useless functions, or methods that could affect performance, bypass checks, or skew comparisons.
 
 !!! note "Validation Benefits"
@@ -67,7 +67,7 @@ The comparison service is now fully internalized, with all logic hidden from ext
 - **Threshold Adjustment**: Acceptable similarity score lowered to `0.6` to accommodate refined logic.
 
 !!! warning "Invalid Submissions"
-    If a miner's script is found invalid during validation, they will receive an "Invalid submission" note in the dashboard's note column. This ensures transparency while maintaining system security.
+    If a miner's script is found invalid during validation, they will receive an "Invalid submission" note in the [dashboard's](https://dashboard.theredteam.io/) note column. This ensures transparency while maintaining system security.
 
 These enhancements make RedTeam Subnet more secure, fair, and efficient for all participants.
 
