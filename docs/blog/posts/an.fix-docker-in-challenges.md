@@ -68,6 +68,6 @@ can avoid the new storage-subsystem behaviour; this option is exposed as a toggl
 
 ## References
 
-- Moby issue discussion: https://github.com/moby/moby/issues/51475#issuecomment-3526792046  
-- Docker v29 release notes: https://github.com/moby/moby/releases/tag/docker-v29.0.0  
-- Docker / containerd storage docs: https://docs.docker.com/engine/storage/containerd/
+- [Moby issue discussion](https://github.com/moby/moby/issues/51475#issuecomment-3526792046)
+- [Docker v29 release notes](https://github.com/moby/moby/releases/tag/docker-v29.0.0)
+- [Docker / containerd storage docs](https://docs.docker.com/engine/storage/containerd/)
