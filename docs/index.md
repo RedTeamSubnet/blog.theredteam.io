@@ -11,6 +11,24 @@ hide:
 </div>
 
 <div class="blog-grid">
+    <a href="blog/posts/an.fix-docker-in-challenges/" class="blog-card-link">
+        <article class="blog-card">
+            <div class="blog-card-image">
+                <img src="../assets/images/docker_v29_issue_poster.png" alt="Docker v29">
+            </div>
+                <div class="blog-card-content">
+                    <span class="blog-card-date">
+                        Nov 16, 2025
+                    </span>
+                    <h2>
+                       Docker v29: Pinning to v28 for Challenge Stability
+                    </h2>
+                <p class="blog-card-excerpt">
+                    Docker v29 introduced breaking storage and runtime changes that caused DinD image-build failures; challenge runners are pinned to v28 and an opt-in compatibility toggle is available.
+                </p>
+            </div>
+        </article>
+    </a>
 
   <a href="blog/posts/an.structural-internal-services/" class="blog-card-link">
     <article class="blog-card">
