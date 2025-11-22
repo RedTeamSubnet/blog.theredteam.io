@@ -1,44 +1,39 @@
-<header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <label class="md-header__button md-icon" for="__drawer">
-      {% include ".icons/material/menu.svg" %}
-    </label>
-    <a href="{{ '' | url }}" title="{{ config.site_name }}" class="md-header__button md-logo" aria-label="{{ config.site_name }}" data-md-component="logo">
-      <!-- Logo SVG -->
-      <img src="{{ config.theme.logo | url }}" alt="RedTeam Logo" class="md-header__logo-img">
-      <span class="md-header__logo-text">
-        <span class="logo-red">Red</span><span class="logo-team">Team</span>
-      </span>
-    </a>
-    <div class="md-header__title" data-md-component="header-title">
-      <div class="md-header__ellipsis">
-        <div class="md-header__topic">
-        </div>
-      </div>
-    </div>
-    <div class="md-header__nav-links">
-      <a href="{{ 'blog/' | url }}" class="md-header__nav-link">Blog</a>
-      <a href="{{ 'important/' | url }}" class="md-header__nav-link">Important</a>
-      <a href="{{ 'announcements/' | url }}" class="md-header__nav-link">Announcements</a>
+<header class="rd-header" role="banner">
+  <div class="rd-header-inner">
+    <div class="rd-header-left">
+      <button class="rd-drawer-toggle" aria-label="Open menu" for="__drawer">
+        {% include ".icons/material/menu.svg" %}
+      </button>
+
+      <a href="{{ '' | url }}" class="rd-logo" aria-label="{{ config.site_name }}">
+        <img src="{{ config.theme.logo | url }}" alt="{{ config.site_name }} logo" class="rd-logo-img">
+        <span class="rd-site-name">
+          <span class="brand-red">{{ config.site_name.split(' ')[0] }} </span>
+        </span>
+      </a>
     </div>
 
-    <!-- Theme toggle switch (Radix UI style) -->
-    <div class="md-header__option">
+    <nav class="rd-nav" aria-label="Primary">
+      <a href="{{ 'blog/' | url }}" class="rd-nav-link">Blog</a>
+      <a href="{{ 'important/' | url }}" class="rd-nav-link">Important</a>
+      <a href="{{ 'announcements/' | url }}" class="rd-nav-link">Announcements</a>
+    </nav>
+
+    <div class="rd-header-actions">
+      <div class="rd-search-inline">
+        {% include "partials/search.html" %}
+      </div>
+
       <button
         id="theme-toggle"
         role="switch"
         aria-label="Toggle dark mode"
         aria-checked="false"
-        class="theme-switch"
+        class="rd-theme-toggle"
         data-state="unchecked"
       >
-        <span class="theme-switch-thumb" data-slot="switch-thumb"></span>
+        <span class="rd-theme-thumb"></span>
       </button>
     </div>
-
-    <label class="md-header__button md-icon" for="__search">
-      {% include ".icons/material/magnify.svg" %}
-    </label>
-    {% include "partials/search.html" %}
-  </nav>
+  </div>
 </header>

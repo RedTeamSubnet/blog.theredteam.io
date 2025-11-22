@@ -47,8 +47,8 @@
 {% block styles %}
   <!-- Apply theme to body on DOMContentLoaded -->
   <script>
-    (function() {
-      const KEY = 'rd_theme';
+
+
       const getSaved = () => {
         try { return localStorage.getItem(KEY); } catch (e) { return null; }
       };
@@ -76,8 +76,83 @@
           document.body.style.transition = 'background-color 200ms ease, color 200ms ease';
         }, 100);
       });
-    })();
   </script>
+  <!-- Redesigned minimalist header styles -->
+  <style>
+    .rd-header {
+      position: sticky;
+      top: 0;
+      z-index: 60;
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      background-color: #0b0b0b; /* solid black header (user preferred) */
+      color: #ffffff;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.12);
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    /* keep header black in both light/dark modes */
+    html[data-md-color-scheme="slate"] .rd-header,
+    html[data-md-color-scheme="default"] .rd-header {
+      background-color: #0b0b0b;
+      color: #ffffff;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .rd-header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 12px 20px;
+    }
+    .rd-header-left { display:flex; align-items:center; gap:18px; }
+    .rd-drawer-toggle { background:transparent; border:0; padding:8px; cursor:pointer; color:inherit }
+    .rd-logo { display:flex; align-items:center; gap:18px; text-decoration:none; color:inherit }
+    .rd-logo-img { width:44px; height:44px; object-fit:contain }
+    .rd-site-name { font-weight:800; letter-spacing:-0.02em; display:inline-flex; align-items:baseline }
+    .rd-site-name .brand-red { color: #e53935; font-weight:900; font-size:1.35rem; }
+
+    .rd-nav { display:flex; gap:12px; align-items:center }
+    .rd-nav-link {
+      display:inline-block;
+      text-decoration:none;
+      color:#ffffff;
+      background: transparent;
+      border: 1px solid transparent;
+      padding:8px 12px;
+      border-radius:10px;
+      font-weight:700;
+      font-size:15px;
+      transition: all 140ms ease;
+      box-shadow: none;
+    }
+    .rd-nav-link:hover,
+    .rd-nav-link:focus {
+      background: rgba(255,255,255,0.06);
+      border-color: rgba(255,255,255,0.06);
+      transform: translateY(-1px);
+      outline: none;
+    }
+
+    .rd-header-actions { display:flex; align-items:center; gap:12px }
+    .rd-search-inline { display:flex; align-items:center }
+    .rd-theme-toggle { background:transparent; border:1px solid rgba(255,255,255,0.08); padding:7px 10px; border-radius:10px; cursor:pointer; color:inherit }
+    html[data-md-color-scheme="slate"] .rd-theme-toggle { border-color: rgba(255,255,255,0.08) }
+
+    /* Responsive: collapse nav on small screens */
+    @media (max-width: 860px) {
+      .rd-nav { display:none }
+    }
+    @media (max-width: 520px) {
+      .rd-site-name { display:none }
+      .rd-logo-img { width:32px; height:32px }
+      .rd-header-inner { padding:8px 12px }
+      .rd-search-inline { display:none }
+      .rd-nav-link { padding:6px 10px; font-size:14px }
+    }
+  </style>
 
   {{ super() }}
 {% endblock %}
