@@ -35,8 +35,8 @@
     
   <!-- Apply theme to body on DOMContentLoaded -->
   <script>
-    (function() {
-      const KEY = 'rd_theme';
+
+
       const getSaved = () => {
         try { return localStorage.getItem(KEY); } catch (e) { return null; }
       };
@@ -64,8 +64,238 @@
           document.body.style.transition = 'background-color 200ms ease, color 200ms ease';
         }, 100);
       });
-    })();
   </script>
+  <!-- Redesigned minimalist header styles -->
+  <style>
+    .rd-header {
+      position: sticky;
+      top: 0;
+      z-index: 60;
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      box-shadow: 0 1px 0 rgba(0,0,0,0.06);
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease;
+    }
+
+    /* Dark mode header */
+    html[data-md-color-scheme="slate"] .rd-header {
+      background-color: #0b0b0b;
+      color: #ffffff;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    /* Light mode header - adopt theme colors */
+    html[data-md-color-scheme="default"] .rd-header {
+      background-color: #ffffff;
+      color: #0b0b0b;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+    .rd-header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 12px 20px;
+    }
+    .rd-header-left { display:flex; align-items:center; gap:18px; }
+    .rd-drawer-toggle { background:transparent; border:0; padding:8px; cursor:pointer; color:inherit }
+    .rd-logo { display:flex; align-items:center; gap:18px; text-decoration:none; color:inherit }
+    .rd-logo-img { width:44px; height:44px; object-fit:contain }
+    .rd-logo-svg { width:44px; height:44px; display:inline-block }
+    /* show inline SVG in light mode, theme logo in dark mode */
+    .rd-logo-img--light { display:none }
+    .rd-logo-img--dark { display:inline-block }
+    .rd-site-name { font-weight:800; letter-spacing:-0.02em; display:inline-flex; align-items:baseline }
+    .rd-site-name .brand-red { color: #e53935; font-weight:900; font-size:1.35rem; }
+
+    .rd-nav { display:flex; gap:12px; align-items:center }
+    .rd-nav-link {
+      display:inline-block;
+      text-decoration:none;
+      color: inherit; /* adapt to header color */
+      background: transparent;
+      border: 1px solid transparent;
+      padding:8px 12px;
+      border-radius:10px;
+      font-weight:700;
+      font-size:15px;
+      transition: all 140ms ease;
+      box-shadow: none;
+    }
+    .rd-nav-link:hover,
+    .rd-nav-link:focus {
+      transform: translateY(-1px);
+      outline: none;
+    }
+    /* Hover styles adapted per-scheme */
+    html[data-md-color-scheme="slate"] .rd-nav-link:hover,
+    html[data-md-color-scheme="slate"] .rd-nav-link:focus {
+      background: rgba(255,255,255,0.06);
+      border-color: rgba(255,255,255,0.06);
+    }
+    html[data-md-color-scheme="default"] .rd-nav-link:hover,
+    html[data-md-color-scheme="default"] .rd-nav-link:focus {
+      background: rgba(0,0,0,0.04);
+      border-color: rgba(0,0,0,0.04);
+    }
+
+    .rd-header-actions { display:flex; align-items:center; gap:12px }
+    .rd-search-inline { display:flex; align-items:center; gap:8px; max-width:420px; position:relative }
+
+    /* Theme toggle - larger, visible icon, scheme-aware */
+    .rd-theme-toggle {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:44px;
+      height:34px;
+      background: transparent;
+      border-radius:8px;
+      border: 1px solid rgba(0,0,0,0.08);
+      cursor:pointer;
+      color: inherit;
+      font-size: 16px;
+      line-height: 1;
+      transition: background-color 120ms ease, border-color 120ms ease, transform 120ms ease;
+    }
+
+    /* Theme toggle thumb using the inner span for reliable SVG icons */
+    .rd-theme-toggle { padding:6px; }
+    .rd-theme-toggle .rd-theme-thumb {
+      width:18px;
+      height:18px;
+      display:inline-block;
+      background-repeat:no-repeat;
+      background-position:center;
+      background-size:contain;
+      border-radius:4px;
+    }
+
+    /* Light mode: clearer sun icon (rays) for good visibility */
+    html[data-md-color-scheme="default"] .rd-theme-toggle .rd-theme-thumb {
+      background-color: rgba(229,57,53,0.14);
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><g fill='none' stroke='%23e53935' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='4'/><path d='M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41'/></g></svg>");
+      box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+      background-position: center;
+      background-size: 80% 80%;
+    }
+
+    /* Dark mode: show moon (white) on subtle dark circle */
+    html[data-md-color-scheme="slate"] .rd-theme-toggle .rd-theme-thumb {
+      background-color: rgba(255,255,255,0.06);
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z' fill='%23ffffff'/></svg>");
+      box-shadow: 0 1px 0 rgba(255,255,255,0.02) inset;
+    }
+
+    .rd-theme-toggle:focus {
+      box-shadow: 0 0 0 3px rgba(229,57,53,0.12);
+      outline: none;
+      transform: translateY(-1px);
+    }
+
+    /* stronger border and visible thumb in light mode */
+    html[data-md-color-scheme="default"] .rd-theme-toggle {
+      border: 1px solid rgba(0,0,0,0.12);
+      background: rgba(255,255,255,0.7);
+    }
+
+    /* Search input styling inside header so it reads in light mode */
+    .rd-search-inline input[type="search"], .rd-search-inline input {
+      border: none;
+      padding: 8px 10px 8px 44px;
+      border-radius: 10px;
+      background: transparent;
+      color: inherit;
+      width: 300px;
+      box-shadow: none;
+      transition: box-shadow 120ms ease, background-color 120ms ease;
+    }
+    /* place the icon inside the input area */
+    .rd-search-inline svg {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      width:18px;
+      height:18px;
+      pointer-events: none;
+      opacity: 0.9;
+    }
+
+    /* Utility: visually hide elements but keep for screen readers */
+    .sr-only {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: -1px !important;
+      overflow: hidden !important;
+      clip: rect(0, 0, 0, 0) !important;
+      white-space: nowrap !important;
+      border: 0 !important;
+    }
+
+    /* Ensure the theme search form has no extra label spacing and aligns inside header */
+    .rd-search-inline .md-search {
+      margin: 0;
+      padding: 0;
+      display: block;
+      position: relative;
+    }
+
+    /* Make sure form elements don't push layout (some theme CSS adds display:inline-block) */
+    .rd-search-inline .md-search input[type="search"],
+    .rd-search-inline .md-search input {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    /* Raise search above header background so shadow is visible */
+    .rd-search-inline { z-index: 12 }
+    html[data-md-color-scheme="default"] .rd-search-inline input[type="search"],
+    html[data-md-color-scheme="default"] .rd-search-inline input {
+      background: #ffffff;
+      color: #0b0b0b;
+      box-shadow: 0 6px 18px rgba(14,20,26,0.06);
+      border: 1px solid rgba(0,0,0,0.04);
+    }
+
+    /* placeholder colors for contrast */
+    .rd-search-inline input::placeholder { color: rgba(11,11,11,0.45); }
+    html[data-md-color-scheme="slate"] .rd-search-inline input::placeholder { color: rgba(224,224,224,0.45); }
+    html[data-md-color-scheme="slate"] .rd-search-inline input[type="search"],
+    html[data-md-color-scheme="slate"] .rd-search-inline input {
+      background: rgba(255,255,255,0.03);
+      color: #e0e0e0;
+      border: 1px solid rgba(255,255,255,0.03);
+    }
+
+    /* Ensure search icons are visible and use currentColor */
+    .rd-search-inline svg { fill: currentColor; }
+    html[data-md-color-scheme="default"] .rd-search-inline svg { color: #b71c1c; }
+    html[data-md-color-scheme="slate"] .rd-search-inline svg { color: #e53935; }
+
+    /* Logo visibility toggles */
+    html[data-md-color-scheme="default"] .rd-logo-img--light { display:inline-block }
+    html[data-md-color-scheme="default"] .rd-logo-img--dark { display:none }
+    html[data-md-color-scheme="slate"] .rd-logo-img--light { display:none }
+    html[data-md-color-scheme="slate"] .rd-logo-img--dark { display:inline-block }
+
+    /* Responsive: collapse nav on small screens */
+    @media (max-width: 860px) {
+      .rd-nav { display:none }
+    }
+    @media (max-width: 520px) {
+      .rd-site-name { display:none }
+      .rd-logo-img { width:32px; height:32px }
+      .rd-header-inner { padding:8px 12px }
+      .rd-search-inline { display:none }
+      .rd-nav-link { padding:6px 10px; font-size:14px }
+    }
+  </style>
 
   
       <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
@@ -171,82 +401,54 @@
     </div>
     
     
-      <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
-    </label>
-    <a href=".." title="RedTeam Blog" class="md-header__button md-logo" aria-label="RedTeam Blog" data-md-component="logo">
-      <!-- Logo SVG -->
-      <img src="../assets/images/logo/logo.light.svg" alt="RedTeam Logo" class="md-header__logo-img">
-      <span class="md-header__logo-text">
-        <span class="logo-red">Red</span><span class="logo-team">Team</span>
-      </span>
-    </a>
-    <div class="md-header__title" data-md-component="header-title">
-      <div class="md-header__ellipsis">
-        <div class="md-header__topic">
-        </div>
-      </div>
-    </div>
-    <div class="md-header__nav-links">
-      <a href="../blog/" class="md-header__nav-link">Blog</a>
-      <a href="./" class="md-header__nav-link">Important</a>
-      <a href="../announcements/" class="md-header__nav-link">Announcements</a>
+      <header class="rd-header" role="banner">
+  <div class="rd-header-inner">
+    <div class="rd-header-left">
+      <button class="rd-drawer-toggle" aria-label="Open menu" for="__drawer">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      </button>
+
+      <a href=".." class="rd-logo" aria-label="RedTeam Blog">
+        <!-- Show dark logo in light mode, and light logo in dark mode (explicit files) -->
+        <img src="../assets/images/logo/logo.dark.svg" alt="RedTeam Blog logo" class="rd-logo-img rd-logo-img--light">
+        <img src="../assets/images/logo/logo.light.svg" alt="RedTeam Blog logo" class="rd-logo-img rd-logo-img--dark">
+
+        <span class="rd-site-name">
+          <span class="brand-red">RedTeam </span>
+        </span>
+      </a>
     </div>
 
-    <!-- Theme toggle switch (Radix UI style) -->
-    <div class="md-header__option">
+    <nav class="rd-nav" aria-label="Primary">
+      <a href="../blog/" class="rd-nav-link">Blog</a>
+      <a href="./" class="rd-nav-link">Important</a>
+      <a href="../announcements/" class="rd-nav-link">Announcements</a>
+    </nav>
+
+    <div class="rd-header-actions">
+      <div class="rd-search-inline">
+        <form role="search" class="md-search" action="../search/" method="get">
+  <label class="sr-only" for="q">Search</label>
+  <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="1.6" fill="none"></circle>
+    <path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+  </svg>
+  <input id="q" type="search" name="q" placeholder="Search" aria-label="Search" autocapitalize="off" autocomplete="off" spellcheck="false">
+</form>
+      </div>
+
       <button
         id="theme-toggle"
         role="switch"
         aria-label="Toggle dark mode"
         aria-checked="false"
-        class="theme-switch"
+        class="rd-theme-toggle"
         data-state="unchecked"
       >
-        <span class="theme-switch-thumb" data-slot="switch-thumb"></span>
+        <span class="rd-theme-thumb"></span>
       </button>
     </div>
-
-    <label class="md-header__button md-icon" for="__search">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-    </label>
-    <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
   </div>
-</div>
-  </nav>
 </header>
     
     <div class="md-container" data-md-component="container">

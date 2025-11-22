@@ -10,23 +10,21 @@
       
       
       
-        <link rel="canonical" href="https://blog.theredteam.io/0.2/announcements/">
+        <link rel="canonical" href="https://blog.theredteam.io/0.2/blog/posts/an.eslint_updates/">
       
-      
-        <link rel="prev" href="../important/">
       
       
       
         
       
       
-      <link rel="icon" href="../assets/images/logo/logo.dark.svg">
+      <link rel="icon" href="../../../assets/images/logo/logo.dark.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
     
     
   
       
-        <title>Announcements - RedTeam Blog</title>
+        <title>ESLint Configuration Enforcement, Effective Nov 21 - RedTeam Blog</title>
       
     
 
@@ -296,10 +294,10 @@
   </style>
 
   
-      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.618322db.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -319,19 +317,19 @@
       
     
     
-      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="../assets/css/colors.css">
+      <link rel="stylesheet" href="../../../assets/css/colors.css">
     
-      <link rel="stylesheet" href="../assets/css/layout.css">
+      <link rel="stylesheet" href="../../../assets/css/layout.css">
     
-      <link rel="stylesheet" href="../assets/css/typography.css">
+      <link rel="stylesheet" href="../../../assets/css/typography.css">
     
-      <link rel="stylesheet" href="../assets/css/components.css">
+      <link rel="stylesheet" href="../../../assets/css/components.css">
     
-      <link rel="stylesheet" href="../assets/css/custom.css">
+      <link rel="stylesheet" href="../../../assets/css/custom.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -393,6 +391,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#new-eslint-rules-will-be-enforced-from-nov-23" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -406,10 +409,10 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
       </button>
 
-      <a href=".." class="rd-logo" aria-label="RedTeam Blog">
+      <a href="../../.." class="rd-logo" aria-label="RedTeam Blog">
         <!-- Show dark logo in light mode, and light logo in dark mode (explicit files) -->
-        <img src="../assets/images/logo/logo.dark.svg" alt="RedTeam Blog logo" class="rd-logo-img rd-logo-img--light">
-        <img src="../assets/images/logo/logo.light.svg" alt="RedTeam Blog logo" class="rd-logo-img rd-logo-img--dark">
+        <img src="../../../assets/images/logo/logo.dark.svg" alt="RedTeam Blog logo" class="rd-logo-img rd-logo-img--light">
+        <img src="../../../assets/images/logo/logo.light.svg" alt="RedTeam Blog logo" class="rd-logo-img rd-logo-img--dark">
 
         <span class="rd-site-name">
           <span class="brand-red">RedTeam </span>
@@ -418,14 +421,14 @@
     </div>
 
     <nav class="rd-nav" aria-label="Primary">
-      <a href="../blog/" class="rd-nav-link">Blog</a>
-      <a href="../important/" class="rd-nav-link">Important</a>
-      <a href="./" class="rd-nav-link">Announcements</a>
+      <a href="../../" class="rd-nav-link">Blog</a>
+      <a href="../../../important/" class="rd-nav-link">Important</a>
+      <a href="../../../announcements/" class="rd-nav-link">Announcements</a>
     </nav>
 
     <div class="rd-header-actions">
       <div class="rd-search-inline">
-        <form role="search" class="md-search" action="../search/" method="get">
+        <form role="search" class="md-search" action="../../../search/" method="get">
   <label class="sr-only" for="q">Search</label>
   <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false" xmlns="http://www.w3.org/2000/svg">
     <circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="1.6" fill="none"></circle>
@@ -459,9 +462,7 @@
           
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -472,9 +473,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="RedTeam Blog" class="md-nav__button md-logo" aria-label="RedTeam Blog" data-md-component="logo">
+    <a href="../../.." title="RedTeam Blog" class="md-nav__button md-logo" aria-label="RedTeam Blog" data-md-component="logo">
       
-  <img src="../assets/images/logo/logo.light.svg" alt="logo">
+  <img src="../../../assets/images/logo/logo.light.svg" alt="logo">
 
     </a>
     RedTeam Blog
@@ -501,7 +502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/" class="md-nav__link">
+      <a href="../../" class="md-nav__link">
         
   
   
@@ -528,7 +529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/" class="md-nav__link">
+      <a href="../../" class="md-nav__link">
         
   
   
@@ -555,7 +556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../important/" class="md-nav__link">
+      <a href="../../../important/" class="md-nav__link">
         
   
   
@@ -579,17 +580,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../announcements/" class="md-nav__link">
         
   
   
@@ -605,7 +599,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -618,9 +611,7 @@
             
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -629,6 +620,64 @@
   
   
   
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#new-eslint-rules-will-be-enforced-from-nov-23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        New ESLint rules will be enforced from Nov 23
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="New ESLint rules will be enforced from Nov 23">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Changed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why this change
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-this-affects-contributors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How this affects contributors
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -642,104 +691,66 @@
               <article class="md-content__inner md-typeset">
                 
                   
+  <!-- Author Information Byline -->
+  <div class="post-meta-info">
+    <div class="post-authors">
+      
+        
+        
+          <div class="post-author">
+            
+              <img src="https://avatars.githubusercontent.com/aliyuldashev" alt="Javokhir" class="post-author-avatar">
+            
+            
+              <a href="https://github.com/aliyuldashev" class="post-author-name" target="_blank" rel="noopener">
+                Javokhir
+              </a>
+            
+          </div>
+        
+      
+    </div>
+    <div class="post-meta-details">
+      
+        <span class="post-meta-date">
+          November 20, 2025
+        </span>
+      
+      
+        <span class="post-meta-separator">·</span>
+        <span class="post-meta-readtime">3 min read</span>
+      
+    </div>
+  </div>
+
 
 <!-- Include default content -->
-<div class="blog-header">
-  <h1>Announcements</h1>
-  <p class="blog-subtitle">Official updates from the RedTeam. Check here for the latest news, event notices, and important messages. It's where we post what's new, what's coming, and what everyone should know.</p>
-</div>
-
-<div class="blog-grid">
-    <article class="blog-card">
-        <div class="blog-card-image">
-            <img src="../assets/images/an.new_eslint_rules.png" alt="New Eslint rule">
-        </div>
-            <div class="blog-card-content">
-                <span class="blog-card-date">Nov 22, 2025</span>
-                <h2>
-                    <a href="../blog/posts/an.eslint_updates/">
-                        New ESLint Rules Go Live Nov 23
-                    </a>
-                </h2>
-            <p class="blog-card-excerpt">
-                Updated ESLint settings will apply to all JavaScript files beginning Nov 23, 2025. Learn what changed, why it matters for code quality and consistency, and how to test it.
-            </p>
-        </div>
-    </article>
-    <article class="blog-card">
-        <div class="blog-card-image">
-            <img src="../assets/images/docker_v29_issue_poster.png" alt="Docker v29">
-        </div>
-            <div class="blog-card-content">
-                <span class="blog-card-date">Nov 16, 2025</span>
-                <h2>
-                    <a href="../blog/posts/an.fix-docker-in-challenges/">Docker v29: Pinning to v28 for Challenge Stability</a>
-                </h2>
-            <p class="blog-card-excerpt">
-                Docker v29 introduced breaking storage and runtime changes that caused DinD image-build failures; challenge runners are pinned to v28 and an opt-in compatibility toggle is available.
-            </p>
-        </div>
-    </article>
-  <article class="blog-card">
-    <div class="blog-card-image">
-      <img src="../assets/images/diagram-redteam.jpg" alt="Miner Linking & Incentive Logic">
-    </div>
-    <div class="blog-card-content">
-      <span class="blog-card-date">Oct 25, 2025</span>
-      <h2><a href="../blog/posts/incentive-logic-update/">Miner Linking & Incentive Logic Update</a></h2>
-      <p class="blog-card-excerpt">This improvement ensures that every miner is recognized fairly, no matter how many nodes or UIDs they operate.</p>
-    </div>
-  </article>
-
-  <!-- 2. Oct 15, 2025 - Auto Browser Sniffer -->
-  <article class="blog-card">
-    <div class="blog-card-image">
-      <img alt="Auto Browser Sniffer v4" src="https://github.com/user-attachments/assets/9335e859-90b8-4277-b95f-eabc55e3a041" />
-    </div>
-    <div class="blog-card-content">
-      <span class="blog-card-date">Oct 15, 2025</span>
-      <h2><a href="../blog/posts/an.ab_sniffer_v4/">Release of Auto Browser Sniffer</a></h2>
-      <p class="blog-card-excerpt">We are making important changes to improve fairness and protect miners' intellectual property</p>
-    </div>
-  </article>
-
-  <!-- 3. Oct 2, 2025 - Subnet Structure -->
-  <article class="blog-card">
-    <div class="blog-card-image">
-      <img src="../assets/images/annoucements/redteam-dashboard.png" alt="Subnet Structure">
-    </div>
-    <div class="blog-card-content">
-      <span class="blog-card-date">Oct 2, 2025</span>
-      <h2><a href="../blog/posts/an.structure-update/">Update in Subnet Structure</a></h2>
-      <p class="blog-card-excerpt">Major changes to protect miners' intellectual property: hidden Docker Hub IDs, encryption detection, and dashboard improvements.</p>
-    </div>
-  </article>
-
-  <!-- 4. Feb 1, 2025 - Alpha Token -->
-  <article class="blog-card">
-    <div class="blog-card-image">
-      <img src="../assets/images/alpha-token.png" alt="Alpha Token & Dynamic TAO">
-    </div>
-    <div class="blog-card-content">
-      <span class="blog-card-date">Feb 1, 2025</span>
-      <h2><a href="../blog/posts/dynamic-tao-alpha-token/">Alpha Token & Dynamic TAO</a></h2>
-      <p class="blog-card-excerpt">How Dynamic TAO and the Alpha token reshape RedTeam's decentralized cybersecurity incentives.</p>
-    </div>
-  </article>
-
-  <!-- 5. Jan 15, 2025 - Bot Challenges (OLDEST) -->
-  <article class="blog-card">
-    <div class="blog-card-image">
-      <img src="../assets/images/decentralized-cybersecurity.png" alt="Bot Challenges">
-    </div>
-    <div class="blog-card-content">
-      <span class="blog-card-date">Jan 15, 2025</span>
-      <h2><a href="../blog/posts/bot-detection-challenges/">Bot Challenges Arrive to RedTeam</a></h2>
-      <p class="blog-card-excerpt">A new wave of bot detection challenges has been released to Subnet 61, advancing our security testing suite.</p>
-    </div>
-  </article>
-
-</div>
+<h2 id="new-eslint-rules-will-be-enforced-from-nov-23">New ESLint rules will be enforced from Nov 23</h2>
+<p><img alt="Thumbnail" src="../../../assets/images/an.new_eslint_rules.png" /></p>
+<p>We have updated our repository's ESLint configuration and will begin enforcing it from <strong>2025-11-23</strong>. This announcement explains what changes to expect, how the rules will affect contributions, and quick steps you can take to run/fix lint issues locally.</p>
+<h3 id="what-changed">What Changed</h3>
+<ul>
+<li>The updated ESLint config applies to all JavaScript files (<code>**/*.{js,mjs,cjs}</code>).</li>
+<li>Key style and safety rules include:</li>
+<li><strong>Max line length:</strong> 100 characters (<code>max-len</code>).</li>
+<li><strong>Indentation:</strong> 2 spaces, <code>SwitchCase: 1</code> (<code>indent</code>).</li>
+<li><strong>Semicolons:</strong> required (<code>semi: always</code>).</li>
+<li><strong>Quotes:</strong> double quotes preferred, allow escape (<code>quotes: double</code>).</li>
+<li><strong>No trailing spaces</strong> and <strong>newline at EOF</strong> (<code>no-trailing-spaces</code>, <code>eol-last</code>).</li>
+<li><strong>Object/array spacing</strong> and spacing around blocks/keywords/arrows.</li>
+<li><strong>Arrow parens:</strong> always include parentheses for arrow args.</li>
+<li><strong>Trailing commas:</strong> always-multiline and proper comma spacing.</li>
+</ul>
+<h3 id="why-this-change">Why this change</h3>
+<ul>
+<li>Consistency: a single, clear style improves readability across contributions.</li>
+<li>Automation: consistent rules enable safer automatic fixes and better CI enforcement.</li>
+<li>Quality: some rules help avoid easy-to-miss bugs and reduce style debates in reviews.</li>
+</ul>
+<h3 id="how-this-affects-contributors">How this affects contributors</h3>
+<ul>
+<li>Starting on <strong>Nov 21, 2025</strong>, CI will fail if ESLint violations are present in pushed code for JS files.</li>
+</ul>
                 
               </article>
             </div>
@@ -758,30 +769,6 @@
       
         <footer class="md-footer">
   
-    
-      
-        
-      
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
-        
-          
-          <a href="../important/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Important">
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              <div class="md-ellipsis">
-                Important
-              </div>
-            </div>
-          </a>
-        
-        
-      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -873,16 +860,16 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.indexes", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.indexes", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
       
-        <script src="../assets/js/mathjax.js"></script>
+        <script src="../../../assets/js/mathjax.js"></script>
       
-        <script src="../assets/js/tex-mml-chtml.js"></script>
+        <script src="../../../assets/js/tex-mml-chtml.js"></script>
       
-        <script src="../assets/js/theme-toggle.js"></script>
+        <script src="../../../assets/js/theme-toggle.js"></script>
       
     
   </body>
