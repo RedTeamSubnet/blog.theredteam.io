@@ -672,6 +672,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#how-to-test-with-new-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to test with new configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -727,7 +738,7 @@
 <!-- Include default content -->
 <h2 id="new-eslint-rules-will-be-enforced-from-nov-23">New ESLint rules will be enforced from Nov 23</h2>
 <p><img alt="Thumbnail" src="../../../assets/images/an.new_eslint_rules.png" /></p>
-<p>We have updated our repository's ESLint configuration and will begin enforcing it from <strong>2025-11-23</strong>. This announcement explains what changes to expect, how the rules will affect contributions, and quick steps you can take to run/fix lint issues locally.</p>
+<p>We have updated our repository's ESLint configuration and will begin enforcing it from <strong>2025-11-23</strong>. This announcement explains what changes to expect, how the rules will affect contributions, and quick steps you can take to run/fix lint issues in your submission to pass validation.</p>
 <h3 id="what-changed">What Changed</h3>
 <ul>
 <li>The updated ESLint config applies to all JavaScript files (<code>**/*.{js,mjs,cjs}</code>).</li>
@@ -749,8 +760,17 @@
 </ul>
 <h3 id="how-this-affects-contributors">How this affects contributors</h3>
 <ul>
-<li>Starting on <strong>Nov 21, 2025</strong>, CI will fail if ESLint violations are present in pushed code for JS files.</li>
+<li>Starting on <strong>Nov 23, 2025</strong>, we will change eslint configuration in <strong>internal services</strong>. Which means all javascript submission will be checked with new rules.</li>
 </ul>
+<h3 id="how-to-test-with-new-configuration">How to test with new configuration</h3>
+<ul>
+<li>Miners can validate their submissions in <a href="https://replit.com/@redteamsn61/absnifferv1eslintcheck">Replit Playground</a> by following the provided guide within the Playground.</li>
+<li>Replit Playground now includes new configuration for both Eslint and PyLint.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Important Message for Miners</p>
+<p>All miners are strongly advised to test these configurations in Replit Playground prior to submitting their scripts.. If miners fail in this then there is a significant likelihood of failure in the validation process from the internal services.</p>
+</div>
                 
               </article>
             </div>
