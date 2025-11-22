@@ -11,6 +11,22 @@ hide:
 </div>
 
 <div class="blog-grid">
+    <a href="blog/posts/an.eslint_updates/" class="blog-card-link">
+        <article class="blog-card">
+            <div class="blog-card-image">
+                <img src="../assets/images/an.new_eslint_rules.png" alt="New Eslint rule">
+            </div>
+                <div class="blog-card-content">
+                    <span class="blog-card-date">Nov 22, 2025</span>
+                    <h2>
+                        New ESLint Rules Go Live Nov 23
+                    </h2>
+                <p class="blog-card-excerpt">
+                    Updated ESLint settings will apply to all JavaScript files beginning Nov 23, 2025. Learn what changed, why it matters for code quality and consistency, and how to test it.
+                </p>
+            </div>
+        </article>
+    </a>
     <a href="blog/posts/an.fix-docker-in-challenges/" class="blog-card-link">
         <article class="blog-card">
             <div class="blog-card-image">
