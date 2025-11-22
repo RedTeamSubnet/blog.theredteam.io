@@ -30,7 +30,7 @@ hide:
     <a href="blog/posts/an.fix-docker-in-challenges/" class="blog-card-link">
         <article class="blog-card">
             <div class="blog-card-image">
-                <img src="../assets/images/docker_v29_issue_poster.png" alt="Docker v29">
+                <img src="assets/images/docker_v29_issue_poster.png" alt="Docker v29">
             </div>
                 <div class="blog-card-content">
                     <span class="blog-card-date">
