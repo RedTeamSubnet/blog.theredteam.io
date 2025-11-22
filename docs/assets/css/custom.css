@@ -568,7 +568,9 @@ html {
 /* Blog Grid Layout - Fingerprint Style */
 .blog-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 0.8fr));
+  /* Make each grid row equal height so cards match */
+  grid-auto-rows: 0.8fr;
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -582,6 +584,9 @@ html {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   border: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 [data-md-color-scheme="slate"] .blog-card {
@@ -599,6 +604,7 @@ html {
   height: 200px;
   overflow: hidden;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  flex: 0 0 200px; /* keep image area fixed */
 }
 
 .blog-card-image img {
@@ -616,6 +622,14 @@ html {
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
+  /* allow content to grow and push footer/tags to bottom */
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+/* Ensure the entire card link fills the card so clicks work across equal-height cards */
+.blog-card-link {
+  display: block;
   height: 100%;
 }
 

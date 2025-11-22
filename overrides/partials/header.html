@@ -6,7 +6,10 @@
       </button>
 
       <a href="{{ '' | url }}" class="rd-logo" aria-label="{{ config.site_name }}">
-        <img src="{{ config.theme.logo | url }}" alt="{{ config.site_name }} logo" class="rd-logo-img">
+        <!-- Show dark logo in light mode, and light logo in dark mode (explicit files) -->
+        <img src="{{ 'assets/images/logo/logo.dark.svg' | url }}" alt="{{ config.site_name }} logo" class="rd-logo-img rd-logo-img--light">
+        <img src="{{ 'assets/images/logo/logo.light.svg' | url }}" alt="{{ config.site_name }} logo" class="rd-logo-img rd-logo-img--dark">
+
         <span class="rd-site-name">
           <span class="brand-red">{{ config.site_name.split(' ')[0] }} </span>
         </span>
