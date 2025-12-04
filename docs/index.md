@@ -11,6 +11,24 @@ hide:
 </div>
 
 <div class="blog-grid">
+    <a href="blog/posts/an.ab_sniffer_v5/" class="blog-card-link">
+        <article class="blog-card">
+            <div class="blog-card-image">
+                <img src="assets/images/blog/Frame_Colaboration.png" alt="AB Sniffer v5">
+            </div>
+            <div class="blog-card-content">
+                <span class="blog-card-date">
+                    Dec 02, 2025
+                </span>
+                <h2>
+                    Release Auto Browser Sniffer v5
+                </h2>
+                <p class="blog-card-excerpt">
+                    We are announcing the release of ab_sniffer_v5, a major redesign of the Auto Browser Sniffer challenge. This update introduces a modular detection structure, a revised evaluation pipeline, stricter validation rules, and a more realistic containerized execution environment.
+                </p>
+            </div>
+        </article>
+    </a>
     <a href="blog/posts/an.eslint_updates/" class="blog-card-link">
         <article class="blog-card">
             <div class="blog-card-image">
