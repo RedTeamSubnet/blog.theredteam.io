@@ -11,7 +11,24 @@ hide:
 </div>
 
 <div class="blog-grid">
-
+  <article class="blog-card">
+        <div class="blog-card-image">
+        <img src="../assets/images/annoucements/Frame_Bullet03.png" alt="ADA Detection v1">
+        </div>
+        <div class="blog-card-content">
+            <span class="blog-card-date">
+                Dec 15, 2025
+            </span>
+            <h2>
+                <a href="../blog/posts/an.ada_detection_v1/">
+                    Release Anti-Detect Automation Detection V1
+                </a>
+            </h2>
+            <p class="blog-card-excerpt">
+                We are announcing the release of ada_detection_v1, a specialized challenge designed to evaluate detection capabilities within
+            </p>
+        </div>
+  </article>
   <article class="blog-card">
         <div class="blog-card-image">
         <img src="../assets/images/blog/Frame_Colaboration.png" alt="AB Sniffer v5">
@@ -30,7 +47,6 @@ hide:
             </p>
         </div>
   </article>
-
   <article class="blog-card">
     <div class="blog-card-image">
       <img src="../assets/images/an.new_eslint_rules.png" alt="Eslint thumbnail">
