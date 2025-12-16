@@ -104,8 +104,8 @@
     /* show inline SVG in light mode, theme logo in dark mode */
     .rd-logo-img--light { display:none }
     .rd-logo-img--dark { display:inline-block }
-    .rd-site-name { font-weight:800; letter-spacing:-0.02em; display:inline-flex; align-items:baseline }
-    .rd-site-name .brand-red { color: #e53935; font-weight:900; font-size:1.35rem; }
+    .rd-site-name { font-weight:900; font-size:1.35rem; letter-spacing:-0.02em; display:inline-flex; align-items:baseline }
+    .rd-site-name .brand-red { color: #e53935;}
 
     .rd-nav { display:flex; gap:12px; align-items:center }
     .rd-nav-link {
@@ -159,7 +159,7 @@
     }
 
     /* Theme toggle thumb using the inner span for reliable SVG icons */
-    .rd-theme-toggle { padding:6px; }
+
     .rd-theme-toggle .rd-theme-thumb {
       width:18px;
       height:18px;
@@ -172,22 +172,21 @@
 
     /* Light mode: clearer sun icon (rays) for good visibility */
     html[data-md-color-scheme="default"] .rd-theme-toggle .rd-theme-thumb {
-      background-color: rgba(229,57,53,0.14);
+      /* background-color: rgba(229,57,53,0.14); */
       background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><g fill='none' stroke='%23e53935' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='4'/><path d='M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41'/></g></svg>");
       box-shadow: 0 1px 0 rgba(0,0,0,0.04);
       background-position: center;
-      background-size: 80% 80%;
+      /* background-size: 80% 80%; */
     }
 
     /* Dark mode: show moon (white) on subtle dark circle */
     html[data-md-color-scheme="slate"] .rd-theme-toggle .rd-theme-thumb {
-      background-color: rgba(255,255,255,0.06);
       background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z' fill='%23ffffff'/></svg>");
       box-shadow: 0 1px 0 rgba(255,255,255,0.02) inset;
     }
 
     .rd-theme-toggle:focus {
-      box-shadow: 0 0 0 3px rgba(229,57,53,0.12);
+      /* box-shadow: 0 0 0 3px rgba(229,57,53,0.12); */
       outline: none;
       transform: translateY(-1px);
     }
@@ -263,7 +262,7 @@
     .rd-search-inline input::placeholder { color: rgba(11,11,11,0.45); }
     html[data-md-color-scheme="slate"] .rd-search-inline input::placeholder { color: rgba(224,224,224,0.45); }
     html[data-md-color-scheme="slate"] .rd-search-inline input[type="search"],
-    html[data-md-color-scheme="slate"] .rd-search-inline input {
+    html[data-md_color-scheme="slate"] .rd-search-inline input {
       background: rgba(255,255,255,0.03);
       color: #e0e0e0;
       border: 1px solid rgba(255,255,255,0.03);
@@ -271,14 +270,14 @@
 
     /* Ensure search icons are visible and use currentColor */
     .rd-search-inline svg { fill: currentColor; }
-    html[data-md-color-scheme="default"] .rd-search-inline svg { color: #b71c1c; }
-    html[data-md-color-scheme="slate"] .rd-search-inline svg { color: #e53935; }
+    html[data-md_color-scheme="default"] .rd-search-inline svg { color: #b71c1c; }
+    html[data-md_color-scheme="slate"] .rd-search-inline svg { color: #e53935; }
 
     /* Logo visibility toggles */
-    html[data-md-color-scheme="default"] .rd-logo-img--light { display:inline-block }
-    html[data-md-color-scheme="default"] .rd-logo-img--dark { display:none }
-    html[data-md-color-scheme="slate"] .rd-logo-img--light { display:none }
-    html[data-md-color-scheme="slate"] .rd-logo-img--dark { display:inline-block }
+    html[data-md_color-scheme="default"] .rd-logo-img--light { display:inline-block }
+    html[data-md_color-scheme="default"] .rd-logo-img--dark { display:none }
+    html[data-md_color-scheme="slate"] .rd-logo-img--light { display:none }
+    html[data-md_color-scheme="slate"] .rd-logo-img--dark { display:inline-block }
 
     /* Responsive: collapse nav on small screens */
     @media (max-width: 860px) {
@@ -406,11 +405,12 @@
 
       <a href="." class="rd-logo" aria-label="RedTeam Blog">
         <!-- Show dark logo in light mode, and light logo in dark mode (explicit files) -->
-        <img src="assets/images/logo/logo.dark.svg" alt="RedTeam Blog logo" class="rd-logo-img rd-logo-img--light">
-        <img src="assets/images/logo/logo.light.svg" alt="RedTeam Blog logo" class="rd-logo-img rd-logo-img--dark">
+        <img src="assets/images/logo/logo.dark.svg" alt="RedTeam Blog logo" class="rd-logo-img rd-logo-img--dark">
+        <img src="assets/images/logo/logo.light.svg" alt="RedTeam Blog logo" class="rd-logo-img rd-logo-img--light">
 
         <span class="rd-site-name">
-          <span class="brand-red">RedTeam </span>
+          <span class="brand-red">Red</span>
+		  <span >Team</span>
         </span>
       </a>
     </div>
@@ -640,6 +640,24 @@
 </div>
 
 <div class="blog-grid">
+    <a href="blog/posts/an.ada_detection_v1/" class="blog-card-link">
+        <article class="blog-card">
+            <div class="blog-card-image">
+                <img src="assets/images/annoucements/Frame_Bullet03.png" alt="ADA Detection v1">
+            </div>
+            <div class="blog-card-content">
+                <span class="blog-card-date">
+                    Dec 15, 2025
+                </span>
+                <h2>
+                    Release Anti-Detect Automation Detection v1
+                </h2>
+                <p class="blog-card-excerpt">
+                    We are announcing the release of ada_detection_v1, a specialized challenge designed to evaluate detection capabilities within anti-detect browser environments (NST-Browser).
+                </p>
+            </div>
+        </article>
+    </a>
     <a href="blog/posts/an.ab_sniffer_v5/" class="blog-card-link">
         <article class="blog-card">
             <div class="blog-card-image">

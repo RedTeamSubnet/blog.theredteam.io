@@ -561,9 +561,6 @@ html {
   transition: transform 0.3s ease;
 }
 
-.blog-post:hover .post-image img {
-  transform: scale(1.05);
-}
 
 /* Blog Grid Layout - Fingerprint Style */
 .blog-grid {
@@ -595,7 +592,7 @@ html {
 }
 
 .blog-card:hover {
-  transform: translateY(-4px);
+
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
@@ -614,9 +611,6 @@ html {
   transition: transform 0.3s ease;
 }
 
-.blog-card:hover .blog-card-image img {
-  transform: scale(1.05);
-}
 
 .blog-card-content {
   padding: 1.5rem;
@@ -665,6 +659,11 @@ html {
   color: var(--md-default-fg-color);
   opacity: 0.8;
   margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* Blog Card Tags */

@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://blog.theredteam.io/0.2/blog/posts/an.ab_sniffer_v5/">
+        <link rel="canonical" href="https://blog.theredteam.io/0.2/blog/posts/an.ada_detection_v1/">
       
       
       
@@ -24,7 +24,7 @@
     
   
       
-        <title>Release Auto Browser Sniffer v5 - RedTeam Blog</title>
+        <title>Release Anti-Detect Automation Detection v1 - RedTeam Blog</title>
       
     
 
@@ -391,7 +391,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#release-of-ab-sniffer-v5" class="md-skip">
+        <a href="#release-of-ada-detection-v1" class="md-skip">
           Skip to content
         </a>
       
@@ -628,10 +628,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#release-of-ab-sniffer-v5" class="md-nav__link">
+  <a href="#release-of-ada-detection-v1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Release of AB Sniffer v5
+        Release of ADA Detection v1
       
     </span>
   </a>
@@ -639,22 +639,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-is-new-in-ab-sniffer-v5" class="md-nav__link">
+  <a href="#what-is-new-in-ada-detection-v1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What is New in AB Sniffer v5
+        What is New in ADA Detection v1
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="What is New in AB Sniffer v5">
+    <nav class="md-nav" aria-label="What is New in ADA Detection v1">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#modular-detection-architecture" class="md-nav__link">
+  <a href="#the-anti-detect-environment" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Modular Detection Architecture
+        The Anti-Detect Environment
       
     </span>
   </a>
@@ -662,10 +662,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#broader-framework-coverage" class="md-nav__link">
+  <a href="#strict-human-safety" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Broader Framework Coverage
+        Strict Human Safety
       
     </span>
   </a>
@@ -673,10 +673,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#multi-session-evaluation-engine" class="md-nav__link">
+  <a href="#targeted-framework-coverage" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Multi-Session Evaluation Engine
+        Targeted Framework Coverage
       
     </span>
   </a>
@@ -684,21 +684,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#realistic-browser-environment" class="md-nav__link">
+  <a href="#payload-based-detection-flow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Realistic Browser Environment
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stronger-schema-validation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Stronger Schema Validation
+        "Payload-Based" Detection Flow
       
     </span>
   </a>
@@ -707,6 +696,17 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submission-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Submission Structure
+      
+    </span>
+  </a>
   
 </li>
       
@@ -723,10 +723,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#baseline-reference-and-baseline-score" class="md-nav__link">
+  <a href="#1-the-human-safety-gate" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Baseline Reference and Baseline Score
+        1. The Human Safety Gate
       
     </span>
   </a>
@@ -734,10 +734,32 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#similarity-scoring" class="md-nav__link">
+  <a href="#2-framework-detection-all-or-nothing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Similarity Scoring
+        2. Framework Detection (All-or-Nothing)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-normalization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Normalization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#similarity-incentives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Similarity &amp; Incentives
       
     </span>
   </a>
@@ -750,10 +772,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#summary-of-improvements" class="md-nav__link">
+  <a href="#summary" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Summary of Improvements
+        Summary
       
     </span>
   </a>
@@ -796,7 +818,7 @@
     <div class="post-meta-details">
       
         <span class="post-meta-date">
-          December 02, 2025
+          December 15, 2025
         </span>
       
       
@@ -808,136 +830,107 @@
 
 
 <!-- Include default content -->
-<h2 id="release-of-ab-sniffer-v5">Release of AB Sniffer v5</h2>
-<p><img alt="AB Sniffer v5" src="../../../assets/images/blog/Frame_Colaboration.png" /></p>
-<p>We are announcing the release of <code>ab_sniffer_v5</code>, a major redesign of the Auto Browser Sniffer challenge. This update introduces a modular detection structure, a revised evaluation pipeline, stricter validation rules, and a more realistic containerized execution environment.</p>
-<p>The goal of this release is to provide a more accurate, fair, and production-aligned assessment of automation detection solutions.</p>
+<h2 id="release-of-ada-detection-v1">Release of ADA Detection v1</h2>
+<p><img alt="ADA Detection v1" src="../../../assets/images/annoucements/Frame_Bullet03.png" /></p>
+<p>We are announcing the release of <code>ada_detection_v1</code>, a specialized challenge designed to evaluate detection capabilities within <strong>anti-detect browser environments</strong>. Unlike previous challenges that focused on standard driver fingerprints, ADA operates entirely inside <strong>NST-Browser</strong>, where traditional static signals are masked.</p>
+<p>The goal of this challenge is to push the boundaries of behavioral analysis, requiring solutions that detect <em>how</em> automation moves and acts, rather than <em>what</em> it claims to be.</p>
 <div class="admonition info">
 <p class="admonition-title">Release Date</p>
-<p>AB Sniffer v5 is live starting December 02, 2025 at 10:00 UTC.
+<p>ADA Detection v1 is live starting December 15, 2025 at 10:00 UTC.
 All new miner submissions are evaluated using this version.</p>
 </div>
-<h1 id="what-is-new-in-ab-sniffer-v5">What is New in AB Sniffer v5</h1>
-<p>This release focuses on architectural improvements, evaluation accuracy, validation enforcement, and consistent testing conditions.</p>
-<h2 id="modular-detection-architecture">Modular Detection Architecture</h2>
-<p>AB Sniffer v5 introduces a strict modular structure for detection logic.
-Each automation framework must be implemented in its own dedicated JavaScript file:</p>
+<h1 id="what-is-new-in-ada-detection-v1">What is New in ADA Detection v1</h1>
+<p>This release shifts the focus from static property inspection to dynamic behavioral analysis in a hardened environment.</p>
+<h2 id="the-anti-detect-environment">The Anti-Detect Environment</h2>
+<p>ADA Detection v1 runs all evaluations inside <strong>NST-Browser</strong>. In this environment:</p>
 <ul>
-<li>nodriver.js</li>
-<li>seleniumbase.js</li>
-<li>selenium-driverless.js</li>
-<li>patchright.js</li>
-<li>puppeteerextra.js</li>
-<li>zendriver.js</li>
-<li>botasaurus.js</li>
-<li>pydoll.js</li>
-<li>(human scenario included in evaluation)</li>
+<li><strong>Fingerprints are masked:</strong> Standard "bot" signals are actively spoofed.</li>
+<li><strong>Profiles are fresh:</strong> Every run starts with a clean profile.</li>
+<li><strong>Isolation:</strong> There is zero shared state between runs.</li>
 </ul>
-<p>Each detection file must follow the required structure:</p>
+<p>This simulates sophisticated, real-world scraping operations where "navigator.webdriver" checks are obsolete. Participants must rely on orchestration timing, WebSocket control patterns, and behavioral anomalies.</p>
+<h2 id="strict-human-safety">Strict Human Safety</h2>
+<p>This challenge introduces a zero-tolerance policy for false positives.
+<strong>Human Safety is the kill switch.</strong></p>
 <ul>
-<li>Exactly one detection function</li>
-<li>Must return a strict boolean</li>
-<li>Must detect only its assigned framework</li>
-<li>Must not exceed 500 lines</li>
-<li>Must pass ESLint rules</li>
-<li>Must follow exact filename conventions</li>
+<li>Real human interactions are randomly injected into the evaluation flow.</li>
+<li><strong>If your solution flags more than 2 humans as bots, your entire score for the submission is 0.0.</strong></li>
 </ul>
-<p>This structure improves clarity, fairness, and consistency across submissions.</p>
-<h2 id="broader-framework-coverage">Broader Framework Coverage</h2>
-<p>AB Sniffer v5 evaluates detection logic against nine total targets:</p>
+<p>This ensures that high-performing detection scripts are safe to deploy in production environments without disrupting real user traffic.</p>
+<h2 id="targeted-framework-coverage">Targeted Framework Coverage</h2>
+<p>Miners must submit distinct detection logic for four specific automation frameworks commonly used with anti-detect browsers:</p>
 <ul>
-<li>Eight automation frameworks</li>
-<li>One real human interaction scenario</li>
+<li><code>automation</code></li>
+<li><code>nodriver</code></li>
+<li><code>playwright</code></li>
+<li><code>patchright</code></li>
+<li><code>puppeteer</code></li>
 </ul>
-<p>This broadened scope allows the system to test a wider range of behaviors—from basic automation fingerprints to advanced, stealth-oriented frameworks.</p>
-<h2 id="multi-session-evaluation-engine">Multi-Session Evaluation Engine</h2>
-<p>Each submission is evaluated through <strong>27 independent sessions</strong>:</p>
-<ul>
-<li>Nine targets</li>
-<li>Three runs per target</li>
-<li>Fresh container per session</li>
-<li>Randomized test order</li>
-<li>Zero shared state</li>
-</ul>
-<p>This ensures reproducibility and prevents assumptions based on predictable execution patterns.</p>
-<h2 id="realistic-browser-environment">Realistic Browser Environment</h2>
-<p>Detection logic is tested in both:</p>
-<ul>
-<li>Headless mode</li>
-<li>Headful mode</li>
-</ul>
-<p>Participants must ensure stability and accuracy across both environments.</p>
-<h2 id="stronger-schema-validation">Stronger Schema Validation</h2>
-<p>The validator is located here:
-<a href="https://github.com/RedTeamSubnet/ab_sniffer/blob/91703da0595672033b160991f491c792c22b8e09/src/api/endpoints/challenge/schemas.py">schemas.py</a></p>
-<p>This validator enforces:</p>
-<ul>
-<li>Correct number of detection files</li>
-<li>Strict <code>.js</code> file extension</li>
-<li>Exact framework-based naming</li>
-<li>No duplicate files</li>
-<li>Maximum 500 lines per file</li>
-<li>Proper modularity</li>
-</ul>
-<p>Any invalid submission is rejected before entering the scoring stage.</p>
-<h1 id="updated-scoring-logic">Updated Scoring Logic</h1>
-<p>Scoring uses a consistent system:</p>
-<table>
-<thead>
-<tr>
-<th>Result</th>
-<th>Points</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Perfect detection</td>
-<td>1.0</td>
-</tr>
-<tr>
-<td>Collision</td>
-<td>0.1</td>
-</tr>
-<tr>
-<td>Failure</td>
-<td>0.0</td>
-</tr>
-</tbody>
-</table>
-<p>Final score is calculated across all 27 sessions.</p>
-<h2 id="baseline-reference-and-baseline-score">Baseline Reference and Baseline Score</h2>
-<p>In AB Sniffer v5, the baseline implementation has been <strong>moved into internal services</strong>.
-These minimal reference scripts serve two purposes:</p>
+<p>Missing detection logic for any of these frameworks invalidates the submission.</p>
+<h2 id="payload-based-detection-flow">"Payload-Based" Detection Flow</h2>
+<p>Unlike previous iterations that might scan for file artifacts, ADA v1 uses a runtime payload system:</p>
 <ol>
-<li>A Structural Example: They provide a perfect, working example of the modular file structure (seleniumbase.js, nodriver.js, etc.) and simple boolean return value that the v5 challenge requires.</li>
-<li>To Establish a Baseline Score: When evaluated, these scripts produce a "baseline score." This score represents the minimum performance level achieved by using only the most basic and well-known detection signals (like navigator.webdriver).</li>
+<li>Scripts execute in the browser page.</li>
+<li>When automation is confirmed, scripts send a payload to a local <code>/_payload</code> endpoint.</li>
+<li><strong>Silence is required</strong> during human sessions. Any payload sent during a human interaction counts as a critical mistake.</li>
 </ol>
-<p>The baseline uses only basic, obvious signals and is not optimized.
-Participants are expected to exceed this baseline by detecting patterns the internal reference scripts cannot.</p>
-<h2 id="similarity-scoring">Similarity Scoring</h2>
-<p>AB Sniffer v5 applies a similarity check to ensure originality across miner submissions.</p>
-<p><strong>Rule:</strong></p>
+<h1 id="submission-structure">Submission Structure</h1>
+<p>We have streamlined the submission format to be strictly modular.
+Submissions must be a JSON object containing exactly four files, named precisely:</p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">  </span><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">&quot;detection_files&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;file_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;automation.js&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;file_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;nodriver.js&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;file_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;playwright.js&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;file_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;patchright.js&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;file_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;puppeteer.js&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="p">]</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="p">}</span>
+</span></code></pre></div>
 <ul>
-<li>For every framework detected perfectly, a fixed similarity value of <strong>0.60</strong> is assigned.</li>
-<li>For all remaining frameworks, the system calculates an <strong>average functional similarity</strong> with internal references.</li>
-<li>If this average is <strong>lower than 0.60</strong>, that lower value becomes the final similarity score.</li>
-<li>If similarity is <strong>higher</strong>, meaning the submission behaves too closely to the baseline or other miners, it is disqualified.</li>
+<li><strong>File names must match exactly.</strong></li>
+<li>Each file is responsible <em>only</em> for detecting its assigned framework.</li>
+<li>Logic must be self-contained JavaScript (ES6+).</li>
 </ul>
-<p>This mechanism prevents baseline-level or lightly modified solutions and ensures miners provide independent, meaningful detection logic.</p>
-<h1 id="summary-of-improvements">Summary of Improvements</h1>
-<p>AB Sniffer v5 introduces:</p>
+<h1 id="updated-scoring-logic">Updated Scoring Logic</h1>
+<p>Scoring in ADA v1 is a composite metric normalized between 0.0 and 1.0.</p>
+<h3 id="1-the-human-safety-gate">1. The Human Safety Gate</h3>
+<p>Before any points are awarded, human accuracy is checked.</p>
 <ul>
-<li>Fully modular SDK structure</li>
-<li>Expanded framework coverage</li>
-<li>Multi-session evaluation</li>
-<li>Stronger validation enforcement</li>
-<li>Improved human safety rules</li>
-<li>Container isolation per session</li>
-<li>Consistent scoring logic</li>
-<li>Clear baseline expectations</li>
-<li>Functional similarity enforcement</li>
+<li><strong>Start:</strong> 1.0 points.</li>
+<li><strong>Penalty:</strong> -0.1 per mistake.</li>
+<li><strong>Limit:</strong> &gt; 2 mistakes = <strong>0.0 Final Score (Immediate Failure)</strong>.</li>
 </ul>
-<p>This update reflects real-world automation-detection challenges more accurately and ensures miners are evaluated on robust, reliable, and original detection strategies.</p>
+<h3 id="2-framework-detection-all-or-nothing">2. Framework Detection (All-or-Nothing)</h3>
+<p>For each framework (e.g., <code>nodriver</code>), your script is tested against multiple runs.</p>
+<ul>
+<li><strong>1 Point:</strong> Perfect detection across <em>all</em> runs for that framework.</li>
+<li><strong>0 Points:</strong> Any missed detection or collision (reporting the wrong framework).</li>
+</ul>
+<h3 id="3-normalization">3. Normalization</h3>
+<p>The final score is calculated by summing your Human Accuracy, Automation Accuracy, and Framework Points, then normalizing against the total number of test cases.</p>
+<div class="arithmatex">\[
+\text{Final Score} = \frac{\text{Human Score} + \text{Automation Score} + \text{Framework Points}}{\text{Total Frameworks} + 1 \text{ Human} + 1 \text{ Auto}}
+\]</div>
+<h2 id="similarity-incentives">Similarity &amp; Incentives</h2>
+<p>To encourage continuous innovation:</p>
+<ul>
+<li><strong>Similarity Check:</strong> Submissions are compared against historical data. High similarity to previous solutions results in penalties or rejection.</li>
+<li><strong>Time Decay:</strong> Scores naturally decay over a 15-day period, incentivizing miners to regularly update and refine their detection heuristics.</li>
+</ul>
+<h1 id="summary">Summary</h1>
+<p>ADA Detection v1 represents a paradigm shift:</p>
+<ul>
+<li><strong>Environment:</strong> NST-Browser (Anti-Detect).</li>
+<li><strong>Philosophy:</strong> Behavioral over Static.</li>
+<li><strong>Safety:</strong> Strict penalties for false positives.</li>
+<li><strong>Format:</strong> Modular, payload-based detection.</li>
+</ul>
+<p>This challenge rewards miners who can solve the hardest problem in bot detection: distinguishing a sophisticated script from a real human without relying on easily spoofed signals.</p>
+<div class="admonition warning">
+<p class="admonition-title">Testing Dependency</p>
+<p>Miner need to buy profession plan of <code>nstbrowser</code> for testing challenge locally. Miners can buy it from NstBrowser's <a href="https://www.nstbrowser.io/en/pricing">official page</a></p>
+</div>
                 
               </article>
             </div>
