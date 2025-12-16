@@ -665,6 +665,11 @@ html {
   color: var(--md-default-fg-color);
   opacity: 0.8;
   margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* Blog Card Tags */
