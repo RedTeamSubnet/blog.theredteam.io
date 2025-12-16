@@ -115,7 +115,7 @@ For each framework (e.g., `nodriver`), your script is tested against multiple ru
 The final score is calculated by summing your Human Accuracy, Automation Accuracy, and Framework Points, then normalizing against the total number of test cases.
 
 $$
-\text{Final Score} = \frac{\text{Human Score} + \text{Auto Score} + \text{Framework Points}}{\text{Total Frameworks} + 1 \text{ Human} + 1 \text{ Auto}}
+\text{Final Score} = \frac{\text{Human Score} + \text{Automation Score} + \text{Framework Points}}{\text{Total Frameworks} + 1 \text{ Human} + 1 \text{ Auto}}
 $$
 
 ## Similarity & Incentives
@@ -135,3 +135,6 @@ ADA Detection v1 represents a paradigm shift:
 * **Format:** Modular, payload-based detection.
 
 This challenge rewards miners who can solve the hardest problem in bot detection: distinguishing a sophisticated script from a real human without relying on easily spoofed signals.
+
+!!! Warning "Testing Dependency"
+    Miner need to buy profession plan of `nstbrowser` for testing challenge locally. Miners can buy it from NstBrowser's [official page](https://www.nstbrowser.io/en/pricing)

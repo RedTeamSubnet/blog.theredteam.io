@@ -124,14 +124,7 @@
 /* =====================================
    ADMONITIONS (Info boxes)
    ===================================== */
-.md-typeset .admonition,
-.md-typeset details {
-	border-radius: var(--custom-radius-md);
-	box-shadow: var(--custom-shadow-subtle);
-	border-left: 4px solid var(--custom-admonition-border);
-	margin: var(--custom-space-lg) 0;
-	padding: var(--custom-space-md);
-}
+
 
 .md-typeset .admonition-title {
 	font-weight: var(--custom-weight-semibold);
