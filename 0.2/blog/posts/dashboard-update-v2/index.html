@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://blog.theredteam.io/0.2/blog/posts/an.ab_sniffer_v4/">
+        <link rel="canonical" href="https://blog.theredteam.io/0.2/blog/posts/dashboard-update-v2/">
       
       
       
@@ -24,7 +24,7 @@
     
   
       
-        <title>Release Auto Browser Sniffer v4 - RedTeam Blog</title>
+        <title>Dashboard Update More Visibility and Status Details - RedTeam Blog</title>
       
     
 
@@ -391,7 +391,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#release-ab_sniffer_v4-new-frameworks-global-eslint-enforcement" class="md-skip">
+        <a href="#dashboard-updates" class="md-skip">
           Skip to content
         </a>
       
@@ -628,22 +628,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#release-ab_sniffer_v4-new-frameworks-global-eslint-enforcement" class="md-nav__link">
+  <a href="#dashboard-updates" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Release: ab_sniffer_v4. New frameworks &amp; global ESLint enforcement
+        Dashboard Updates
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Release: ab_sniffer_v4. New frameworks &amp; global ESLint enforcement">
+    <nav class="md-nav" aria-label="Dashboard Updates">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#whats-included-in-ab_sniffer_v4" class="md-nav__link">
+  <a href="#enhanced-status-tracking" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What’s included in ab_sniffer_v4
+        Enhanced Status Tracking
       
     </span>
   </a>
@@ -651,10 +651,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#eslint-now-enforced-across-all-challenges" class="md-nav__link">
+  <a href="#three-payload-columns-added" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ESLint: now enforced across all challenges
+        Three Payload Columns Added
       
     </span>
   </a>
@@ -662,21 +662,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#scoring-results-scoring_result" class="md-nav__link">
+  <a href="#complete-commit-history-now-visible" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Scoring results (scoring_result)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#why-these-changes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Why these changes
+        Complete Commit History Now Visible
       
     </span>
   </a>
@@ -724,105 +713,87 @@
     <div class="post-meta-details">
       
         <span class="post-meta-date">
-          October 15, 2025
+          December 25, 2025
         </span>
       
       
         <span class="post-meta-separator">·</span>
-        <span class="post-meta-readtime">3 min read</span>
+        <span class="post-meta-readtime">5 min read</span>
       
     </div>
   </div>
 
 
 <!-- Include default content -->
-<h2 id="release-ab_sniffer_v4-new-frameworks-global-eslint-enforcement">Release: <code>ab_sniffer_v4</code>. New frameworks &amp; global ESLint enforcement</h2>
-<p><img width="1920" height="1080" alt="Add a heading" src="https://github.com/user-attachments/assets/9335e859-90b8-4277-b95f-eabc55e3a041" /></p>
-<p>We're excited to announce the release of <strong><code>ab_sniffer_v4</code></strong>, a new challenge template that introduces additional evaluation frameworks and raises the baseline quality standards for all submissions.</p>
-<div class="admonition warning">
-<p class="admonition-title">Release Date</p>
-<p><strong><code>ab_sniffer_v4</code> will be released on:</strong> <strong>October 16, 2025 10:00 AM UTC</strong>.<br />
-Please treat that as the authoritative go-live time for the new challenge.</p>
-</div>
-<h3 id="whats-included-in-ab_sniffer_v4">What’s included in <code>ab_sniffer_v4</code></h3>
-<p>The v4 release adds <strong>three new frameworks</strong> for miner submissions:
-- <strong><code>botasaurus</code></strong>: automaton framework for scripted bot evaluations.<br />
-- <strong><code>pydoll</code></strong>: Python-based evaluation harness for flexible test scenarios.<br />
-- <strong><code>human</code></strong>: <em>real device interaction</em> mode.</p>
-<p>The <strong><code>human</code></strong> framework uses a <strong>real device</strong> interacting with the miner's injected web page. This allows evaluation of miner scripts under realistic user-driven conditions (touch/keyboard interactions, timing variability, and real browser/device subtleties). In other words, <code>human</code> tests how your script behaves when a real person interacts with the page, not a synthetic emulator.</p>
-<h3 id="eslint-now-enforced-across-all-challenges">ESLint: now enforced across all challenges</h3>
-<p>To raise baseline code quality and prevent rule bypassing, <strong>ESLint checks are now integrated into all challenges</strong>, not just <code>ab_sniffer_v4</code>. The shared ESLint configuration sets:</p>
-<div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&quot;noInlineConfig&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
-</span></code></pre></div>
-<p>This prevents miners from disabling rules via inline comments such as <code>/* eslint-disable */</code> or <code>// eslint-disable-line</code>. If a rule flags a problem, the correct approach is to address the underlying issue or propose a change to the shared config — not to silence the linter inline.</p>
-<p>Inline ESLint disables will be <strong>ignored and flagged</strong>. Please update code to conform to the rules or submit a change request for the shared config if you have a legitimate need.</p>
-<h3 id="scoring-results-scoring_result">Scoring results (<code>scoring_result</code>)</h3>
-<p>Miners can now view their validator scoring results in JSON form (available from the Hugging Face view for the submission). The <code>scoring_result</code> JSON contains per-run validator outputs — for example, predictions, detection flags, driver/framework used, and execution time.</p>
-<p><strong>Short example of <code>scoring_result</code>:</strong></p>
-<div class="language-json highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="nt">&quot;0&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">        </span><span class="p">{</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">            </span><span class="nt">&quot;driver&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;human&quot;</span><span class="p">,</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">            </span><span class="nt">&quot;predicted&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;HeadlessBot&quot;</span><span class="p">,</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">            </span><span class="nt">&quot;detected&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">            </span><span class="nt">&quot;execution_time&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">15.676664113998413</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">        </span><span class="p">}</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="p">],</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="nt">&quot;1&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">        </span><span class="p">{</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">            </span><span class="nt">&quot;detected&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">            </span><span class="nt">&quot;predicted&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Chrome&quot;</span><span class="p">,</span>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">            </span><span class="nt">&quot;driver&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;seleniumbase&quot;</span><span class="p">,</span>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">            </span><span class="nt">&quot;execution_time&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">15.242670774459839</span>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">        </span><span class="p">}</span>
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">    </span><span class="p">],</span>
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">    </span><span class="nt">&quot;2&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">        </span><span class="p">{</span>
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">            </span><span class="nt">&quot;driver&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;human&quot;</span><span class="p">,</span>
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">            </span><span class="nt">&quot;predicted&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;HeadlessBot&quot;</span><span class="p">,</span>
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">            </span><span class="nt">&quot;detected&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">            </span><span class="nt">&quot;execution_time&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">12.766318559646606</span>
-</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">        </span><span class="p">}</span>
-</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">    </span><span class="p">],</span>
-</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">    </span><span class="nt">&quot;3&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">        </span><span class="p">{</span>
-</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">            </span><span class="nt">&quot;detected&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">            </span><span class="nt">&quot;predicted&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Chrome&quot;</span><span class="p">,</span>
-</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="w">            </span><span class="nt">&quot;driver&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;seleniumbase&quot;</span><span class="p">,</span>
-</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="w">            </span><span class="nt">&quot;execution_time&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">15.284128427505493</span>
-</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="w">        </span><span class="p">}</span>
-</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="w">    </span><span class="p">],</span>
-</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="w">    </span><span class="nt">&quot;4&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a><span class="w">        </span><span class="p">{</span>
-</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="w">            </span><span class="nt">&quot;driver&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;human&quot;</span><span class="p">,</span>
-</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a><span class="w">            </span><span class="nt">&quot;predicted&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;HeadlessBot&quot;</span><span class="p">,</span>
-</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="w">            </span><span class="nt">&quot;detected&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a><span class="w">            </span><span class="nt">&quot;execution_time&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">12.783197164535522</span>
-</span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a><span class="w">        </span><span class="p">}</span>
-</span><span id="__span-1-41"><a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a><span class="w">    </span><span class="p">],</span>
-</span><span id="__span-1-42"><a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a><span class="w">    </span><span class="nt">&quot;5&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-</span><span id="__span-1-43"><a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a><span class="w">        </span><span class="p">{</span>
-</span><span id="__span-1-44"><a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a><span class="w">            </span><span class="nt">&quot;detected&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-</span><span id="__span-1-45"><a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a><span class="w">            </span><span class="nt">&quot;predicted&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Chrome&quot;</span><span class="p">,</span>
-</span><span id="__span-1-46"><a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a><span class="w">            </span><span class="nt">&quot;driver&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;seleniumbase&quot;</span><span class="p">,</span>
-</span><span id="__span-1-47"><a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a><span class="w">            </span><span class="nt">&quot;execution_time&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">15.305853605270386</span>
-</span><span id="__span-1-48"><a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a><span class="w">        </span><span class="p">}</span>
-</span><span id="__span-1-49"><a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a><span class="w">    </span><span class="p">]</span>
-</span><span id="__span-1-50"><a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a><span class="p">}</span>
-</span></code></pre></div>
-<p><strong>Fields explained:</strong></p>
+<h2 id="dashboard-updates">Dashboard Updates</h2>
+<p>We are adding more information to the dashboard to improve monitoring and transparency for your submissions.</p>
+<p><img alt="Dashboard Update" src="../../../assets/images/Dashboard_update.png" /></p>
+<h3 id="enhanced-status-tracking">Enhanced Status Tracking</h3>
+<div class="admonition info">
+<p class="admonition-title">What Changed</p>
 <ul>
-<li><code>driver</code>: the evaluation framework / driver used (e.g., <code>human</code>, <code>seleniumbase</code>, <code>botasaurus</code>, <code>pydoll</code>).</li>
-<li><code>predicted</code>: result of a submission for that session.</li>
-<li><code>detected</code>: boolean indicating that marks match of pridicted value with the driver.</li>
-<li><code>execution_time</code>: the execution time of script in that session in seconds (float).</li>
+<li>The dashboard now shows detailed status information for each submission throughout its lifecycle.</li>
+<li>New statuses include: <strong>Received</strong>, <strong>Accepted | Rejected</strong>, <strong>Validated</strong>, <strong>Invalid</strong>, <strong>Decaying X%</strong>, and <strong>Decayed</strong>.</li>
+<li>Each status provides clear insight into where your submission is in the evaluation pipeline.</li>
+<li>New columns provide information about validation outputs, comparison reasons, and scoring results.</li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Where to find it</p>
-<p><code>scoring_result</code> JSON is available in the validators' Hugging Face view for your submission . Check the submission page to download or inspect the JSON for each validator run.</p>
 </div>
-<h3 id="why-these-changes">Why these changes</h3>
-<p>The new frameworks (including the real-device <code>human</code> mode) and the global ESLint enforcement improve the <em>realism</em>, <em>fairness</em>, and <em>maintainability</em> of the RedTeam evaluation ecosystem. They help ensure that miners are judged on robust, reproducible behavior and on sound implementation practices.</p>
+<p><strong>Status definitions:</strong></p>
+<ul>
+<li><strong>Received</strong>: New commits received by validators and waiting to be scored.</li>
+<li><strong>Accepted | Rejected</strong>: Indicates whether a commit is eligible for incentives. Commits in this state are scored but have not reached validators. Pushing a new commit will overwrite this state, and the previous commit will not receive incentives.</li>
+<li><strong>Validated</strong>: Commits that reached validators after being scored.</li>
+<li><strong>Invalid</strong>: Commits that failed a specific validation step of the challenge.</li>
+<li><strong>Decaying X%</strong>: Commits currently decaying; the percentage shows how much has decayed so far.</li>
+<li><strong>Decayed</strong>: Commits fully decayed and no longer eligible for incentives.</li>
+</ul>
+<h3 id="three-payload-columns-added">Three Payload Columns Added</h3>
+<div class="admonition note">
+<p class="admonition-title">Highlights</p>
+<ul>
+<li>Added <strong>3 new payload columns</strong> to the dashboard for better debugging and transparency.</li>
+<li>Each payload provides different information about your submission.</li>
+</ul>
+</div>
+<p><strong>Payload types:</strong></p>
+<ul>
+<li>
+<p><strong>Validation Output</strong>:</p>
+<ul>
+<li>Reasons from each verification step.</li>
+<li>Detailed messages from the validation process.</li>
+<li>Steps that failed or passed during validation.</li>
+</ul>
+</li>
+<li>
+<p><strong>Comparison Logs</strong>:</p>
+<ul>
+<li>Score from each comparison.</li>
+<li>Detailed reasoning behind the similarity score against other submissions.</li>
+<li>Hidden Docker Hub IDs of compared submissions for privacy.</li>
+</ul>
+</li>
+<li>
+<p><strong>Results JSON</strong>:</p>
+<ul>
+<li>Available only for challenges that expose a <code>payload</code> endpoint.</li>
+<li>Scoring results for each submission in JSON format.</li>
+<li>Metrics from each step of the scoring process.</li>
+</ul>
+</li>
+</ul>
+<p>All payloads are displayed in a formatted, collapsible JSON viewer for easy inspection.</p>
+<h3 id="complete-commit-history-now-visible">Complete Commit History Now Visible</h3>
+<div class="admonition success">
+<p class="admonition-title">Improvement</p>
+<ul>
+<li>The dashboard now displays all commits, including the newest ones.</li>
+<li>New, unscored commits appear as the first 20 characters of their encrypted commit, prefixed with <code>encrypted_commit:</code>.</li>
+<li>Previously, only the scored commit was visible.</li>
+</ul>
+</div>
+<hr />
+<p>These updates are designed to provide better <strong>visibility and transparency</strong> into your submission progress and help you debug issues more effectively.</p>
                 
               </article>
             </div>
