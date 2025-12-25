@@ -11,6 +11,24 @@ hide:
 </div>
 
 <div class="blog-grid">
+    <a href="blog/posts/dashboard-update-v2/" class="blog-card-link">
+        <article class="blog-card">
+            <div class="blog-card-image">
+                <img src="assets/images/Dashboard_update.png" alt="Dashboard Update">
+            </div>
+            <div class="blog-card-content">
+                <span class="blog-card-date">
+                    Dec 25, 2025
+                </span>
+                <h2>
+                    Dashboard Update: More Visibility and Status Details
+                </h2>
+                <p class="blog-card-excerpt">
+                    We are adding more information to the dashboard to improve monitoring and transparency for your submissions.
+                </p>
+            </div>
+        </article>
+    </a>
     <a href="blog/posts/an.ada_detection_v1/" class="blog-card-link">
         <article class="blog-card">
             <div class="blog-card-image">
