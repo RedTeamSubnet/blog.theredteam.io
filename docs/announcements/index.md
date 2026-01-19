@@ -11,6 +11,24 @@ hide:
 </div>
 
 <div class="blog-grid">
+    <a href="./posts/an.new_structure" class="blog-card-link">
+        <article class="blog-card">
+            <div class="blog-card-image">
+                <img src="../assets/images/annoucements/an.new_structure.png" alt="Repository Split and Migration Deadline">
+            </div>
+            <div class="blog-card-content">
+                <span class="blog-card-date">
+                    Jan 19, 2026
+                </span>
+                <h2>
+                    Repository split and migration deadline
+                </h2>
+                <p class="blog-card-excerpt">
+                    We are separating the monolithic RedTeam repository into four focused projects. The split will be merged on Jan 25, 2026. Validators must migrate to the new dedicated validator repository or risk losing rewards.
+                </p>
+            </div>
+        </article>
+    </a>
     <a href="../blog/posts/an.ada_detection_v1/" class="blog-card-link">
         <article class="blog-card">
             <div class="blog-card-image">
