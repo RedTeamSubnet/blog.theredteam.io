@@ -640,21 +640,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#what-moved-where" class="md-nav__link">
+  <a href="#actions-that-need-to-be-done" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What moved where
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#required-actions-for-validators" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Required actions for validators
+        Actions That need to be done
       
     </span>
   </a>
@@ -738,28 +727,36 @@
 <!-- Include default content -->
 <h2 id="repository-split-and-migration-deadline">Repository split and migration deadline</h2>
 <p><img alt="Announcement Banner" src="../../../assets/images/annoucements/an.new_structure.png" /></p>
-<p>We are separating the monolithic <code>RedTeam</code> repository into four focused projects so updates can ship faster and operators can manage only what they run. The split will be merged on <strong>Jan 25, 2026</strong>. After the merge, any validator still using the old repo will stop working.</p>
-<h3 id="what-moved-where">What moved where</h3>
-<div class="admonition info">
-<p class="admonition-title">Repositories and docs</p>
+<p>We are separating the monolithic <code>RedTeam</code> repository into four focused projects so updates can ship faster and operators can manage only what they run. The split will be merged on <strong>Jan 25, 2026</strong>. After the merge, any validator still using the old repository will stop working.</p>
+<h3 id="actions-that-need-to-be-done">Actions That need to be done</h3>
+<div class="admonition warning">
+<p class="admonition-title">Action Required</p>
+<p><strong>For Miners:</strong></p>
 <ul>
-<li><strong>Shared core</strong> contains shared services and protocol types. Find the source in the streamlined <a href="https://github.com/RedTeamSubnet/RedTeam">RedTeam repo</a>, which we're transitioning to <code>redteam_core</code>.</li>
-<li><strong>Miner</strong> documentation is available in the <a href="https://docs.theredteam.io/latest/miner/">Miner docs</a>, and the code is in the <a href="https://github.com/RedTeamSubnet/miner">miner repository</a>.</li>
-<li><strong>Validator</strong> documentation is available in the <a href="https://docs.theredteam.io/latest/validator/">Validator docs</a>, and the code is in the <a href="https://github.com/RedTeamSubnet/validator">validator repository</a>.</li>
+<li>Read the <a href="https://docs.theredteam.io/latest/miner/">Miner documentation</a> carefully.</li>
+<li>Clone the <a href="https://github.com/RedTeamSubnet/miner">miner repository</a> and follow the installation steps provided in its README.</li>
+<li>Follow all provided instructions to set up your miner node.</li>
+<li>Update your environment variables and service definitions to point at the new miner codebase.</li>
+<li>Restart your miner and confirm it's running properly by monitoring the logs.</li>
 </ul>
-</div>
-<h3 id="required-actions-for-validators">Required actions for validators</h3>
+<p><strong>For Validators:</strong></p>
 <ul>
-<li>Stop your existing validator that was built from the monolithic repo.</li>
-<li>Clone the dedicated validator repository and follow the installation steps provided in its README.</li>
-<li>Update your environment variables and service definitions to point at the new codebase.</li>
+<li>Read all <a href="https://docs.theredteam.io/latest/validator/">Validator documentation</a> thoroughly.</li>
+<li>Stop your existing validator that was built from the monolithic repository.</li>
+<li>Clone the dedicated <a href="https://github.com/RedTeamSubnet/validator">validator repository</a> and follow the installation steps provided in its README.</li>
+<li>Update your environment variables and service definitions to point at the new validator codebase.</li>
+<li>The new repository includes important stability fixes and improvements.</li>
 <li>Restart the validator and confirm it by monitoring the logs.</li>
-<li>Before Jan 25, ensure your team understands the split: miners use the miner repo, validators use the validator repo, and shared bits live in <code>redteam_core</code>.</li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Shared Components</p>
+<p><strong>Shared core</strong> contains shared services and protocol types. Find the source in the streamlined <a href="https://github.com/RedTeamSubnet/RedTeam">RedTeam repository</a>, which we're transitioning to <code>redteam_core</code>.</p>
+</div>
+</div>
 <h3 id="timeline">Timeline</h3>
 <ul>
 <li><strong>Now</strong>: The migration window is open, and we encourage you to switch immediately.</li>
-<li><strong>Jan 25, 2026</strong>: The new repos become authoritative. Validators still on the old repo will stop and lose rewards until migrated.</li>
+<li><strong>Jan 25, 2026</strong>: The new repos become authoritative. Validators still on the old repository will stop and lose rewards until migrated.</li>
 </ul>
 <h3 id="why-the-change">Why the change</h3>
 <ul>
@@ -769,7 +766,7 @@
 <li>The result is a simpler security posture where public APIs stay public while validator runtimes and shared core remain compartmentalized.</li>
 <li>It makes onboarding easier since miners and validators only pull what they need, reducing update friction and dependency drift.</li>
 </ul>
-<p>If you hit issues while migrating, open a GitHub issue in the relevant repo or reach out in our public <a href="https://discord.com/channels/799672011265015819/1319313447435108413">Discord channel on the Bittensor server</a>.</p>
+<p>If you hit issues while migrating, open a GitHub issue in the relevant repository or reach out in our public <a href="https://discord.com/channels/799672011265015819/1319313447435108413">Discord channel on the Bittensor server</a>.</p>
                 
               </article>
             </div>
