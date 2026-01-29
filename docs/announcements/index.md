@@ -11,6 +11,24 @@ hide:
 </div>
 
 <div class="blog-grid">
+    <a href="./posts/an.what_is_changed" class="blog-card-link">
+        <article class="blog-card">
+            <div class="blog-card-image">
+                <img src="../assets/images/annoucements/an.comlite_reconstruction.png" alt="Major System Updates and Repository Migration Complete">
+            </div>
+            <div class="blog-card-content">
+                <span class="blog-card-date">
+                    Jan 29, 2026
+                </span>
+                <h2>
+                    Major System Updates and Repository Migration Complete
+                </h2>
+                <p class="blog-card-excerpt">
+                    Repository migration is complete with HuggingFace dependency removed, humanize_behaviour_v5 deprecated, and enhanced security with encrypted commit display and early termination for invalid submissions.
+                </p>
+            </div>
+        </article>
+    </a>
     <a href="./posts/an.new_structure" class="blog-card-link">
         <article class="blog-card">
             <div class="blog-card-image">
