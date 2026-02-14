@@ -2,94 +2,98 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://blog.theredteam.io/0.2/</loc>
-         <lastmod>2026-01-29</lastmod>
+         <lastmod>2026-02-14</lastmod>
     </url>
     <url>
          <loc>https://blog.theredteam.io/0.2/CUSTOMIZATION/</loc>
-         <lastmod>2026-01-29</lastmod>
+         <lastmod>2026-02-14</lastmod>
     </url>
     <url>
          <loc>https://blog.theredteam.io/0.2/release-notes/</loc>
-         <lastmod>2026-01-29</lastmod>
+         <lastmod>2026-02-14</lastmod>
     </url>
     <url>
          <loc>https://blog.theredteam.io/0.2/announcements/</loc>
-         <lastmod>2026-01-29</lastmod>
+         <lastmod>2026-02-14</lastmod>
+    </url>
+    <url>
+         <loc>https://blog.theredteam.io/0.2/announcements/posts/an.ada_detection_v2/</loc>
+         <lastmod>2026-02-14</lastmod>
     </url>
     <url>
          <loc>https://blog.theredteam.io/0.2/announcements/posts/an.new_structure/</loc>
-         <lastmod>2026-01-29</lastmod>
+         <lastmod>2026-02-14</lastmod>
     </url>
     <url>
          <loc>https://blog.theredteam.io/0.2/announcements/posts/an.what_is_changed/</loc>
-         <lastmod>2026-01-29</lastmod>
+         <lastmod>2026-02-14</lastmod>
     </url>
     <url>
          <loc>https://blog.theredteam.io/0.2/blog/</loc>
-         <lastmod>2026-01-29</lastmod>
+         <lastmod>2026-02-14</lastmod>
     </url>
     <url>
          <loc>https://blog.theredteam.io/0.2/blog/posts/an.ab_sniffer_v4/</loc>
-         <lastmod>2026-01-29</lastmod>
+         <lastmod>2026-02-14</lastmod>
     </url>
     <url>
          <loc>https://blog.theredteam.io/0.2/blog/posts/an.ab_sniffer_v5/</loc>
-         <lastmod>2026-01-29</lastmod>
+         <lastmod>2026-02-14</lastmod>
     </url>
     <url>
          <loc>https://blog.theredteam.io/0.2/blog/posts/an.ada_detection_v1/</loc>
-         <lastmod>2026-01-29</lastmod>
+         <lastmod>2026-02-14</lastmod>
     </url>
     <url>
          <loc>https://blog.theredteam.io/0.2/blog/posts/an.eslint_updates/</loc>
-         <lastmod>2026-01-29</lastmod>
+         <lastmod>2026-02-14</lastmod>
     </url>
     <url>
          <loc>https://blog.theredteam.io/0.2/blog/posts/an.fix-docker-in-challenges/</loc>
-         <lastmod>2026-01-29</lastmod>
+         <lastmod>2026-02-14</lastmod>
     </url>
     <url>
          <loc>https://blog.theredteam.io/0.2/blog/posts/an.structural-internal-services/</loc>
-         <lastmod>2026-01-29</lastmod>
+         <lastmod>2026-02-14</lastmod>
     </url>
     <url>
          <loc>https://blog.theredteam.io/0.2/blog/posts/an.structure-update/</loc>
-         <lastmod>2026-01-29</lastmod>
+         <lastmod>2026-02-14</lastmod>
     </url>
     <url>
          <loc>https://blog.theredteam.io/0.2/blog/posts/bot-detection-challenges/</loc>
-         <lastmod>2026-01-29</lastmod>
+         <lastmod>2026-02-14</lastmod>
     </url>
     <url>
          <loc>https://blog.theredteam.io/0.2/blog/posts/dashboard-update-v2/</loc>
-         <lastmod>2026-01-29</lastmod>
+         <lastmod>2026-02-14</lastmod>
     </url>
     <url>
          <loc>https://blog.theredteam.io/0.2/blog/posts/dynamic-tao-alpha-token/</loc>
-         <lastmod>2026-01-29</lastmod>
+         <lastmod>2026-02-14</lastmod>
     </url>
     <url>
          <loc>https://blog.theredteam.io/0.2/blog/posts/incentive-logic-update/</loc>
-         <lastmod>2026-01-29</lastmod>
+         <lastmod>2026-02-14</lastmod>
     </url>
     <url>
          <loc>https://blog.theredteam.io/0.2/blog/posts/monetization-opportunities/</loc>
-         <lastmod>2026-01-29</lastmod>
+         <lastmod>2026-02-14</lastmod>
     </url>
     <url>
          <loc>https://blog.theredteam.io/0.2/dev/build/</loc>
-         <lastmod>2026-01-29</lastmod>
+         <lastmod>2026-02-14</lastmod>
     </url>
     <url>
          <loc>https://blog.theredteam.io/0.2/dev/test/</loc>
-         <lastmod>2026-01-29</lastmod>
+         <lastmod>2026-02-14</lastmod>
     </url>
     <url>
          <loc>https://blog.theredteam.io/0.2/important/</loc>
-         <lastmod>2026-01-29</lastmod>
+         <lastmod>2026-02-14</lastmod>
     </url>
     <url>
          <loc>https://blog.theredteam.io/0.2/importants/</loc>
-         <lastmod>2026-01-29</lastmod>
+         <lastmod>2026-02-14</lastmod>
     </url>
 </urlset>

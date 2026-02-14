@@ -10,23 +10,21 @@
       
       
       
-        <link rel="canonical" href="https://blog.theredteam.io/0.2/announcements/">
+        <link rel="canonical" href="https://blog.theredteam.io/0.2/announcements/posts/an.ada_detection_v2/">
       
-      
-        <link rel="prev" href="../important/">
       
       
       
         
       
       
-      <link rel="icon" href="../assets/images/logo/logo.dark.svg">
+      <link rel="icon" href="../../../assets/images/logo/logo.dark.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
   
       
-        <title>Announcements - RedTeam Blog</title>
+        <title>ADA v2: Hardened Detection & Fail-Fast Scoring - RedTeam Blog</title>
       
     
 
@@ -295,10 +293,10 @@
   </style>
 
   
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -318,19 +316,19 @@
       
     
     
-      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="../assets/css/colors.css">
+      <link rel="stylesheet" href="../../../assets/css/colors.css">
     
-      <link rel="stylesheet" href="../assets/css/layout.css">
+      <link rel="stylesheet" href="../../../assets/css/layout.css">
     
-      <link rel="stylesheet" href="../assets/css/typography.css">
+      <link rel="stylesheet" href="../../../assets/css/typography.css">
     
-      <link rel="stylesheet" href="../assets/css/components.css">
+      <link rel="stylesheet" href="../../../assets/css/components.css">
     
-      <link rel="stylesheet" href="../assets/css/custom.css">
+      <link rel="stylesheet" href="../../../assets/css/custom.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -392,6 +390,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#next-generation-automation-detection-release-of-ada-v2" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -405,10 +408,10 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
       </button>
 
-      <a href=".." class="rd-logo" aria-label="RedTeam Blog">
+      <a href="../../.." class="rd-logo" aria-label="RedTeam Blog">
         <!-- Show dark logo in light mode, and light logo in dark mode (explicit files) -->
-        <img src="../assets/images/logo/logo.dark.svg" alt="RedTeam Blog logo" class="rd-logo-img rd-logo-img--dark">
-        <img src="../assets/images/logo/logo.light.svg" alt="RedTeam Blog logo" class="rd-logo-img rd-logo-img--light">
+        <img src="../../../assets/images/logo/logo.dark.svg" alt="RedTeam Blog logo" class="rd-logo-img rd-logo-img--dark">
+        <img src="../../../assets/images/logo/logo.light.svg" alt="RedTeam Blog logo" class="rd-logo-img rd-logo-img--light">
 
         <span class="rd-site-name">
           <span class="brand-red">Red</span>
@@ -418,14 +421,14 @@
     </div>
 
     <nav class="rd-nav" aria-label="Primary">
-      <a href="../blog/" class="rd-nav-link">Blog</a>
-      <a href="../important/" class="rd-nav-link">Important</a>
-      <a href="./" class="rd-nav-link">Announcements</a>
+      <a href="../../../blog/" class="rd-nav-link">Blog</a>
+      <a href="../../../important/" class="rd-nav-link">Important</a>
+      <a href="../../" class="rd-nav-link">Announcements</a>
     </nav>
 
     <div class="rd-header-actions">
       <div class="rd-search-inline">
-        <form role="search" class="md-search" action="../search/" method="get">
+        <form role="search" class="md-search" action="../../../search/" method="get">
   <label class="sr-only" for="q">Search</label>
   <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false" xmlns="http://www.w3.org/2000/svg">
     <circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="1.6" fill="none"></circle>
@@ -459,9 +462,7 @@
           
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -472,9 +473,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="RedTeam Blog" class="md-nav__button md-logo" aria-label="RedTeam Blog" data-md-component="logo">
+    <a href="../../.." title="RedTeam Blog" class="md-nav__button md-logo" aria-label="RedTeam Blog" data-md-component="logo">
       
-  <img src="../assets/images/logo/logo.light.svg" alt="logo">
+  <img src="../../../assets/images/logo/logo.light.svg" alt="logo">
 
     </a>
     RedTeam Blog
@@ -501,7 +502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/" class="md-nav__link">
+      <a href="../../../blog/" class="md-nav__link">
         
   
   
@@ -528,7 +529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/" class="md-nav__link">
+      <a href="../../../blog/" class="md-nav__link">
         
   
   
@@ -555,7 +556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../important/" class="md-nav__link">
+      <a href="../../../important/" class="md-nav__link">
         
   
   
@@ -579,17 +580,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
         
   
   
@@ -605,7 +599,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -618,9 +611,7 @@
             
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -628,6 +619,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+  
+    
   
   
 </nav>
@@ -642,206 +635,124 @@
               <article class="md-content__inner md-typeset">
                 
                   
+  <!-- Author Information Byline -->
+  <div class="post-meta-info">
+    <div class="post-authors">
+      
+        
+        
+          <div class="post-author">
+            
+              <img src="https://avatars.githubusercontent.com/aliyuldashev" alt="Javokhir" class="post-author-avatar">
+            
+            
+              <a href="https://github.com/aliyuldashev" class="post-author-name" target="_blank" rel="noopener">
+                Javokhir
+              </a>
+            
+          </div>
+        
+      
+    </div>
+    <div class="post-meta-details">
+      
+        <span class="post-meta-date">
+          February 11, 2026
+        </span>
+      
+      
+        <span class="post-meta-separator">·</span>
+        <span class="post-meta-readtime">6 min read</span>
+      
+    </div>
+  </div>
+
 
 <!-- Include default content -->
-<div class="blog-header">
-  <h1>Announcements</h1>
-  <p class="blog-subtitle">Official updates from the RedTeam. Check here for the latest news, event notices, and important messages. It's where we post what's new, what's coming, and what everyone should know.</p>
+<h1 id="next-generation-automation-detection-release-of-ada-v2">Next-Generation Automation Detection: Release of ADA v2</h1>
+<p><img alt="ADA v2 Banner" src="../../../assets/images/annoucements/an.ada_detection_2.png" /></p>
+<p>We are excited to announce the release of <strong>Anti-Detect Automation Detection v2 (ADA v2)</strong>. This major update raises the bar for detection difficulty through advanced browser-level obfuscation and a refined, fail-fast scoring architecture designed for maximum accuracy.</p>
+<hr />
+<h1 id="what-is-new-in-ada-v2">What is new in ADA v2</h1>
+<h2 id="hardened-detection-with-nstbrowser">🕵️‍♂️ Hardened Detection with NSTBrowser</h2>
+<p>ADA v2 leverages the full power of <strong>NSTBrowser</strong> to create highly realistic environments. By simulating authentic hardware fingerprints and disabling common automation signals at the engine level, static detection is now virtually impossible.</p>
+<h3 id="key-obfuscation-features">Key Obfuscation Features</h3>
+<ul>
+<li><strong>Dynamic Fingerprinting</strong>: Every session generates unique, randomized browser identifiers.</li>
+<li><strong>Hardware Simulation</strong>: Realistic signals for <code>deviceMemory</code> (8GB) and <code>hardwareConcurrency</code> (16).</li>
+<li><strong>Engine-Level Stealth</strong>: Disables <code>AutomationControlled</code> flags and injects custom User-Agents across all network layers.</li>
+</ul>
+<details class="abstract">
+<summary>View Internal Browser Configuration</summary>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Linux&quot;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">headless</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nt">incognito</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nt">fingerprintRandomness</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nt">fingerprinting</span><span class="p">:</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="nt">userAgent</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Mozilla/5.0</span><span class="nv"> </span><span class="s">(Macintosh;</span><span class="nv"> </span><span class="s">Intel</span><span class="nv"> </span><span class="s">Mac</span><span class="nv"> </span><span class="s">OS</span><span class="nv"> </span><span class="s">X</span><span class="nv"> </span><span class="s">10_15_7)</span><span class="nv"> </span><span class="s">...&quot;</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="nt">deviceMemory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="nt">hardwareConcurrency</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">16</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="nt">screen</span><span class="p">:</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="nt">width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1280</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="nt">height</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1024</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="nt">args</span><span class="p">:</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="s">&quot;--disable-blink-features&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;AutomationControlled&quot;</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span><span class="s">&quot;--disable-backgrounding-occluded-windows&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">  </span><span class="s">&quot;--no-sandbox&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</span></code></pre></div>
+</details>
+<h2 id="the-three-pillars-of-fail-fast-scoring">➉ The Three Pillars of Fail-Fast Scoring</h2>
+<p>The scoring system has moved to a <strong>Fail-Fast</strong> model. If a submission fails any of these three critical pillars, the final score drops to <strong>0.0</strong> immediately.</p>
+<h3 id="1-human-detection">1. Human Detection</h3>
+<p>Miners must distinguish between automated tasks and human-injected sessions.</p>
+<ul>
+<li><strong>Threshold</strong>: Exceeding the allowed human miss count (default: 1) results in a total score of <strong>0</strong>.</li>
+<li><strong>Weight</strong>: Perfect detection grants 1.0; partial penalties apply for minor misses.</li>
+</ul>
+<h3 id="2-framework-detection">2. Framework Detection</h3>
+<p>Identifies tools like <code>seleniumbase</code>, <code>puppeteer-extra</code>, and <code>zendriver</code>.</p>
+<ul>
+<li><strong>Selenium Safety Gate</strong>: Missing any Selenium-based framework (<code>seleniumbase</code> or <code>selenium_driverless</code>) results in an immediate <strong>0.0</strong> total score. This is implemented because Selenium-based frameworks are the primary focus of ADA v2; missing them represents a failure to detect the challenge's main automation vectors.</li>
+<li><strong>Density</strong>: Points are earned for every 3 correct detections.</li>
+</ul>
+<h3 id="3-protocol-accuracy">3. Protocol Accuracy</h3>
+<p>Validates the low-level communication patterns (Webdriver/WebSocket) of the browser.</p>
+<ul>
+<li><strong>Verification</strong>: Checks usage against expected framework profiles.</li>
+<li><strong>Threshold</strong>: Exceeding protocol miss limits results in a total score of <strong>0</strong>.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Final Formula</p>
+<div class="arithmatex">\[\text{Final Score} = \frac{\text{Human Score} + \text{Framework Score} + \text{Protocol Score}}{\text{Framework Count} + 2}\]</div>
 </div>
-
-<div class="blog-grid">
-    <a href="./posts/an.ada_detection_v2" class="blog-card-link">
-        <article class="blog-card">
-            <div class="blog-card-image">
-                <img src="../assets/images/annoucements/an.ada_detection_2.png" alt="Release of ADA Detection v2">
-            </div>
-            <div class="blog-card-content">
-                <span class="blog-card-date">
-                    Feb 11, 2026
-                </span>
-                <h2>
-                    Release of Anti-Detect Automation Detection v2
-                </h2>
-                <p class="blog-card-excerpt">
-                    ADA v2 introduces hardened browser obfuscation via NSTBrowser and a new Fail-Fast scoring logic across human, framework, and protocol detection pillars.
-                </p>
-            </div>
-        </article>
-    </a>
-    <a href="./posts/an.what_is_changed" class="blog-card-link">
-        <article class="blog-card">
-            <div class="blog-card-image">
-                <img src="../assets/images/annoucements/an.comlite_reconstruction.png" alt="Major System Updates and Repository Migration Complete">
-            </div>
-            <div class="blog-card-content">
-                <span class="blog-card-date">
-                    Jan 29, 2026
-                </span>
-                <h2>
-                    Major System Updates and Repository Migration Complete
-                </h2>
-                <p class="blog-card-excerpt">
-                    Repository migration is complete with HuggingFace dependency removed, humanize_behaviour_v5 deprecated, and enhanced security with encrypted commit display and early termination for invalid submissions.
-                </p>
-            </div>
-        </article>
-    </a>
-    <a href="./posts/an.new_structure" class="blog-card-link">
-        <article class="blog-card">
-            <div class="blog-card-image">
-                <img src="../assets/images/annoucements/an.new_structure.png" alt="Repository Split and Migration Deadline">
-            </div>
-            <div class="blog-card-content">
-                <span class="blog-card-date">
-                    Jan 19, 2026
-                </span>
-                <h2>
-                    Repository split and migration deadline
-                </h2>
-                <p class="blog-card-excerpt">
-                    We are separating the monolithic RedTeam repository into four focused projects. The split will be merged on Jan 25, 2026. Validators must migrate to the new dedicated validator repository or risk losing rewards.
-                </p>
-            </div>
-        </article>
-    </a>
-    <a href="../blog/posts/an.ada_detection_v1/" class="blog-card-link">
-        <article class="blog-card">
-            <div class="blog-card-image">
-                <img src="../assets/images/annoucements/Frame_Bullet03.png" alt="ADA Detection v1">
-            </div>
-            <div class="blog-card-content">
-                <span class="blog-card-date">
-                    Dec 15, 2025
-                </span>
-                <h2>
-                    Release Anti-Detect Automation Detection v1
-                </h2>
-                <p class="blog-card-excerpt">
-                    We are announcing the release of ada_detection_v1, a specialized challenge designed to evaluate detection capabilities within anti-detect browser environments (NST-Browser).
-                </p>
-            </div>
-        </article>
-    </a>
-    <a href="../blog/posts/an.ab_sniffer_v5/" class="blog-card-link">
-        <article class="blog-card">
-            <div class="blog-card-image">
-                <img src="../assets/images/blog/Frame_Colaboration.png" alt="AB Sniffer v5">
-            </div>
-            <div class="blog-card-content">
-                <span class="blog-card-date">
-                    Dec 02, 2025
-                </span>
-                <h2>
-                    Release Auto Browser Sniffer v5
-                </h2>
-                <p class="blog-card-excerpt">
-                    We are announcing the release of ab_sniffer_v5, a major redesign of the Auto Browser Sniffer challenge. This update introduces a modular detection structure, a revised evaluation pipeline, stricter validation rules, and a more realistic containerized execution environment.
-                </p>
-            </div>
-        </article>
-    </a>
-    <a href="../blog/posts/an.eslint_updates/" class="blog-card-link">
-        <article class="blog-card">
-            <div class="blog-card-image">
-                <img src="../assets/images/an.new_eslint_rules.png" alt="New Eslint rule">
-            </div>
-                <div class="blog-card-content">
-                    <span class="blog-card-date">Nov 22, 2025</span>
-                    <h2>
-                        New ESLint Rules Go Live Nov 23
-                    </h2>
-                <p class="blog-card-excerpt">
-                    Updated ESLint settings will apply to all JavaScript files beginning Nov 23, 2025. Learn what changed, why it matters for code quality and consistency, and how to test it.
-                </p>
-            </div>
-        </article>
-    </a>
-    <a href="../blog/posts/an.fix-docker-in-challenges/" class="blog-card-link">
-        <article class="blog-card">
-            <div class="blog-card-image">
-                <img src="../assets/images/docker_v29_issue_poster.png" alt="Docker v29">
-            </div>
-                <div class="blog-card-content">
-                    <span class="blog-card-date">Nov 16, 2025</span>
-                    <h2>
-                        Docker v29: Pinning to v28 for Challenge Stability
-                    </h2>
-                <p class="blog-card-excerpt">
-                    Docker v29 introduced breaking storage and runtime changes that caused DinD image-build failures; challenge runners are pinned to v28 and an opt-in compatibility toggle is available.
-                </p>
-            </div>
-        </article>
-    </a>
-  <a href="../blog/posts/incentive-logic-update/" class="blog-card-link">
-    <article class="blog-card">
-        <div class="blog-card-image">
-            <img src="../assets/images/diagram-redteam.jpg" alt="Miner Linking & Incentive Logic">
-        </div>
-        <div class="blog-card-content">
-            <span class="blog-card-date">Oct 25, 2025</span>
-            <h2>Miner Linking & Incentive Logic Update</h2>
-            <p class="blog-card-excerpt">This improvement ensures that every miner is recognized fairly, no matter how many nodes or UIDs they operate.</p>
-        </div>
-    </article>
-  </a>
-
-  <!-- 2. Oct 15, 2025 - Auto Browser Sniffer -->
-  <a href="../blog/posts/an.ab_sniffer_v4/" class="blog-card-link">
-    <article class="blog-card">
-        <div class="blog-card-image">
-            <img alt="Auto Browser Sniffer v4" src="https://github.com/user-attachments/assets/9335e859-90b8-4277-b95f-eabc55e3a041" />
-        </div>
-        <div class="blog-card-content">
-            <span class="blog-card-date">Oct 15, 2025</span>
-            <h2>Release of Auto Browser Sniffer</h2>
-            <p class="blog-card-excerpt">We are making important changes to improve fairness and protect miners' intellectual property</p>
-        </div>
-    </article>
-  </a>
-
-  <!-- 3. Oct 2, 2025 - Subnet Structure -->
-  <a href="../blog/posts/an.structure-update/" class="blog-card-link">
-    <article class="blog-card">
-        <div class="blog-card-image">
-            <img src="../assets/images/annoucements/redteam-dashboard.png" alt="Subnet Structure">
-        </div>
-        <div class="blog-card-content">
-            <span class="blog-card-date">Oct 2, 2025</span>
-            <h2>Update in Subnet Structure</h2>
-            <p class="blog-card-excerpt">Major changes to protect miners' intellectual property: hidden Docker Hub IDs, encryption detection, and dashboard improvements.</p>
-        </div>
-    </article>
-  </a>
-
-  <!-- 4. Feb 1, 2025 - Alpha Token -->
-  <a href="../blog/posts/dynamic-tao-alpha-token/" class="blog-card-link">
-    <article class="blog-card">
-        <div class="blog-card-image">
-            <img src="../assets/images/alpha-token.png" alt="Alpha Token & Dynamic TAO">
-        </div>
-        <div class="blog-card-content">
-            <span class="blog-card-date">Feb 1, 2025</span>
-            <h2>Alpha Token & Dynamic TAO</h2>
-            <p class="blog-card-excerpt">How Dynamic TAO and the Alpha token reshape RedTeam's decentralized cybersecurity incentives.</p>
-        </div>
-    </article>
-  </a>
-
-  <!-- 5. Jan 15, 2025 - Bot Challenges (OLDEST) -->
-  <a href="../blog/posts/bot-detection-challenges/" class="blog-card-link">
-    <article class="blog-card">
-        <div class="blog-card-image">
-            <img src="../assets/images/decentralized-cybersecurity.png" alt="Bot Challenges">
-        </div>
-        <div class="blog-card-content">
-            <span class="blog-card-date">Jan 15, 2025</span>
-            <h2>Bot Challenges Arrive to RedTeam</h2>
-            <p class="blog-card-excerpt">A new wave of bot detection challenges has been released to Subnet 61, advancing our security testing suite.</p>
-        </div>
-    </article>
-  </a>
-
+<h2 id="incentive-eligibility">💰 Incentive Eligibility</h2>
+<p>To ensure high-quality detection, we have set a minimum performance threshold for incentive eligibility.</p>
+<ul>
+<li><strong>Minimum Score</strong>: <strong>0.6</strong></li>
+<li><strong>Rationale</strong>: A perfect submission across all categories would yield a score of <strong>0.8</strong> (normalized), consisting of:<ul>
+<li><strong>Human Detection</strong>: 0.1</li>
+<li><strong>Protocol Detection</strong>: 0.1</li>
+<li><strong>Legacy Frameworks (4)</strong>: 0.4</li>
+<li><strong>Main Selenium Frameworks (2)</strong>: 0.2</li>
+</ul>
+</li>
+<li><strong>Buffer</strong>: We have deducted <strong>0.2</strong> from the perfect baseline to arrive at the <strong>0.6</strong> eligibility threshold. This provides a buffer that accepts partial detection in human and protocol verification, provided the allowed miss limits are not exceeded. Additinally, it gives some chance for new miners to enter the incentive program while maintaining a high standard for detection quality.</li>
+</ul>
+<h1 id="infrastructure-stability-updates">Infrastructure &amp; Stability Updates</h1>
+<p>To ensure the platform remains fast and scalable, we've implemented several backend optimizations.</p>
+<h2 id="storage-optimization">Storage Optimization</h2>
+<p>We are now pruning comparison logs from validator state commits, retaining only the highest-scoring entry.</p>
+<div class="admonition note">
+<p class="admonition-title">Dashboard Visibility</p>
+<p>This change is purely internal to reduce storage load. The <strong>RedTeam Dashboard</strong> will still visualize full comparison logs by sourcing them from our centralized scoring service.</p>
 </div>
+<h2 id="system-stability">System Stability</h2>
+<ul>
+<li><strong><a href="https://github.com/RedTeamSubnet/RedTeam/pull/104">PR #104</a></strong>: Removed redundant comparison logs from validators' state.</li>
+<li><strong>Cleanups</strong>: Optimized abstract method implementations to improve validator runtime performance.</li>
+</ul>
+<p>Need help with the migration? Reach out in our <a href="https://discord.com/channels/799672011265015819/1319313447435108413">Discord channel</a>.</p>
+<p><em>The RedTeam continues to push the boundaries of cybersecurity innovation. Stay tuned for more updates!</em></p>
                 
               </article>
             </div>
@@ -860,30 +771,6 @@
       
         <footer class="md-footer">
   
-    
-      
-        
-      
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
-        
-          
-          <a href="../important/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Important">
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              <div class="md-ellipsis">
-                Important
-              </div>
-            </div>
-          </a>
-        
-        
-      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -975,16 +862,16 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.indexes", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.indexes", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="../assets/js/mathjax.js"></script>
+        <script src="../../../assets/js/mathjax.js"></script>
       
-        <script src="../assets/js/tex-mml-chtml.js"></script>
+        <script src="../../../assets/js/tex-mml-chtml.js"></script>
       
-        <script src="../assets/js/theme-toggle.js"></script>
+        <script src="../../../assets/js/theme-toggle.js"></script>
       
     
   </body>
