@@ -11,6 +11,24 @@ hide:
 </div>
 
 <div class="blog-grid">
+    <a href="./posts/an.ada_detection_v2" class="blog-card-link">
+        <article class="blog-card">
+            <div class="blog-card-image">
+                <img src="../assets/images/annoucements/an.ada_detection_2.png" alt="Release of ADA Detection v2">
+            </div>
+            <div class="blog-card-content">
+                <span class="blog-card-date">
+                    Feb 11, 2026
+                </span>
+                <h2>
+                    Release of Anti-Detect Automation Detection v2
+                </h2>
+                <p class="blog-card-excerpt">
+                    ADA v2 introduces hardened browser obfuscation via NSTBrowser and a new Fail-Fast scoring logic across human, framework, and protocol detection pillars.
+                </p>
+            </div>
+        </article>
+    </a>
     <a href="./posts/an.what_is_changed" class="blog-card-link">
         <article class="blog-card">
             <div class="blog-card-image">
