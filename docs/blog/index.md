@@ -11,6 +11,24 @@ hide:
 </div>
 
 <div class="blog-grid">
+  <a href="posts/dfp2-status-update/" class="blog-card-link">
+    <article class="blog-card">
+        <div class="blog-card-image">
+            <img src="../../assets/images/blog/dfp-2.0.1.png" alt="DFP-2 Status Update">
+        </div>
+        <div class="blog-card-content">
+            <span class="blog-card-date">
+                Mar 10, 2026
+            </span>
+            <h2>
+                Dev Fingerprinter v2 [DFP-2]: Status Update and Version 2.0.1
+            </h2>
+            <p class="blog-card-excerpt">
+                Critical update on scoring logic fixes in v2.0.1 and essential testing guidelines for miners to improve submission success.
+            </p>
+        </div>
+    </article>
+  </a>
   <a href="posts/dashboard-update-v2/" class="blog-card-link">
     <article class="blog-card">
         <div class="blog-card-image">
