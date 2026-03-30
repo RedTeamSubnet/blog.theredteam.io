@@ -11,6 +11,24 @@ hide:
 </div>
 
 <div class="blog-grid">
+    <a href="./posts/an.historical_fingerprinter_v1" class="blog-card-link">
+        <article class="blog-card">
+            <div class="blog-card-image">
+                <img src="../assets/images/annoucements/an.historical_fingerprinter_1.png" alt="Historical Fingerprinter v1 Release">
+            </div>
+            <div class="blog-card-content">
+                <span class="blog-card-date">
+                    Mar 30, 2026
+                </span>
+                <h2>
+                    New Historical Fingerprinter Challenge and Infrastructure Upgrades
+                </h2>
+                <p class="blog-card-excerpt">
+                    Introducing historical_fingerprinter_v1 for advanced browser telemetry, alongside AI-assisted changelog automation and new GitHub issue templates.
+                </p>
+            </div>
+        </article>
+    </a>
     <a href="./posts/an.ada_detection_v2" class="blog-card-link">
         <article class="blog-card">
             <div class="blog-card-image">
