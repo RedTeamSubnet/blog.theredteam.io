@@ -9,8 +9,10 @@
         <meta name="description" content="RedTeam Blog - Security research, challenges, tutorials, and insights from the RedTeam community">
       
       
+        <meta name="author" content="redteam_ops">
       
-        <link rel="canonical" href="https://blog.theredteam.io/0.2/release-notes/">
+      
+        <link rel="canonical" href="https://blog.theredteam.io/0.2/announcements/posts/an.historical_fingerprinter_v1/">
       
       
       
@@ -18,13 +20,13 @@
         
       
       
-      <link rel="icon" href="../assets/images/logo/logo.dark.svg">
+      <link rel="icon" href="../../../assets/images/logo/logo.dark.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
   
       
-        <title>Release Notes - RedTeam Blog</title>
+        <title>Announcing Historical Fingerprinter & Infrastructure Upgrades - RedTeam Blog</title>
       
     
 
@@ -293,10 +295,10 @@
   </style>
 
   
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -316,19 +318,19 @@
       
     
     
-      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="../assets/css/colors.css">
+      <link rel="stylesheet" href="../../../assets/css/colors.css">
     
-      <link rel="stylesheet" href="../assets/css/layout.css">
+      <link rel="stylesheet" href="../../../assets/css/layout.css">
     
-      <link rel="stylesheet" href="../assets/css/typography.css">
+      <link rel="stylesheet" href="../../../assets/css/typography.css">
     
-      <link rel="stylesheet" href="../assets/css/components.css">
+      <link rel="stylesheet" href="../../../assets/css/components.css">
     
-      <link rel="stylesheet" href="../assets/css/custom.css">
+      <link rel="stylesheet" href="../../../assets/css/custom.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -391,7 +393,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#release-notes" class="md-skip">
+        <a href="#historical-fingerprinter-repository-infrastructure-upgrades" class="md-skip">
           Skip to content
         </a>
       
@@ -408,10 +410,10 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
       </button>
 
-      <a href=".." class="rd-logo" aria-label="RedTeam Blog">
+      <a href="../../.." class="rd-logo" aria-label="RedTeam Blog">
         <!-- Show dark logo in light mode, and light logo in dark mode (explicit files) -->
-        <img src="../assets/images/logo/logo.dark.svg" alt="RedTeam Blog logo" class="rd-logo-img rd-logo-img--dark">
-        <img src="../assets/images/logo/logo.light.svg" alt="RedTeam Blog logo" class="rd-logo-img rd-logo-img--light">
+        <img src="../../../assets/images/logo/logo.dark.svg" alt="RedTeam Blog logo" class="rd-logo-img rd-logo-img--dark">
+        <img src="../../../assets/images/logo/logo.light.svg" alt="RedTeam Blog logo" class="rd-logo-img rd-logo-img--light">
 
         <span class="rd-site-name">
           <span class="brand-red">Red</span>
@@ -421,14 +423,14 @@
     </div>
 
     <nav class="rd-nav" aria-label="Primary">
-      <a href="../blog/" class="rd-nav-link">Blog</a>
-      <a href="../important/" class="rd-nav-link">Important</a>
-      <a href="../announcements/" class="rd-nav-link">Announcements</a>
+      <a href="../../../blog/" class="rd-nav-link">Blog</a>
+      <a href="../../../important/" class="rd-nav-link">Important</a>
+      <a href="../../" class="rd-nav-link">Announcements</a>
     </nav>
 
     <div class="rd-header-actions">
       <div class="rd-search-inline">
-        <form role="search" class="md-search" action="../search/" method="get">
+        <form role="search" class="md-search" action="../../../search/" method="get">
   <label class="sr-only" for="q">Search</label>
   <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false" xmlns="http://www.w3.org/2000/svg">
     <circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="1.6" fill="none"></circle>
@@ -462,9 +464,7 @@
           
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -475,9 +475,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="RedTeam Blog" class="md-nav__button md-logo" aria-label="RedTeam Blog" data-md-component="logo">
+    <a href="../../.." title="RedTeam Blog" class="md-nav__button md-logo" aria-label="RedTeam Blog" data-md-component="logo">
       
-  <img src="../assets/images/logo/logo.light.svg" alt="logo">
+  <img src="../../../assets/images/logo/logo.light.svg" alt="logo">
 
     </a>
     RedTeam Blog
@@ -504,7 +504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/" class="md-nav__link">
+      <a href="../../../blog/" class="md-nav__link">
         
   
   
@@ -531,7 +531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/" class="md-nav__link">
+      <a href="../../../blog/" class="md-nav__link">
         
   
   
@@ -558,7 +558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../important/" class="md-nav__link">
+      <a href="../../../important/" class="md-nav__link">
         
   
   
@@ -585,7 +585,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../announcements/" class="md-nav__link">
+      <a href="../../" class="md-nav__link">
         
   
   
@@ -613,8 +613,6 @@
             
             
               
-                
-              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -634,33 +632,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#v021-260214-2026-02-14" class="md-nav__link">
+  <a href="#new-challenge-historical-fingerprinter-v1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        v0.2.1-260214 (2026-02-14)
+        New Challenge: Historical Fingerprinter (v1)
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#whats-changed" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What's Changed
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="What&#39;s Changed">
+    <nav class="md-nav" aria-label="New Challenge: Historical Fingerprinter (v1)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#other" class="md-nav__link">
+  <a href="#key-features" class="md-nav__link">
     <span class="md-ellipsis">
       
-        💬 Other
+        Key Features
       
     </span>
   </a>
@@ -673,44 +660,44 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#v020-251028-2025-10-28" class="md-nav__link">
+  <a href="#infrastructure-automation-upgrades" class="md-nav__link">
     <span class="md-ellipsis">
       
-        v0.2.0-251028 (2025-10-28)
+        Infrastructure &amp; Automation Upgrades
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#v010-251011-2025-10-11" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        v0.1.0-251011 (2025-10-11)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#whats-changed_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What's Changed
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="What&#39;s Changed">
+    <nav class="md-nav" aria-label="Infrastructure &amp; Automation Upgrades">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#other_1" class="md-nav__link">
+  <a href="#1-ai-assisted-changelog-release-automation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        💬 Other
+        1. AI-Assisted Changelog &amp; Release Automation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-streamlined-issue-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Streamlined Issue Templates
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-enhanced-security-reporting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Enhanced Security Reporting
       
     </span>
   </a>
@@ -723,10 +710,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#new-contributors" class="md-nav__link">
+  <a href="#call-to-action" class="md-nav__link">
     <span class="md-ellipsis">
       
-        New Contributors
+        Call to Action
       
     </span>
   </a>
@@ -749,34 +736,44 @@
                   
 
 <!-- Include default content -->
-<h1 id="release-notes">📌 Release Notes</h1>
-<h2 id="v021-260214-2026-02-14">v0.2.1-260214 (2026-02-14)</h2>
-<!-- Release notes generated using configuration in .github/release.yml at v0.2.1-260214 -->
-
-<h2 id="whats-changed">What's Changed</h2>
-<h3 id="other">💬 Other</h3>
+<h1 id="historical-fingerprinter-repository-infrastructure-upgrades">Historical Fingerprinter &amp; Repository Infrastructure Upgrades</h1>
+<p>We are excited to announce a major update to the RedTeam ecosystem. This release introduces a sophisticated new challenge, <strong>Historical Fingerprinter</strong>, alongside significant improvements to our repository's automation and community support infrastructure.</p>
+<p><img alt="Historical Fingerprinter" src="../../../assets/images/annoucements/an.historical_fingerprinter_1.png" /></p>
+<h2 id="new-challenge-historical-fingerprinter-v1">New Challenge: Historical Fingerprinter (v1)</h2>
+<p>We are officially adding <code>historical_fingerprinter_v1</code> to our active challenge pool. This challenge replaces <code>ada_detection_v2</code> and focuses on advanced browser telemetry and persistent cross-session linking.</p>
+<h3 id="key-features">Key Features</h3>
 <ul>
-<li>feat: new announcement about a challenge and a subnet by @abdibekbolot in https://github.com/RedTeamSubnet/blog.theredteam.io/pull/5</li>
+<li><strong>High-Signal Browser Telemetry:</strong> Leverages deep browser data points for accurate identification.</li>
+<li><strong>Spoof-Resistant Fingerprinting:</strong> Designed to withstand common browser obfuscation techniques.</li>
+<li><strong>Persistent User Linking:</strong> Focuses on tracking and linking sessions across different timeframes and environments.</li>
 </ul>
-<p><strong>Full Changelog</strong>: https://github.com/RedTeamSubnet/blog.theredteam.io/compare/v0.2.0-251028...v0.2.1-260214</p>
-<h2 id="v020-251028-2025-10-28">v0.2.0-251028 (2025-10-28)</h2>
-<!-- Release notes generated using configuration in .github/release.yml at v0.2.0-251028 -->
-
-<p><strong>Full Changelog</strong>: https://github.com/RedTeamSubnet/blog.theredteam.io/compare/v0.1.0-251011...v0.2.0-251028</p>
-<h2 id="v010-251011-2025-10-11">v0.1.0-251011 (2025-10-11)</h2>
-<!-- Release notes generated using configuration in .github/release.yml at v0.1.0-251011 -->
-
-<h2 id="whats-changed_1">What's Changed</h2>
-<h3 id="other_1">💬 Other</h3>
+<p>Validators and miners should update their local environments to include the new submodules and dependencies required for this challenge.</p>
+<hr />
+<h2 id="infrastructure-automation-upgrades">Infrastructure &amp; Automation Upgrades</h2>
+<p>Beyond the new challenge, we've implemented several "under-the-hood" enhancements to streamline development and community engagement.</p>
+<h3 id="1-ai-assisted-changelog-release-automation">1. AI-Assisted Changelog &amp; Release Automation</h3>
+<p>We've integrated a new automation pipeline that analyzes commit history and submodule changes to generate detailed release notes.</p>
 <ul>
-<li>feat: restructure blog and announcement pages for improved layout and… by @abdibekbolot in https://github.com/RedTeamSubnet/blog.theredteam.io/pull/1</li>
-<li>Dev by @abdibekbolot in https://github.com/RedTeamSubnet/blog.theredteam.io/pull/2</li>
+<li><strong>Gemini Integration:</strong> Our scripts now optionally leverage the Gemini API to provide intelligent summaries of technical changes.</li>
+<li><strong>Transparent Progress:</strong> This ensures that every update is documented accurately and transparently for the community.</li>
 </ul>
-<h2 id="new-contributors">New Contributors</h2>
+<h3 id="2-streamlined-issue-templates">2. Streamlined Issue Templates</h3>
+<p>To help us handle community feedback and bug reports more efficiently, we've introduced new GitHub Issue Templates. You can now choose from specific categories when opening an issue:</p>
 <ul>
-<li>@abdibekbolot made their first contribution in https://github.com/RedTeamSubnet/blog.theredteam.io/pull/1</li>
+<li><strong>Bug Reports:</strong> Standardized format for reporting technical issues.</li>
+<li><strong>Feature Requests:</strong> Propose new ideas for the subnet.</li>
+<li><strong>Challenge Feedback:</strong> Specific templates for discussing challenges.</li>
+<li><strong>Documentation &amp; Questions:</strong> Dedicated paths for getting help or improving our docs.</li>
 </ul>
-<p><strong>Full Changelog</strong>: https://github.com/RedTeamSubnet/blog.theredteam.io/commits/v0.1.0-251011</p>
+<h3 id="3-enhanced-security-reporting">3. Enhanced Security Reporting</h3>
+<p>The process for reporting security vulnerabilities has been clarified and integrated into our new issue workflow, making it easier for security researchers to responsibly disclose findings.</p>
+<h2 id="call-to-action">Call to Action</h2>
+<div class="admonition tip">
+<p class="admonition-title">Get Involved</p>
+<p>We encourage all miners to start exploring the <strong>Historical Fingerprinter</strong> challenge. If you encounter any issues or have suggestions for the new automation features, please use our new <strong>Issue Templates</strong> on GitHub!</p>
+</div>
+<hr />
+<p><em>Stay tuned for more updates as we continue to harden the RedTeam subnet.</em></p>
                 
               </article>
             </div>
@@ -886,16 +883,16 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.indexes", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.indexes", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="../assets/js/mathjax.js"></script>
+        <script src="../../../assets/js/mathjax.js"></script>
       
-        <script src="../assets/js/tex-mml-chtml.js"></script>
+        <script src="../../../assets/js/tex-mml-chtml.js"></script>
       
-        <script src="../assets/js/theme-toggle.js"></script>
+        <script src="../../../assets/js/theme-toggle.js"></script>
       
     
   </body>
