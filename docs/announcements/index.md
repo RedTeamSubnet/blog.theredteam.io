@@ -11,6 +11,24 @@ hide:
 </div>
 
 <div class="blog-grid">
+    <a href="./posts/an.comparison_overhaul_docker_move" class="blog-card-link">
+        <article class="blog-card">
+            <div class="blog-card-image">
+                <img src="../assets/images/annoucements/an.comparsion_overhaul.png" alt="Comparison Logic Overhaul & Docker Infrastructure Update">
+            </div>
+            <div class="blog-card-content">
+                <span class="blog-card-date">
+                    Apr 15, 2026
+                </span>
+                <h2>
+                    Upcoming Protocol Changes: Comparison Logic Overhaul & Docker Infrastructure Update
+                </h2>
+                <p class="blog-card-excerpt">
+                    Major overhaul of the deduplication logic with a new multi-stage metadata pipeline and transition of all miners to private Docker Hub repositories.
+                </p>
+            </div>
+        </article>
+    </a>
     <a href="./posts/an.historical_fingerprinter_v1" class="blog-card-link">
         <article class="blog-card">
             <div class="blog-card-image">
