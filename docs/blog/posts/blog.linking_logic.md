@@ -21,7 +21,7 @@ The linking logic is designed to identify when multiple UIDs are likely controll
 !!! info "Core Objective"
     Ensure fair treatment by grouping associated UIDs into one logical miner entity for incentive calculations.
 
----
+![Linking Logic Banner](../../assets/images/blog_linking_logic.png)
 
 ## When Linking Is Applied
 

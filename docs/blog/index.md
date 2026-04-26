@@ -11,6 +11,24 @@ hide:
 </div>
 
 <div class="blog-grid">
+  <a href="posts/blog.linking_logic/" class="blog-card-link">
+    <article class="blog-card">
+        <div class="blog-card-image">
+            <img src="../assets/images/blog_linking_logic.png" alt="Linking Logic in the RedTeam Subnet">
+        </div>
+        <div class="blog-card-content">
+            <span class="blog-card-date">
+                Apr 25, 2026
+            </span>
+            <h2>
+                Linking Logic in the RedTeam Subnet
+            </h2>
+            <p class="blog-card-excerpt">
+                Identify and group multiple UIDs controlled by the same miner into a single effective identity for fair emission distribution.
+            </p>
+        </div>
+    </article>
+  </a>
   <a href="posts/dfp2-status-update/" class="blog-card-link">
     <article class="blog-card">
         <div class="blog-card-image">
